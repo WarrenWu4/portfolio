@@ -9,7 +9,7 @@ export default function Home() {
             <div className="home-container">
 
             <nav>
-                <img src="public/Logo.1.svg" alt="logo"/>
+                <img src="/Logo.1.svg" alt="logo"/>
                 <img src="/Nav Menu.svg" alt="navigation" id="nav-menu"/>
                 <div className="nav-links">
                     <NavLink to="/projects">Projects</NavLink>
