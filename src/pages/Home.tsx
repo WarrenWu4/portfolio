@@ -9,8 +9,8 @@ export default function Home() {
             <div className="home-container">
 
             <nav>
-                <img src="/src/assets/Logo.1.svg" alt="logo"/>
-                <img src="/src/assets/Nav Menu.svg" alt="navigation" id="nav-menu"/>
+                <img src={"public/Logo.1.svg"} alt="logo"/>
+                <img src="public/Nav Menu.svg" alt="navigation" id="nav-menu"/>
                 <div className="nav-links">
                     <NavLink to="/projects">Projects</NavLink>
                     <NavLink to="/experiences">Experiences</NavLink>
@@ -19,7 +19,7 @@ export default function Home() {
             </nav>
 
             <div className="home-content">
-                <img src="/src/assets/Masking Cloud.svg" alt="profile"/>
+                <img src="public/Masking Cloud.svg" alt="profile"/>
                 <div className="home-hero-1">
                     <div className="home-header">Hi, I'm Warren</div>
                     <div className="home-subheader">I'm a computer science student and I want to change the world</div>
