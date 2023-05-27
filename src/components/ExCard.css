@@ -1,0 +1,51 @@
+.ex-card {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    position: relative;
+}
+
+.ex-container {
+    margin: 1.6rem 0 0.8rem 0;
+    width: 27.6rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ex-img {
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 0.4rem;
+    background: #d9d9d9 center no-repeat;
+    background-size: cover;
+}
+
+.ex-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ex-org {
+    font: bold 2.4rem "Inter";
+}
+
+.ex-role {
+    color: #666;
+    font: bold 1.6rem "Inter";
+}
+
+.ex-desc {
+    color: #999;
+    font: bold 1.2rem "Inter";
+    width: 27.6rem;
+    overflow-wrap: anywhere;
+}

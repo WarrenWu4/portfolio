@@ -1,142 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-html {
-    font-size: 10px;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.home-page {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.home-container {
-    width: 100%;
-    max-width: 37.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav {
-    width: 25rem;
-    height: 5rem;
-    margin-top: 3.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img {
-    width: 5rem;
-    aspect-ratio: 1;
-}
-
-.nav-links {
-    display: none;
-}
-
+/* 320px */
 .home-content {
     width: 25rem;
-    margin-top: 2.4rem;
-    display: flex; 
+    height: calc(100vh - 3.2rem);
+    position: absolute;
+    top: 3.2rem;
+    display: flex;
     flex-direction: column;
+    justify-content: center; 
     align-items: center;
+    text-align: center;
 }
 
-.home-content img {
+.home-profile {
     width: 25rem;
     height: 21.3rem;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2.4rem;
 }
 
 .home-header {
-    margin-top: 2.4rem;
     font: bold 3rem "Inter";
+    margin-bottom: 1.6rem;
 }
 
 .home-subheader {
-    margin-top: 1.6rem;
     color: #666666;
     font: bold 1.6rem "Inter";
+    margin-bottom: 2rem;
 }
 
 .socials {
-    margin-top: 2rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.socials a{
+    margin: 0 1.2rem 0 1.2rem;
+    width: 2.8rem;
+    aspect-ratio: 1;
+    display: flex;
+    color: black;
+    cursor: pointer;
 }
 
 .socials svg {
-    margin: 0 1.6rem 0 1.6rem;
-    font-size: 2.4rem;
-}
-
-@media (min-width: 475px) {
-    .home-container{
-        max-width: 475px;
-    } 
-    nav {
-        width: 400px;
-    }
-}
-@media (min-width: 640px) {
-    .home-container{
-        max-width: 640px;
-    }
-    #nav-menu {
-        display: none;
-    }
-    .nav-links {
-        display: flex;
-        font: bold 2rem "Inter";
-    }
-    .nav-links a {
-        text-decoration: none;
-        color: black;
-        margin-left: 1.6rem;
-    }
-    nav {
-        width: 640px;
-    }
-}
-@media (min-width: 768px) {
-    .home-container{
-        max-width: 768px;
-    }
-    nav {
-        width: 656px;
-    }
-}
-@media (min-width: 1024px) {
-    .home-container{
-        max-width: 1024px;
-    }
-    nav  {
-        width: 896px;
-    }
-}
-@media (min-width: 1280px) {
-    .home-container{
-        max-width: 1280px;
-    }    
-    nav {
-        width: 1136px;
-    }
-}
-@media (min-width: 1536px) {
-    .home-container{
-        max-width: 1536px;
-    }
-    nav {
-        width: 1376px;
-    }
+    font-size: 2.8rem;
 }

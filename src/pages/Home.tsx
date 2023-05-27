@@ -1,38 +1,34 @@
 import "./Home.css"
-import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";
-import { NavLink } from "react-router-dom"
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
     return (
-        <div className="home-page">
+        <div className="page">
 
-            <div className="home-container">
-
-            <nav>
-                <img src="/Logo.1.svg" alt="logo"/>
-                <img src="/Nav Menu.svg" alt="navigation" id="nav-menu"/>
-                <div className="nav-links">
-                    <NavLink to="/projects">Projects</NavLink>
-                    <NavLink to="/experiences">Experiences</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                </div>
-            </nav>
+            <Navbar/>
 
             <div className="home-content">
-                <img src="/Masking Cloud.svg" alt="profile"/>
-                <div className="home-hero-1">
-                    <div className="home-header">Hi, I'm Warren</div>
-                    <div className="home-subheader">I'm a computer science student and I want to change the world</div>
-                    <div className="socials">
+                <img src="/cloud.svg" alt="profile" className="home-profile"/>
+                <div className="home-header">Hi, I'm Warren</div>
+                <div className="home-subheader">A computer science student on a mission to improve the world</div>
+                <div className="socials">
+                    <a href="https://github.com/WarrenWu4" target="_blank">
                         <FaGithub/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/warren-wu4/" target="_blank">
                         <FaLinkedin/>
+                    </a>
+                    <a href="https://github.com/WarrenWu4" target="_blank">
+                        <SiGmail/>
+                    </a>
+                    <a href="https://github.com/WarrenWu4" target="_blank">
                         <FaYoutube/>
-                        <FaTwitter/>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-            </div>
 
         </div>
     )

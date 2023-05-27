@@ -1,0 +1,42 @@
+.about-summary {
+    width: 25rem;
+    font: 600 1.6rem "Inter";
+}
+
+.tech-stack {
+    margin: 2.4rem 0 0 0;
+    font: bold 2.4rem "Inter";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-down svg {
+    font-size: 3rem;
+    margin: 1.2rem 1.8rem 1.6rem 1.8rem;
+}
+
+.tech-stack-container {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-stack-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+
+.tech {
+    min-width: 5rem;
+    aspect-ratio: 1;
+    box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.4rem;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.tech svg {
+    font-size: 3.5rem;
+}
