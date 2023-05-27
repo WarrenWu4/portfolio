@@ -18,23 +18,27 @@
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 2.4rem;
+    animation: 3s fadeBot;
 }
 
 .home-header {
     font: bold 3rem "Inter";
     margin-bottom: 1.6rem;
+    animation: 3s fadeRight;
 }
 
 .home-subheader {
     color: #666666;
     font: bold 1.6rem "Inter";
     margin-bottom: 2rem;
+    animation: 3s fadeLeft;
 }
 
 .socials {
     display: flex;
     width: 100vw;
     justify-content: center;
+    animation: 3s fadeTop;
 }
 
 .socials a{
@@ -48,4 +52,49 @@
 
 .socials svg {
     font-size: 2.8rem;
+}
+
+/* animations */
+@keyframes fadeBot {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.6rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-1.6rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(1.6rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeTop {
+    0% {
+        opacity: 0;
+        transform: translateY(1.6rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
