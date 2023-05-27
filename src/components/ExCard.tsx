@@ -3,7 +3,7 @@ import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function ExCard(props: {org:string, role:string, desc:string, imgPath:string}) {
     return (
-        <div className="ex-card">
+        <div className="ex-card hidden">
             <div className="ex-container">
                 <img src={props.imgPath} alt="ex-img" className="ex-img"/>
                 <div className="ex-wrapper">

@@ -1,0 +1,8 @@
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    animation: fadeBot 3s;  
+    opacity: 1;
+}
