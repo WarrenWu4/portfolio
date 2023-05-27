@@ -19,13 +19,13 @@ export default function Experiences() {
                     org="TAMU Datathon"
                     role="Developer"
                     desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_1.png"
+                    imgPath="/ex_td.webp"
                 />
                 <ExCard 
                     org="General Motors"
                     role="IT Intern"
                     desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_1.png"
+                    imgPath="/ex_gm.png"
                 />
             </div>
 
