@@ -10,7 +10,9 @@ export default function Home() {
             <Navbar/>
 
             <div className="home-content">
-                <img src="/cloud.svg" alt="profile" className="home-profile"/>
+                <div className="home-profile">
+                    <div id="easter-egg">Made with 💚 by Warren Wu</div>
+                </div>
                 <div className="home-header">Hi, I'm Warren</div>
                 <div className="home-subheader">A computer science student on a mission to improve the world</div>
                 <div className="socials">

@@ -15,11 +15,31 @@
     width: 25rem;
     height: 21.3rem;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     margin-bottom: 2.4rem;
     animation: 3s fadeBot;
+    transition: all 0.5s ease-in-out;
+    background: url("/cloud.svg") center no-repeat;
+    display: flex; justify-content: center; align-items: center;
+    color: black;
+    font: bold 1.6rem "Inter";
 }
+
+#easter-egg {
+    width: 50%; height: 50%;
+    justify-content: center; align-items: center;
+    display: none;
+}
+
+.home-profile:hover {
+    background: url("/cloud_hover.svg") center no-repeat;
+}
+
+.home-profile:hover #easter-egg {
+    animation: 1s fadeTop;
+    display: flex;
+}
+
+
 
 .home-header {
     font: bold 3rem "Inter";
