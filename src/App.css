@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    /* colors */
+    --main-700: #000;
+    --main-600: #3D3F40;
+    --main-570: #55585A;
+    --main-500: #797D80;
+
+    /* fonts */
+    --lg-h1: bold 6rem "Inter";
+    --lg-h2: bold 2.8rem "Inter";
+    --lg-h3: bold 2rem "Inter";
+    --lg-h4: bold 1.6rem "Inter";
+    --sm-h1: bold 3rem "Inter";
+    --sm-h2: bold 2.4rem "Inter";
+    --sm-h3: bold 1.6rem "Inter";
+    --sm-h4: bold 1.2rem "Inter";
+}
+
 html {
     font-size: 10px;
 }
@@ -35,6 +53,15 @@ body {
     margin: 10.6rem 0 2.4rem 0;
     color: black;
     font: bold 3rem "Inter";
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.show {
+    animation: fadeBot 3s;  
+    opacity: 1;
 }
 
 .easter-egg {
@@ -136,4 +163,12 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* projects page */
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
