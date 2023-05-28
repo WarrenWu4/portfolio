@@ -1,23 +1,22 @@
-/* 320px */
-
 .nav {
+    width: calc(100% - 4rem);
+    height: 5rem;
     position: absolute;
     top: 3.2rem;
-    width: 30rem;
-    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 .nav-logo, .nav-menu {
     width: 5rem;
     aspect-ratio: 1;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 }
 
-.nav-links {
+.nav-links-col {    
     position: fixed;
     top: 0;
     right: 0;
@@ -26,18 +25,50 @@
     border-left: solid 0.2rem black;
     background: white;
     flex-direction: column;
-    align-items: flex-end;
-    z-index: 2;
+    align-items: center;
+    z-index: 3;
 }
 
-.nav-links a:nth-child(1) {
-    margin-top: 10.4rem;
+.nav-links-col a:nth-child(1) {
+    margin-top: 10.6rem;
 }
 
-.nav-links a {
+.nav-links-col a {
     cursor: pointer;
     color: black;
     text-decoration: none;
-    font: bold 2.4rem "Inter";
-    margin: 0 2rem 1.6rem 0;
+    font: bold 2rem "Inter";
+    margin: 0 0 1.6rem 0;
+}
+
+.nav-links-row a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font: bold 2rem "Inter";
+    margin-left: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        width: 65.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        width: 89.6rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .nav {
+        width: 113.6rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .nav {
+        width: 137.6rem;
+    }
 }
