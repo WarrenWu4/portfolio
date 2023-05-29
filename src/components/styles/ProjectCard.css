@@ -29,12 +29,14 @@
     color: white;
     font: var(--un2);
     border-radius: inherit;
-    display: none; justify-content: center; align-items: center;
+    display: flex; justify-content: center; align-items: center;
     flex-wrap:wrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .proj-img:hover .proj-overlay {
-    display: flex;
+    opacity: 1;
 }
 
 .proj-overlay svg {
@@ -73,5 +75,6 @@
 }
 
 .learn-more:hover {
+    color: var(--neutral-500);
     transform: translateX(0.4rem);
 }

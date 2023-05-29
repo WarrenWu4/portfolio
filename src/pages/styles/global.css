@@ -87,7 +87,7 @@ body {
 }
 
 .show {
-    animation: fadeTop 3s;  
+    animation: fadeTop 1s;  
     opacity: 1;
 }
 
@@ -177,10 +177,10 @@ body {
 }
 
 @keyframes fade {
-    0% {
+    from {
         opacity: 0;
     }
-    100% {
+    to {
         opacity: 1
     }
 }

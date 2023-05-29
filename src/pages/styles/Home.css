@@ -77,14 +77,14 @@
     animation: fadeLeft 2s;
     animation-fill-mode: forwards;
     opacity: 0;
-    animation-delay: 200ms;
+    animation-delay: 100ms;
 }
 
 .socials {
     opacity: 0;
     animation: fadeTop 2s;
     animation-fill-mode: forwards;
-    animation-delay: 400ms;
+    animation-delay: 200ms;
 }
 
 .socials a {
