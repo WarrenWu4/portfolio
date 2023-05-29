@@ -6,6 +6,10 @@
     bottom: 1.6rem;;
 }
 
+.easter-egg a {
+    text-decoration: none;
+}
+
 .blob {
     width: 15rem;
     aspect-ratio: 1;
@@ -46,16 +50,6 @@
 
 .blob:hover .secret {
     display: flex;
-}
-
-.secret {
-    width: 12rem;
-    height: 4rem;
-    border-radius: 2rem;
-    border: 0.4rem solid black;
-    display: none; justify-content: center; align-items: center;
-    cursor: pointer;
-    z-index: 1;
 }
 
 .home-content {

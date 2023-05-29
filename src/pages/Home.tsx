@@ -1,13 +1,10 @@
 import "./styles/Home.css"
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { NavLink } from "react-router-dom";
 import Nav from "../components/Nav";
 
 export default function Home() {
-
-    const secret = () => {
-        console.log("work in progress");
-    }
 
     return (
         <div className="page" style={{justifyContent:"center"}}>
@@ -19,7 +16,6 @@ export default function Home() {
                     <span />
                     <span />
                     <span />
-                    <div className="secret" onClick={secret}>Click Me</div>
                 </div>
 
                 <div className="home-container">
@@ -50,7 +46,7 @@ export default function Home() {
             </div>
 
             <div className="easter-egg">
-                Made with 💚 by Warren Wu
+                Made with <NavLink to="/secret">💚</NavLink> by Warren Wu
             </div>
 
         </div>
