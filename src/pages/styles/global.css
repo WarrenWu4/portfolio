@@ -105,7 +105,6 @@ body {
         place-items: center;
         grid-template-columns: repeat(2, 30rem);
         grid-template-rows: auto;
-        gap: 3.2rem;
     }
 }
 

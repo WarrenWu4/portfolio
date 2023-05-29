@@ -1,0 +1,75 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Jumbo",
+      "desc": "A flashcard web app that accelerates the learning process through multi-dimensional cards.",
+      "techstack": ["figma", "typescript", "next", "react", "css", "firebase"]
+    },
+    {
+      "id": 2,
+      "name": "Emerald",
+      "desc": "A project management web app that focuses on building simple, yet powerful timelines as well as assigning tickets to other members.",
+      "techstack": [
+        "figma",
+        "typescript",
+        "next",
+        "react",
+        "tailwindcss",
+        "firebase"
+      ],
+      "imgPath": "/proj_emerald.png"
+    },
+    {
+      "id": 3,
+      "name": "Personal Portfolio",
+      "desc": "A website that showcases my projects, experiences, and other information about me. Features a secret easter egg 😊.",
+      "techstack": ["figma", "typescript", "react", "css"]
+    },
+    {
+      "id": 4,
+      "name": "ENGR 102 Website",
+      "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
+      "techstack": ["figma", "javascript", "react", "css"]
+    },
+    {
+      "id": 5,
+      "name": "Pulse",
+      "desc": "A mobile social media app that encourages spontaneous activity through highlighting nearby events."
+    },
+    {
+      "id": 6,
+      "name": "RevTube",
+      "desc": "A Texas A&M themed video streaming website."
+    },
+    {
+      "id": 7,
+      "name": "Tally",
+      "desc": "A competitive to-do mobile app that featured built-in reards and a leaderboard system.",
+      "imgPath": "/proj_tally.svg",
+      "techstack": ["react", "expo", "css", "firebase"]
+    },
+    {
+      "id": 8,
+      "name": "Project Icarus",
+      "desc": "An interactive website that showcases data from the Parker Solar Probe.",
+      "techstack": ["threejs", "html", "css", "nodejs"],
+      "imgPath": "/proj_icarus.png"
+    },
+    {
+      "id": 9,
+      "name": "Fraud Detector",
+      "desc": "Used machine learning to detect unusual spending behavior"
+    },
+    {
+      "id": 10,
+      "name": "AI Chatbot",
+      "desc": "Used TensorFlow and Natural Language Tool Kit to create and train an AI chatbot to output greetings"
+    },
+    {
+      "id": 11,
+      "name": "COVID Visualization",
+      "desc": "Used pandas and geopandas to analyze and map out COVID-19 cases"
+    }
+  ]
+}

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import Nav from "../components/Nav";
+import IconGen from "../data/IconGen";
 import ProjectCard from "../components/ProjectCard";
+
+import proj from "../data/proj.json";
 
 export default function Projects() {
 
@@ -19,6 +22,17 @@ export default function Projects() {
         hiddenCards.forEach((el) => observer.observe(el));
     })
 
+    const projCards:any[] = []
+    proj.projects.map((project) => {
+        projCards.push(
+            <ProjectCard
+                name={project.name}
+                desc={project.desc}
+                techStack={IconGen({icons: project.techstack})}
+                imgPath={project.imgPath}
+            />
+        )
+    })
 
     return (
         <div className="page">
@@ -28,52 +42,7 @@ export default function Projects() {
             <div className="title">Projects</div>
 
             <div className="card-wrapper">
-                <ProjectCard 
-                    name="Jumbo" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                    wip={true}
-                />
-                <ProjectCard 
-                    name="Emerald" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                    wip={true}
-                />
-                <ProjectCard
-                    name="ENGR 102 Website" 
-                    desc="A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M." 
-                    imgPath="/proj_1.png"
-                    wip={true}
-                />
-                <ProjectCard
-                    name="Pulse" 
-                    desc="A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M." 
-                    wip={true}
-                />
-                <ProjectCard 
-                    name="RevTube" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                />
-                <ProjectCard 
-                    name="Tally" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                    imgPath="/proj_2.svg"
-                />
-                <ProjectCard 
-                    name="Project Icarus" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                />
-                <ProjectCard 
-                    name="Fraud Detector" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                />
-                <ProjectCard 
-                    name="AI Chatbot" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                />
-                <ProjectCard 
-                    name="COVID Visualization" 
-                    desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
-                />
+                {projCards}
             </div>
 
         </div>
