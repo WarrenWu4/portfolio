@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.6rem;
     position: relative;
 }
 
@@ -49,10 +48,4 @@
     font: bold 1.2rem "Inter";
     width: 27.6rem;
     overflow-wrap: anywhere;
-}
-
-@media (min-width: 475px) {
-    .ex-card {
-        margin: 0 0.8rem 1.6rem 0.8rem;
-    }
 }

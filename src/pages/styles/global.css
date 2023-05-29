@@ -77,9 +77,9 @@ body {
 }
 
 .title {
-    margin: 10.6rem 0 2.4rem 0;
-    color: black;
-    font: bold 3rem "Inter";
+    margin: 12.8rem 0 3.2rem 0;
+    color: var(--neutral-500);
+    font: var(--un1);
 }
 
 .hidden {
@@ -91,45 +91,27 @@ body {
     opacity: 1;
 }
 
-.easter-egg {
-    position: fixed;
-    left: 1.2rem;
-    bottom: 1.2rem;
-    color: #3D3F40;
-    font: bold 1.2rem "Inter";
+.card-wrapper {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 30rem;
+    grid-template-rows: auto;
+    gap: 3.2rem;
 }
 
-@media (min-width: 475px) {
-    .container {
-        max-width: 47.5rem;
-    }
-}
-@media (min-width: 640px) {
-    .container {
-        max-width: 64rem;
-    }
-}
 @media (min-width: 768px) {
-    .container {
-        max-width: 76.8rem;
+    .card-wrapper {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 30rem);
+        grid-template-rows: auto;
+        gap: 3.2rem;
     }
 }
+
 @media (min-width: 1024px) {
-    .container {
-        max-width: 102.4rem;
-    }
-    .title {
-        font: bold 4rem "Inter";
-    }
-}
-@media (min-width: 1280px) {
-    .container {
-        max-width: 128rem;
-    }
-}
-@media (min-width: 1536px) {
-    .container {
-        max-width: 153.6rem;
+    .card-wrapper {
+        grid-template-columns: repeat(3, 30rem);
     }
 }
 
@@ -202,11 +184,4 @@ body {
     100% {
         opacity: 1
     }
-}
-
-.card-wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
