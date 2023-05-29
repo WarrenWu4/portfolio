@@ -1,5 +1,4 @@
-import Navbar from "../components/Navbar";
-import "./About.css";
+import "./styles/About.css";
 import { BsArrowDown } from "react-icons/bs";
 import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaDocker } from "react-icons/fa";
 import { SiJavascript, SiCplusplus, SiFirebase, SiTailwindcss, SiPandas, SiTensorflow, SiNumpy, SiNextdotjs, SiDotnet, SiElectron, SiFlask, SiExpo, SiMysql, SiTypescript, SiMongodb} from "react-icons/si";
@@ -11,7 +10,6 @@ export default function About() {
 
     return (
         <div className="page">
-            <Navbar/>
 
             <div className="container">
                 <div className="title" style={{animation: "3s fadeBot"}}>About</div>

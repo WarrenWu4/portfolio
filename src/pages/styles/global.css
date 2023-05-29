@@ -1,21 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    /* colors */
-    --main-700: #000;
-    --main-600: #3D3F40;
-    --main-570: #55585A;
-    --main-500: #797D80;
+    
+    /* Color styles */
+    --neutral-500: #000000;
+    --neutral-400: #222326;
+    --neutral-390: #38393C;
+    --neutral-380: #4E4F51;
+    --neutral-370: #646567;
+    --neutral-360: #7A7B7D;
+    --neutral-350: #919193;
+    --neutral-340: #A7A7A8;
+    --neutral-330: #BDBDBE;
+    --neutral-300: #707680;
+    --neutral-200: #C0C4CC;
+    --neutral-100: #F7F7F7;
+    --danger-500: #B35054;
+    --danger-400: #CA5A5F;
+    --danger-300: #E06469;
+    --danger-200: #E37478;
+    --danger-100: #E68387;
+    --success-500: #80AD8F;
+    --success-400: #90C2A1;
+    --success-300: #A0D8B3;
+    --success-200: #AADCBB;
+    --success-100: #B3E0C2;
+    --primary-500: #415B50;
+    --primary-400: #577A6B;
+    --primary-300: #6D9886;
+    --primary-200: #8AAD9E;
+    --primary-100: #A7C1B6;
+    --rando-500: #918B80;
+    --rando-400: #C2B9AA;
+    --rando-300: #F2E7D5;
+    --rando-200: #F5ECDD;
+    --rando-100: #F7F1E6;
 
-    /* fonts */
-    --lg-h1: bold 6rem "Inter";
-    --lg-h2: bold 2.8rem "Inter";
-    --lg-h3: bold 2rem "Inter";
-    --lg-h4: bold 1.6rem "Inter";
-    --sm-h1: bold 3rem "Inter";
-    --sm-h2: bold 2.4rem "Inter";
-    --sm-h3: bold 1.6rem "Inter";
-    --sm-h4: bold 1.2rem "Inter";
+    /* Text-size styles */
+    --un1: bold 3.6rem "Inter";
+    --un2: bold 2.4rem "Inter";
+    --un3: bold 2rem "Inter";
+    --un4: bold 1.6rem "Inter";
+    --un5: bold 1.2rem "Inter";
+    --desktop-hero-title: bold 6rem "Inter";
+    --desktop-socials: bold 3rem "Inter";
+    --desktop-hero-subtitle: bold 2rem "Inter";
+    --desktop-about-desc: bold 2rem "Inter";
+    --tablet-hero-title: bold 4.5rem "Inter";
+    --tablet-hero-subtitle: bold 1.8rem "Inter";
+    --mobile-hero-title: bold 3rem "Inter";
+    --mobile-socials: bold 2.5rem "Inter";
+    --mobile-hero-subtitle: bold 1.6rem "Inter";
+    --mobile-about-desc: bold 1.6rem "Inter";
+
 }
 
 html {
@@ -39,16 +76,6 @@ body {
     position: relative;
 }
 
-.container {
-    width: 100%;
-    max-width: 32rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
 .title {
     margin: 10.6rem 0 2.4rem 0;
     color: black;
@@ -60,7 +87,7 @@ body {
 }
 
 .show {
-    animation: fadeBot 3s;  
+    animation: fadeTop 3s;  
     opacity: 1;
 }
 
@@ -90,6 +117,9 @@ body {
 @media (min-width: 1024px) {
     .container {
         max-width: 102.4rem;
+    }
+    .title {
+        font: bold 4rem "Inter";
     }
 }
 @media (min-width: 1280px) {
@@ -165,7 +195,15 @@ body {
     }
 }
 
-/* projects page */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+}
+
 .card-wrapper {
     width: 100%;
     display: flex;

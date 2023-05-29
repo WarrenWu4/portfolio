@@ -1,4 +1,4 @@
-import "./ExCard.css";
+import "./styles/ExCard.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function ExCard(props: {org:string, role:string, desc:string, imgPath:string}) {

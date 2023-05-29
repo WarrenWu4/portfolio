@@ -1,5 +1,4 @@
 import ExCard from "../components/ExCard";
-import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 
 export default function Experiences() {
@@ -21,7 +20,6 @@ export default function Experiences() {
 
     return (
         <div className="page">
-            <Navbar/>
 
             <div className="container">
                 <div className="title" style={{animation:"fadeBot 3s"}}>Experiences</div>

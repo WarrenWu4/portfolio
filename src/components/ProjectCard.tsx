@@ -1,4 +1,4 @@
-import "./ProjectCard.css";
+import "./styles/ProjectCard.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function ProjectCard(props: {name: string, desc: string, imgPath?:string, wip?:boolean}) {

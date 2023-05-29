@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
-import "../App.css";
 
 export default function Projects() {
 
@@ -23,7 +21,6 @@ export default function Projects() {
 
     return (
         <div className="page">
-            <Navbar/>
 
             <div className="container">
                 <div className="title" style={{animation:"fadeBot 3s"}}>Projects</div>
@@ -49,6 +46,10 @@ export default function Projects() {
                         name="Pulse" 
                         desc="A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M." 
                         wip={true}
+                    />
+                    <ProjectCard 
+                        name="RevTube" 
+                        desc="A competitive to-do mobile app that featured built-in rewards and a leaderboard system" 
                     />
                     <ProjectCard 
                         name="Tally" 
