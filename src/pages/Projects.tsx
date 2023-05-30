@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import { useEffect } from "react";
-import Nav from "../components/Nav";
 import IconGen from "../data/IconGen";
 import ProjectCard from "../components/ProjectCard";
 
@@ -35,9 +35,7 @@ export default function Projects() {
     })
 
     return (
-        <div className="page">
-
-            <Nav />
+        <motion.div exit={{opacity: 0, transform: "translateX(60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="page">
 
             <div className="title">Projects</div>
 
@@ -45,6 +43,6 @@ export default function Projects() {
                 {projCards}
             </div>
 
-        </div>
+        </motion.div>
     )
 }

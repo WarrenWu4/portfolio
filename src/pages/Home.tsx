@@ -2,14 +2,12 @@ import "./styles/Home.css"
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { NavLink } from "react-router-dom";
-import Nav from "../components/Nav";
+import { motion } from "framer-motion";
 
 export default function Home() {
 
     return (
-        <div className="page" style={{justifyContent:"center"}}>
-
-            <Nav />
+        <motion.div exit={{transform: "translateX(-80vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="page" style={{justifyContent:"center"}}>
 
             <div className="home-content">
                 <div className="blob">
@@ -49,6 +47,6 @@ export default function Home() {
                 Made with <NavLink to="/secret">💚</NavLink> by Warren Wu
             </div>
 
-        </div>
+        </motion.div>
     )
 }

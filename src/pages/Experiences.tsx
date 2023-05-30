@@ -1,5 +1,5 @@
 import ExCard from "../components/ExCard";
-import Nav from "../components/Nav";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Experiences() {
@@ -20,9 +20,7 @@ export default function Experiences() {
     })
 
     return (
-        <div className="page">
-
-            <Nav />
+        <motion.div exit={{opacity: 0, transform: "translateX(60vw)"}} transition={{duration:0.4, ease:"easeInOut"}}  className="page">
 
             <div className="title">Experiences</div>
 
@@ -65,6 +63,6 @@ export default function Experiences() {
                 />
             </div>
 
-        </div>
+        </motion.div>
     )
 }

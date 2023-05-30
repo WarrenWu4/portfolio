@@ -5,14 +5,12 @@ import { SiJavascript, SiCplusplus, SiFirebase, SiTailwindcss, SiPandas, SiTenso
 import { CgFigma } from "react-icons/cg";
 import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
-import Nav from "../components/Nav";
+import { motion } from "framer-motion";
 
 export default function About() {
 
     return (
-        <div className="page">
-
-            <Nav/>
+        <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="page">
 
             <div className="title">About</div>
 
@@ -84,6 +82,6 @@ export default function About() {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
