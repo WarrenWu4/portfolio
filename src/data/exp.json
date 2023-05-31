@@ -1,0 +1,33 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "org": "General Motors",
+      "role": "IT Intern",
+      "desc": "Wdsafasdfasdf",
+      "imgPath": "/ex_gm.png"
+    },
+    {
+      "id": 2,
+      "org": "Aggie Coding Club",
+      "role": "Workshops Officer",
+      "desc": "sdafsdf",
+      "imgPath": "/ex_1.png"
+    },
+    {
+      "id": 3,
+      "org": "TAMU Datathon",
+      "role": "Developer",
+      "desc": "asdfsadfsddf",
+      "imgPath": "/ex_td.webp"
+    },
+    {
+      "id": 4,
+      "org": "Lanfang LLC",
+      "role": "Web Developer",
+      "desc": "adfdsf"
+    },
+    { "id": 5, "org": "Vivatech LLC", "role": "Technician", "desc": "adfasdf" },
+    { "id": 6, "org": "AGWCS", "role": "Math Instructor", "desc": "adfadsfadf" }
+  ]
+}
