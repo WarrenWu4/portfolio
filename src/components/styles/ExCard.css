@@ -21,7 +21,8 @@
     aspect-ratio: 1;
     border-radius: 0.4rem;
     box-sizing: border-box;
-    background: center no-repeat;
+    background-position: center; 
+    background-repeat: no-repeat;
     background-size: contain;
     margin-right: 0.6rem;
 }
@@ -35,17 +36,17 @@
 }
 
 .ex-org {
-    font: bold 2.4rem "Inter";
+    font: var(--un2);
 }
 
 .ex-role {
-    color: #666;
-    font: bold 1.6rem "Inter";
+    color: var(--neutral-380);
+    font: var(--un4);
 }
 
 .ex-desc {
-    color: #999;
-    font: bold 1.2rem "Inter";
+    color: var(--neutral-360);
+    font: var(--un5);
     width: 27.6rem;
     overflow-wrap: anywhere;
 }

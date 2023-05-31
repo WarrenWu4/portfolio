@@ -31,7 +31,8 @@
       "id": 4,
       "name": "ENGR 102 Website",
       "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
-      "techstack": ["figma", "javascript", "react", "css"]
+      "techstack": ["figma", "javascript", "react", "css"],
+      "imgPath": "/proj_102.png"
     },
     {
       "id": 5,

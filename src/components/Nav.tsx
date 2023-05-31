@@ -1,11 +1,15 @@
 import "./styles/nav.css";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BsHouseDoorFill, BsFillPersonFill, BsFolderFill } from "react-icons/bs";
+import { IoMdBriefcase } from "react-icons/io"
 
-export default function Nav() {
+export default function Nav(props: {currLoc:string}) {
 
     const [mode, setMode] = useState("light");
-    const [menuIcon, setMenuIcon] = useState("/menu.svg")
+    const [menuIcon, setMenuIcon] = useState("/menu.svg");
+    const [showTop, setShowTop] = useState("translateY(-110%)");
+    const [displayBool, setDisplayBool] = useState("flex");
 
     // Todo: add light/dark mode
     const changeMode = () => {
@@ -13,11 +17,34 @@ export default function Nav() {
         console.log("WIP")
     }
 
-    // Todo: add sidebar
     const showSide = () => {
         setMenuIcon((menuIcon === "/menu.svg") ? "/close.svg":"/menu.svg");
-        console.log("WIP");
+        setShowTop((showTop === "translateY(-110%)") ? "translateY(0)":"translateY(-110%)");
     }
+
+    useEffect(() => {
+        const changeNav = () => {
+            if (window.innerWidth >= 768) {
+                setMenuIcon("/menu.svg");
+                setShowTop("translateY(-110%)");
+                setDisplayBool("none");
+            }
+            else {
+                setDisplayBool("flex");
+            }
+        }
+
+        window.addEventListener("resize", changeNav)
+
+        return () => {
+            window.removeEventListener("resize", changeNav);
+        }
+    })
+
+    useEffect(() => {
+        setShowTop("translateY(-110%)");
+    }, [props.currLoc])
+    
 
 
     return (
@@ -26,6 +53,30 @@ export default function Nav() {
             <NavLink to="/">
                 <img src="/logo.svg" alt="logo" className="nav-icon"/>
             </NavLink>
+
+            <div className="nav-topbar" style={{display:displayBool, transform: showTop}}>
+                <div className="nav-toplinks">
+                    <div className="nav-topgroup">
+                        <BsHouseDoorFill/>
+                        <NavLink to="/home">Home</NavLink>
+                    </div>
+                    <div className="nav-topgroup">
+                        <BsFolderFill/>
+                        <NavLink to="/projects">Projects</NavLink>
+                    </div>
+                    <div className="nav-topgroup">
+                        <IoMdBriefcase/>
+                        <NavLink to="/experiences">Experiences</NavLink>
+                    </div>
+                    <div className="nav-topgroup">
+                        <BsFillPersonFill/>
+                        <NavLink to="/about">About</NavLink>
+                    </div>
+                </div>
+
+                <img src={(mode==="light") ? "./dark_mode.svg" : "./light_mode.svg"} alt="bruh" className="nav-mode-side" onClick={changeMode}/>
+
+            </div>
 
             <img 
                 src={menuIcon}
@@ -49,6 +100,7 @@ export default function Nav() {
                     onClick={changeMode}
                 />
             </div>
+
 
 
         </div>

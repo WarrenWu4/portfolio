@@ -2,6 +2,8 @@ import ExCard from "../components/ExCard";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
+import exp from "../data/exp.json";
+
 export default function Experiences() {
 
     useEffect(() => {
@@ -19,48 +21,25 @@ export default function Experiences() {
         hiddenCards.forEach((el) => observer.observe(el));
     })
 
+    const expCards:any[] = []
+    exp.experiences.map((exp) => {
+        expCards.push(
+            <ExCard
+                org={exp.org}
+                role={exp.role}
+                desc={exp.desc}
+                imgPath={exp.imgPath}
+            />
+        )
+    })
+
     return (
         <motion.div exit={{opacity: 0, transform: "translateX(60vw)"}} transition={{duration:0.4, ease:"easeInOut"}}  className="page">
 
             <div className="title">Experiences</div>
 
             <div className="card-wrapper">
-                <ExCard 
-                    org="General Motors"
-                    role="IT Intern"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_gm.png"
-                />
-                <ExCard 
-                    org="Aggie Coding Club"
-                    role="Workshops Officer"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_1.png"
-                />
-                <ExCard 
-                    org="TAMU Datathon"
-                    role="Developer"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_td.webp"
-                />
-                <ExCard 
-                    org="Lanfang LLC"
-                    role="Web Developer"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_td.webp"
-                />
-                <ExCard 
-                    org="Vivatech LLC"
-                    role="Technician"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_td.webp"
-                />
-                <ExCard 
-                    org="AGWCS"
-                    role="Math Instructor"
-                    desc="Prepared weekly workshops on a variety of topics including debugging, Pygame, and ..."
-                    imgPath="/ex_td.webp"
-                />
+                {expCards}
             </div>
 
         </motion.div>

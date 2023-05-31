@@ -10,10 +10,10 @@ import Nav from './components/Nav';
 
 export default function App() {
   const loc = useLocation();
-  
+
   return (
     <div className='page'>
-      <Nav/>
+      <Nav currLoc={loc.pathname}/>
       <AnimatePresence mode="wait">
         <Routes key={loc.pathname} location={loc}>
           <Route path="/" element={<Home/>}/>
