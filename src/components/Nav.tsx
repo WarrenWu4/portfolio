@@ -56,22 +56,22 @@ export default function Nav(props: {currLoc:string}) {
 
             <div className="nav-topbar" style={{display:displayBool, transform: showTop}}>
                 <div className="nav-toplinks">
-                    <div className="nav-topgroup">
+                    <NavLink to="/home" className="nav-topgroup">
                         <BsHouseDoorFill/>
-                        <NavLink to="/home">Home</NavLink>
-                    </div>
-                    <div className="nav-topgroup">
+                        Home
+                    </NavLink>
+                    <NavLink to="/projects" className="nav-topgroup">
                         <BsFolderFill/>
-                        <NavLink to="/projects">Projects</NavLink>
-                    </div>
-                    <div className="nav-topgroup">
+                        Projects
+                    </NavLink>
+                    <NavLink to="/experiences" className="nav-topgroup">
                         <IoMdBriefcase/>
-                        <NavLink to="/experiences">Experiences</NavLink>
-                    </div>
-                    <div className="nav-topgroup">
+                        Experiences
+                    </NavLink>
+                    <NavLink to="/about" className="nav-topgroup">
                         <BsFillPersonFill/>
-                        <NavLink to="/about">About</NavLink>
-                    </div>
+                        About
+                    </NavLink>
                 </div>
 
                 <img src={(mode==="light") ? "./dark_mode.svg" : "./light_mode.svg"} alt="bruh" className="nav-mode-side" onClick={changeMode}/>
