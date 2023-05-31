@@ -8,7 +8,7 @@ import { DiSqllite } from "react-icons/di";
 export default function IconGen(props:{icons:string[]|undefined}) {
 
     if (props.icons === undefined) {
-        return "";
+        return [];
     }
 
     const iconDict:{[name:string]:JSX.Element} = {
@@ -38,10 +38,19 @@ export default function IconGen(props:{icons:string[]|undefined}) {
         "electronjs": <SiElectron />,
         "docker": <FaDocker />
     }
-
+    
     const iconStack:any[] = []
+
+    // if user request all icons
+    if (props.icons[0] === "all") {
+        Object.keys(iconDict).map((key) => {
+            iconStack.push(iconDict[key]);
+        });
+        return iconStack;
+    }
+
     props.icons.map((name) => {
-        iconStack.push(iconDict[name])
+        iconStack.push(iconDict[name]);
     })
 
     return iconStack;
