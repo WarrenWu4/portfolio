@@ -11,21 +11,41 @@ export default function Nav(props: {currLoc:string}) {
     const [showTop, setShowTop] = useState("translateY(-110%)");
     const [displayBool, setDisplayBool] = useState("flex");
 
-    // Todo: add light/dark mode
     const changeMode = () => {
         setMode((mode==="light") ? "dark":"light");
-        console.log("WIP")
+        if (mode === "light") {
+            document.documentElement.style.setProperty('--neutral-0', "#222326")
+            document.documentElement.style.setProperty('--neutral-500', "#F7F7F7")
+            document.documentElement.style.setProperty('--neutral-360', "#C2B9AA")
+            document.documentElement.style.setProperty('--neutral-380', "#C2B9AA")
+            document.documentElement.style.setProperty('--fade-100', "rgba(0, 0, 0, 1)")
+            setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu_dark.svg":"/close_dark.svg") 
+        }
+        else {
+            document.documentElement.style.setProperty('--neutral-0', "#fff")
+            document.documentElement.style.setProperty('--neutral-500', "#000000")
+            document.documentElement.style.setProperty('--neutral-360', "#7A7B7D")
+            document.documentElement.style.setProperty('--neutral-380', "#4E4F51")
+            document.documentElement.style.setProperty('--fade-100', "rgba(0, 0, 0, 0.25)")
+            setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu.svg":"/close.svg") 
+
+        }
     }
 
     const showSide = () => {
-        setMenuIcon((menuIcon === "/menu.svg") ? "/close.svg":"/menu.svg");
+        if (mode === "light") {
+            setMenuIcon((menuIcon === "/menu.svg") ? "/close.svg":"/menu.svg");
+        }
+        else {
+            setMenuIcon((menuIcon === "/menu_dark.svg") ? "/close_dark.svg":"/menu_dark.svg");
+        }
         setShowTop((showTop === "translateY(-110%)") ? "translateY(0)":"translateY(-110%)");
     }
 
     useEffect(() => {
         const changeNav = () => {
             if (window.innerWidth >= 768) {
-                setMenuIcon("/menu.svg");
+                setMenuIcon((mode==="light")? "/menu.svg":"/menu_dark.svg");
                 setShowTop("translateY(-110%)");
                 setDisplayBool("none");
             }
@@ -51,7 +71,7 @@ export default function Nav(props: {currLoc:string}) {
         <div className="nav">
 
             <NavLink to="/">
-                <img src="/logo.svg" alt="logo" className="nav-icon"/>
+                <img src={(mode === "light") ? "/logo.svg":"/logo_dark.svg"} alt="logo" className="nav-icon"/>
             </NavLink>
 
             <div className="nav-topbar" style={{display:displayBool, transform: showTop}}>

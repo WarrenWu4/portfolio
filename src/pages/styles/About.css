@@ -15,6 +15,7 @@
     padding: 0 1.6rem 0 1.6rem;
     width: min(144rem, 100vw);
     box-sizing: border-box;
+    color: var(--neutral-500);
 }
 
 .arrow-down svg {
@@ -28,12 +29,13 @@
     place-content: center;
     gap: 3.2rem;
     width: 100%;
+    padding-bottom: 6.4rem;
 }
 
 .tech {
     width: 5rem;
     aspect-ratio: 1;
-    box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.2rem 0.4rem 0.2rem var(--fade-100);
     border-radius: 0.4rem;
     display: flex; justify-content: center; align-items: center;
 }
