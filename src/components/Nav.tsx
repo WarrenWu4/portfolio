@@ -15,7 +15,7 @@ export default function Nav(props: {currLoc:string}) {
         setMode((mode==="light") ? "dark":"light");
         if (mode === "light") {
             document.documentElement.style.setProperty('--neutral-0', "#222326")
-            document.documentElement.style.setProperty('--neutral-500', "#F7F7F7")
+            document.documentElement.style.setProperty('--neutral-500', "#F7F1E6")
             document.documentElement.style.setProperty('--neutral-360', "#C2B9AA")
             document.documentElement.style.setProperty('--neutral-380', "#C2B9AA")
             document.documentElement.style.setProperty('--fade-100', "rgba(0, 0, 0, 1)")
