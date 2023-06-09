@@ -1,7 +1,6 @@
 import "./styles/Home.css"
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -44,7 +43,7 @@ export default function Home() {
             </div>
 
             <div className="easter-egg">
-                Made with <NavLink to="/secret">💚</NavLink> by Warren Wu
+                Made with 💚 by Warren Wu
             </div>
 
         </motion.div>
