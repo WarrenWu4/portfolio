@@ -17,7 +17,7 @@ export default function About() {
             <div className="title">About</div>
 
             <div className="about-summary" style={{animation: "1s fadeTop"}}>
-            pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum
+                Hello! I'm Warren (if you didn't read the home page LOL). I'm a sophomore studying computer science at Texas A&M with a mission-driven approach to building software. I've always viewed the biggest asset of software to be its ability to help others, whether through games that provide endless entertainment or an app that teaches web development. Nothing brings me more joy in life than writing a program that people enjoy as even though the title of “software engineer” isn't heroic as “firefighter” or “police officer”, I can still very much contribute to my community. Aside from the serious stuff though, I also like clouds, blobs, and watching YouTube.
             </div>
 
             <div className="tech-stack">
