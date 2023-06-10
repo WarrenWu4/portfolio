@@ -1,4 +1,3 @@
-import "./styles/About.css";
 import { BsArrowDown } from "react-icons/bs";
 import { motion } from "framer-motion";
 import IconGen from "../data/IconGen";
@@ -8,31 +7,31 @@ export default function About() {
     const icons:any[] = IconGen({icons:["all"]})
     let icon_cards:any[] = []
     icons.map((icon) => {
-        icon_cards.push(<div className="tech">{icon}</div>)
+        icon_cards.push(<div className="w-[5rem] aspect-square rounded-[0.4rem] flex justify-center items-center text-[3.5rem] shadow-tech">{icon}</div>)
     })
 
     return (
-        <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="page">
+        <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
 
-            <div className="title">About</div>
+            <div className="mt-[12.8rem] mb-[3.2rem] text-black font-bold font-default text-[3.6rem]">About</div>
 
-            <div className="about-summary" style={{animation: "1s fadeTop"}}>
+            <div className="max-w-[153.6rem] w-full text-neutral-380 font-bold font-default text-[1.6rem] box-border px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
                 Hello! I'm Warren (if you didn't read the home page LOL). I'm a sophomore studying computer science at Texas A&M with a mission-driven approach to building software. I've always viewed the biggest asset of software to be its ability to help others, whether through games that provide endless entertainment or an app that teaches web development. Nothing brings me more joy in life than writing a program that people enjoy as even though the title of “software engineer” isn't heroic as “firefighter” or “police officer”, I can still very much contribute to my community. Aside from the serious stuff though, I also like clouds, blobs, and watching YouTube.
             </div>
 
-            <div className="tech-stack">
+            <div className="mt-[2.4rem] font-bold font-default text-[2.4rem] flex flex-col items-center px-[1.6rem] max-w-[153.6rem] w-full box-border text-[black] tablet:px-[6.4rem] desktop:px-[12.8rem]">
 
-                <span style={{animation: "1s fadeRight"}}>
+                <span>
                     Tech Stack
                 </span>
 
-                <div className="arrow-down" style={{animation: "1s fadeLeft"}}>
+                <div className="text-[3rem] text-[black] mt-[1.2rem] mb-[3.2rem] mx-[1.8rem] flex">
                     <BsArrowDown/>
                     <BsArrowDown/>
                     <BsArrowDown/>
                 </div>
 
-                <div className="tech-stack-container" style={{animation: "1s fadeTop"}}>
+                <div className="grid grid-cols-tech-stack place-content-center gap-[3.2rem] w-full pb-[6.4rem]">
                     {icon_cards}
                 </div>
 

@@ -16,11 +16,11 @@ export default function Home() {
                 </div>
 
                 <div className="desktop:w-[50.7rem] flex flex-col desktop:items-start desktop:text-left desktop:mr-[3.2rem] mt-[3.2rem] text-center items-center">
-                    <div className="font-default font-bold text-[3rem] text-black mt-[4.2rem] mb-[1.2rem] tablet:text-[4.5rem] desktop:text-[6rem]">
+                    <div className="font-default font-bold text-[3.6rem] text-black mt-[4.2rem] tablet:text-[4.5rem] desktop:text-[6rem]">
                         Hi, I'm Warren
                     </div>
 
-                    <div className="max-w-[47.2rem] mb-[2rem] text-neutral-380 font-bold font-default text-[1.6rem] tablet:text-[1.8rem] desktop:text-[2rem] leading-[2rem]">
+                    <div className="max-w-[47.2rem] mb-[2rem] text-neutral-380 font-bold font-default text-[1.6rem] tablet:text-[1.8rem] desktop:text-[2rem] leading-[2.4rem]">
                         I'm a computer science student and I make software that help people.
                     </div>
 
