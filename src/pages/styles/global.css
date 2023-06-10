@@ -58,10 +58,6 @@
 
 }
 
-html {
-    font-size: 10px;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -87,14 +83,14 @@ body {
     font: var(--un1);
 }
 
-.hidden {
+/* .hidden {
     opacity: 0;
 }
 
 .show {
     animation: fadeTop 1s;  
     opacity: 1;
-}
+} */
 
 .card-wrapper {
     display: grid;
@@ -120,23 +116,7 @@ body {
     }
 }
 
-/* animations */
-@keyframes rot {
-    0% {
-        rotate: 0deg;
-    }
-    100% {
-        rotate: 360deg;
-    }
-}
-@keyframes rot_rev {
-    0% {
-        rotate: 360deg;
-    }
-    100% {
-        rotate: 0deg;
-    }
-}
+
 
 @keyframes fadeBot {
     0% {

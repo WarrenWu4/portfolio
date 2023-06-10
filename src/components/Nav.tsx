@@ -1,4 +1,3 @@
-import "./styles/nav.css";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BsHouseDoorFill, BsFillPersonFill, BsFolderFill } from "react-icons/bs";
@@ -14,19 +13,11 @@ export default function Nav(props: {currLoc:string}) {
     const changeMode = () => {
         setMode((mode==="light") ? "dark":"light");
         if (mode === "light") {
-            document.documentElement.style.setProperty('--neutral-0', "#222326")
-            document.documentElement.style.setProperty('--neutral-500', "#F7F1E6")
-            document.documentElement.style.setProperty('--neutral-360', "#C2B9AA")
-            document.documentElement.style.setProperty('--neutral-380', "#C2B9AA")
-            document.documentElement.style.setProperty('--fade-100', "rgba(0, 0, 0, 1)")
+            document.documentElement.className = "dark";
             setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu_dark.svg":"/close_dark.svg") 
         }
         else {
-            document.documentElement.style.setProperty('--neutral-0', "#fff")
-            document.documentElement.style.setProperty('--neutral-500', "#000000")
-            document.documentElement.style.setProperty('--neutral-360', "#7A7B7D")
-            document.documentElement.style.setProperty('--neutral-380', "#4E4F51")
-            document.documentElement.style.setProperty('--fade-100', "rgba(0, 0, 0, 0.25)")
+            document.documentElement.className = "light"
             setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu.svg":"/close.svg") 
 
         }
@@ -63,50 +54,51 @@ export default function Nav(props: {currLoc:string}) {
 
     useEffect(() => {
         setShowTop("translateY(-110%)");
+        setMenuIcon("/menu.svg")
     }, [props.currLoc])
     
 
 
     return (
-        <div className="nav">
+        <div className="max-w-[1536px] w-full h-[12.8rem] flex items-center justify-between box-border px-[1.6rem] absolute top-0 z-50 tablet:px-[6.4rem] desktop:px-[12.8rem]">
 
             <NavLink to="/">
-                <img src={(mode === "light") ? "/logo.svg":"/logo_dark.svg"} alt="logo" className="nav-icon"/>
+                <img src={(mode === "light") ? "/logo.svg":"/logo_dark.svg"} alt="logo" className="w-[5rem] aspect-square cursor-pointer"/>
             </NavLink>
 
-            <div className="nav-topbar" style={{display:displayBool, transform: showTop}}>
-                <div className="nav-toplinks">
-                    <NavLink to="/home" className="nav-topgroup">
+            <div className="flex justify-center items-end w-full rounded-b-[2rem] shadow-xl fixed top-0 left-0 transition-all ease-in-out duration-[0.5s] pt-[12.8rem] bg-[#fff]" style={{display:displayBool, transform: showTop}}>
+                <div className="[&>a]:cursor-pointer [&>a]:ml-[1.6rem] [&>a]:font-bold [&>a]:font-default [&>a]:text-[2rem] [&>a]:text-black [&>svg]:text-black grid grid-cols-2 pb-[3.2rem] sm:grid-cols-4 sm:gap-0 gap-[2rem]">
+                    <NavLink to="/home" className="flex items-center flex-col w-[12.2rem] h-[5.8rem] [&>svg]:text-[3rem]">
                         <BsHouseDoorFill/>
                         Home
                     </NavLink>
-                    <NavLink to="/projects" className="nav-topgroup">
+                    <NavLink to="/projects" className="flex items-center flex-col w-[12.2rem] h-[5.8rem] [&>svg]:text-[3rem]">
                         <BsFolderFill/>
                         Projects
                     </NavLink>
-                    <NavLink to="/experiences" className="nav-topgroup">
+                    <NavLink to="/experiences" className="flex items-center flex-col w-[12.2rem] h-[5.8rem] [&>svg]:text-[3rem]">
                         <IoMdBriefcase/>
                         Experiences
                     </NavLink>
-                    <NavLink to="/about" className="nav-topgroup">
+                    <NavLink to="/about" className="flex items-center flex-col w-[12.2rem] h-[5.8rem] [&>svg]:text-[3rem]">
                         <BsFillPersonFill/>
                         About
                     </NavLink>
                 </div>
 
-                <img src={(mode==="light") ? "./dark_mode.svg" : "./light_mode.svg"} alt="bruh" className="nav-mode-side" onClick={changeMode}/>
+                <img src={(mode==="light") ? "./dark_mode.svg" : "./light_mode.svg"} alt="bruh" className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem] fixed top-[3.9rem] left-[1.6rem]" onClick={changeMode}/>
 
             </div>
 
             <img 
                 src={menuIcon}
                 alt="menu" 
-                className="nav-icon menu"
+                className="w-[5rem] aspect-square cursor-pointer z-50 tablet:hidden"
                 onClick={showSide}
             />
 
-            <div className="nav-container">
-                <div className="nav-links">
+            <div className="justify-center items-center relative tablet:flex hidden">
+                <div className="[&>*]:cursor-pointer [&>*]:ml-[1.6rem] [&>*]:font-bold [&>*]:font-default [&>*]:text-[2rem] [&>*]:text-black">
                     <NavLink to="/home">Home</NavLink>
                     <NavLink to="/projects">Projects</NavLink>
                     <NavLink to="/experiences">Experiences</NavLink>
@@ -116,7 +108,7 @@ export default function Nav(props: {currLoc:string}) {
                 <img 
                     src={(mode === "light") ? "./dark_mode.svg" : "./light_mode.svg"} 
                     alt="bruh" 
-                    className="nav-mode"
+                    className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem]"
                     onClick={changeMode}
                 />
             </div>

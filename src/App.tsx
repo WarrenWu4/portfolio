@@ -12,7 +12,7 @@ export default function App() {
 
   return (
 
-    <div className='page'>
+    <div className='w-screen flex flex-col justify-center items-center'>
 
       <Nav currLoc={loc.pathname}/>
 
@@ -25,7 +25,7 @@ export default function App() {
           <Route path="/experiences" element={<Experiences/>}/>
           <Route path="/about" element={<About/>}/>
         </Routes>
-        
+
       </AnimatePresence>
 
     </div>
