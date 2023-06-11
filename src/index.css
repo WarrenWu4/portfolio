@@ -30,8 +30,8 @@ html {
 }
 
 .blob span {
-  background-color: var(--neutral-500);
-  border: 0.4rem solid var(--neutral-500);
+  background-color: black;
+  border: 0.4rem solid black;
   position: absolute;
   width: 100%;
   height: 100%;

@@ -1,6 +1,7 @@
 import { FiArrowRightCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-export default function ProjectCard(props: {name: string, desc: string, imgPath?:string, techStack?:any}) {
+export default function ProjectCard(props: {id:number, name: string, desc: string, imgPath?:string, techStack?:any}) {
 
     return (
         <div className="min-w-[30rem] aspect-square shadow-card rounded-[0.4rem] flex flex-col relative">
@@ -11,7 +12,11 @@ export default function ProjectCard(props: {name: string, desc: string, imgPath?
             </div>
             <div className="mt-[1.6rem] mr-[0.8rem] ml-[1.6rem] font-default font-bold text-[black] text-[2.4rem]">{props.name}</div>
             <div className="max-w-[27.2rem] ml-[1.6rem] text-neutral-360 font-bold font-default text-[1.2rem]">{props.desc}</div>
-            <div className="text-neutral-380 absolute flex bottom-[1.2rem] right-[1.6rem] font-default font-bold text-[1.6rem] justify-center items-center cursor-pointer transition-all duration-[0.2s] ease-in-out [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] hover:text-[black] hover:transform hover:translate-x-[0.4rem]">Learn More <FiArrowRightCircle/></div>
+            <Link to={"projects/"+props.id}>
+            <div className="text-neutral-380 absolute flex bottom-[1.2rem] right-[1.6rem] font-default font-bold text-[1.6rem] justify-center items-center cursor-pointer transition-all duration-[0.2s] ease-in-out [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] hover:text-[black] hover:transform hover:translate-x-[0.4rem]">
+                    Learn More <FiArrowRightCircle/>
+            </div>
+            </Link>
         </div>
     )
 }

@@ -25,6 +25,7 @@ export default function Experiences() {
     exp.experiences.map((exp) => {
         expCards.push(
             <ExCard
+                id = {exp.id}
                 org={exp.org}
                 role={exp.role}
                 desc={exp.desc}

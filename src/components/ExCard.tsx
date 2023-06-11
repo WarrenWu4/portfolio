@@ -1,6 +1,7 @@
 import { FiArrowRightCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-export default function ExCard(props: {org:string, role:string, desc:string, imgPath?:string}) {
+export default function ExCard(props: {id:number, org:string, role:string, desc:string, imgPath?:string}) {
 
     const imgContent = (props.imgPath === undefined) ? <div className="w-[5rem] aspect-square rounded-[0.4rem] box-border bg-center bg-no-repeat bg-contain mr-[0.6rem]" style={{background: "var(--neutral-360)"}}></div>
     :
@@ -16,7 +17,11 @@ export default function ExCard(props: {org:string, role:string, desc:string, img
                 </div>
             </div>
             <div className="text-neutral-360 font-bold font-default text-[1.2rem] w-[27.2rem]">{props.desc}</div>
-            <div className="text-neutral-380 absolute flex bottom-[1.2rem] right-[1.6rem] font-default font-bold text-[1.6rem] justify-center items-center cursor-pointer transition-all duration-[0.2s] ease-in-out [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] hover:text-[black] hover:transform hover:translate-x-[0.4rem]">Learn More <FiArrowRightCircle/></div>
+            <Link to={"experiences/"+props.id}>
+            <div className="text-neutral-380 absolute flex bottom-[1.2rem] right-[1.6rem] font-default font-bold text-[1.6rem] justify-center items-center cursor-pointer transition-all duration-[0.2s] ease-in-out [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] hover:text-[black] hover:transform hover:translate-x-[0.4rem]">
+                Learn More <FiArrowRightCircle/>
+            </div>
+            </Link>
         </div>
     )
 }

@@ -26,6 +26,7 @@ export default function Projects() {
     proj.projects.map((project) => {
         projCards.push(
             <ProjectCard
+                id = {project.id}
                 name={project.name}
                 desc={project.desc}
                 techStack={IconGen({icons: project.techstack})}
