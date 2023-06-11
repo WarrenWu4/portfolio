@@ -86,7 +86,7 @@ export default function Nav(props: {currLoc:string}) {
                     </NavLink>
                 </div>
 
-                <img src={(mode==="light") ? "./dark_mode.svg" : "./light_mode.svg"} alt="bruh" className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem] fixed top-[3.9rem] left-[1.6rem]" onClick={changeMode}/>
+                <img src={(mode==="light") ? "/dark_mode.svg" : "/light_mode.svg"} alt="bruh" className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem] fixed top-[3.9rem] left-[1.6rem]" onClick={changeMode}/>
 
             </div>
 
@@ -107,7 +107,7 @@ export default function Nav(props: {currLoc:string}) {
                 </div>
 
                 <img 
-                    src={(mode === "light") ? "./dark_mode.svg" : "./light_mode.svg"} 
+                    src={(mode === "light") ? "/dark_mode.svg" : "/light_mode.svg"} 
                     alt="bruh" 
                     className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem]"
                     onClick={changeMode}

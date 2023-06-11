@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "name": "Personal Portfolio",
+      "name": "Portfolio",
       "desc": "A website that showcases my projects, experiences, and other information about me. Features a secret easter egg.",
       "techstack": ["figma", "typescript", "react", "css"],
       "imgPath": "/proj_portfolio.png"
