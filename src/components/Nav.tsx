@@ -5,7 +5,7 @@ import { IoMdBriefcase } from "react-icons/io"
 
 export default function Nav(props: {currLoc:string}) {
 
-    const [mode, setMode] = useState("light");
+    const [mode, setMode] = useState((localStorage.getItem("theme") === null) ? "light":localStorage.getItem("theme"));
     const [menuIcon, setMenuIcon] = useState("/menu.svg");
     const [showTop, setShowTop] = useState("translateY(-110%)");
     const [displayBool, setDisplayBool] = useState("flex");
@@ -14,10 +14,12 @@ export default function Nav(props: {currLoc:string}) {
         setMode((mode==="light") ? "dark":"light");
         if (mode === "light") {
             document.documentElement.className = "dark";
+            localStorage.setItem("theme", "dark");
             setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu_dark.svg":"/close_dark.svg") 
         }
         else {
             document.documentElement.className = "light"
+            localStorage.setItem("theme", "light");
             setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu.svg":"/close.svg") 
 
         }
@@ -54,20 +56,20 @@ export default function Nav(props: {currLoc:string}) {
 
     useEffect(() => {
         setShowTop("translateY(-110%)");
-        setMenuIcon("/menu.svg")
+        setMenuIcon((mode === "light") ? "/menu.svg":"/menu_dark.svg")
     }, [props.currLoc])
     
 
 
     return (
-        <div className="max-w-[1536px] w-full h-[12.8rem] flex items-center justify-between box-border px-[1.6rem] absolute top-0 z-50 tablet:px-[6.4rem] desktop:px-[12.8rem]">
+        <div className="max-w-[1536px] w-screen h-[12.8rem] flex items-center justify-between box-border px-[1.6rem] absolute top-0 z-50 tablet:px-[6.4rem] desktop:px-[12.8rem]">
 
             <NavLink to="/">
                 <img src={(mode === "light") ? "/logo.svg":"/logo_dark.svg"} alt="logo" className="w-[5rem] aspect-square cursor-pointer"/>
             </NavLink>
 
-            <div className="flex justify-center items-end w-full rounded-b-[2rem] shadow-xl fixed top-0 left-0 transition-all ease-in-out duration-[0.5s] pt-[12.8rem] bg-[#fff]" style={{display:displayBool, transform: showTop}}>
-                <div className="[&>a]:cursor-pointer [&>a]:ml-[1.6rem] [&>a]:font-bold [&>a]:font-default [&>a]:text-[2rem] [&>a]:text-black [&>svg]:text-black grid grid-cols-2 pb-[3.2rem] sm:grid-cols-4 sm:gap-0 gap-[2rem]">
+            <div className="flex justify-center items-end w-full rounded-b-[2rem] shadow-card fixed top-0 left-0 transition-all ease-in-out duration-[0.5s] pt-[12.8rem] bg-[#fff] dark:bg-dark-bg dark:shadow-card-dark" style={{display:displayBool, transform: showTop}}>
+                <div className="[&>a]:cursor-pointer [&>a]:ml-[1.6rem] [&>a]:font-bold [&>a]:font-default [&>a]:text-[2rem] [&>a]:text-black [&>svg]:text-black grid grid-cols-2 pb-[3.2rem] sm:grid-cols-4 sm:gap-0 gap-[2rem] [&>*]:dark:text-dark-100">
                     <NavLink to="/home" className="flex items-center flex-col w-[12.2rem] h-[5.8rem] [&>svg]:text-[3rem]">
                         <BsHouseDoorFill/>
                         Home
@@ -99,7 +101,7 @@ export default function Nav(props: {currLoc:string}) {
             />
 
             <div className="justify-center items-center relative tablet:flex hidden">
-                <div className="[&>*]:cursor-pointer [&>*]:ml-[1.6rem] [&>*]:font-bold [&>*]:font-default [&>*]:text-[2rem] [&>*]:text-black">
+                <div className="[&>*]:cursor-pointer [&>*]:ml-[1.6rem] [&>*]:font-bold [&>*]:font-default [&>*]:text-[2rem] [&>*]:text-black [&>*]:dark:text-dark-100">
                     <NavLink to="/home">Home</NavLink>
                     <NavLink to="/projects">Projects</NavLink>
                     <NavLink to="/experiences">Experiences</NavLink>

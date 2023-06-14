@@ -7,9 +7,22 @@ import Experiences from "./pages/Experiences";
 import ExpInfo from './components/ExpInfo';
 import About from "./pages/About";
 import Nav from './components/Nav';
+import { useEffect } from 'react';
 
 export default function App() {
   const loc = useLocation();
+
+  // configure theme on initial load
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    // default theme
+    if (theme === null) {
+      document.documentElement.className = "light";
+    }
+    else {
+      document.documentElement.className = localStorage.getItem("theme")!;
+    }
+  },[])
 
   return (
 

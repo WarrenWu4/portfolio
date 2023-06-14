@@ -18,6 +18,12 @@ html {
   overflow-x: hidden;
 }
 
+@layer base {
+  body {
+    @apply bg-[white] dark:bg-dark-bg;
+  }
+}
+
 .blob {
   width: 15rem;
   aspect-ratio: 1;
@@ -93,5 +99,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: black;
 }
-
-/* markdown styling */

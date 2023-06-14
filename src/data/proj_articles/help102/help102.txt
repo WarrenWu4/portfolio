@@ -1,0 +1,3 @@
+### A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M
+## Why build this?
+### Since my high school years, I've been very passionate about teaching others, whether it be math or chess or computer science. I love seeing the joy others feel when the finally understand a concept or when they are able to build something cool. As such, the underlining driver for creating this website was mainly fueled by my passion as an educator. Another aspect that I'm
