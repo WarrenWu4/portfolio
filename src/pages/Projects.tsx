@@ -24,6 +24,8 @@ export default function Projects() {
 
     const projCards:any[] = []
     proj.projects.map((project) => {
+        let github_link = (project.links.length >= 2) ? project.links[1]: "" 
+        let web_link = (project.links.length >= 3) ? project.links[2]: "" 
         projCards.push(
             <ProjectCard
                 key = {project.id}
@@ -32,6 +34,8 @@ export default function Projects() {
                 desc={project.desc}
                 techStack={IconGen({icons: project.techstack})}
                 imgPath={project.imgPath}
+                github={github_link}
+                weblink={web_link}
             />
         )
     })
