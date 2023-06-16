@@ -11,7 +11,7 @@ export default function About() {
     })
 
     return (
-        <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
+        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
 
             <div className="mt-[12.8rem] mb-[3.2rem] text-black font-bold font-default text-[3.6rem] dark:text-dark-100">About</div>
 

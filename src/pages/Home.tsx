@@ -12,7 +12,7 @@ export default function Home() {
     }
 
     return (
-        <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative bg-[white] dark:bg-dark-bg">
+        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative bg-[white] dark:bg-dark-bg">
 
             <div className="max-w-[153.6rem] w-full h-screen box-border flex flex-col desktop:flex-row items-center justify-center text-center px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
 

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { BsGlobe, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -19,7 +20,7 @@ export default function ProjectCard(props: {id:number, name: string, desc: strin
     ""
 
     return (
-        <div className="min-w-[30rem] aspect-square shadow-card dark:shadow-card-dark rounded-[0.4rem] flex flex-col relative">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 1, ease:"easeInOut" }} variants={{visible: { opacity: 1 },hidden: { opacity: 0 }}} className="w-[30rem] aspect-square shadow-card dark:shadow-card-dark rounded-[0.4rem] flex flex-col relative">
 
             <div className="border-b-[0.2rem] border-solid border-[black] box-border w-full h-[55%] bg-neutral-360 bg-no-repeat bg-top bg-cover rounded-t-[0.4rem] relative group" style={{backgroundImage: `url("/proj_img${props.imgPath}")`}}>
                 <div className="absolute top-0 left-0 w-full h-full bg-[black]/[0.8] font-bold font-default text-[white] text-[2.4rem] rounded-[0.2rem] flex justify-center items-center flex-wrap opacity-0 transition-[opacity] duration-[0.2s] ease-in-out group-hover:opacity-100 [&>*]:m-[0.8rem]">
@@ -28,7 +29,7 @@ export default function ProjectCard(props: {id:number, name: string, desc: strin
             </div>
 
             <div className="mt-[1.6rem] mr-[0.8rem] ml-[1.6rem] font-default font-bold text-[black] dark:text-dark-100 text-[2.4rem]">{props.name}</div>
-            <div className="max-w-[27.2rem] ml-[1.6rem] h-[4rem] text-neutral-360 font-bold font-default text-[1.2rem] dark:text-dark-360 text-ellipsis overflow-hidden">{props.desc}</div>
+            <div className="max-w-[27.2rem] ml-[1.6rem] h-[4rem] text-neutral-360 font-bold font-default text-[1.2rem] dark:text-dark-360 text-ellipsis overflow-hidden line-clamp-2">{props.desc}</div>
 
             <div className="flex [&>*]:mr-[0.8rem] text-[2rem] absolute bottom-[1.2rem] left-[1.6rem]">
                 {githubComp}
@@ -41,6 +42,6 @@ export default function ProjectCard(props: {id:number, name: string, desc: strin
             </div>
             </Link>
 
-        </div>
+        </motion.div>
     )
 }

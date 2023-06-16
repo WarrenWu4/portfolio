@@ -15,7 +15,7 @@ export default function ExpInfo() {
     })
 
     return (
-        <motion.div exit={{opacity: 0, transform: "translateY(20vw)"}} transition={{duration:0.6, ease:"easeInOut"}}  className="w-screen h-screen flex flex-col items-center relative">
+        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
             <div className="mt-[12.8rem] mb-[2rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem]">{title}</div>
             
             <div></div>
