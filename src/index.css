@@ -41,7 +41,6 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: all 1s;
 }
 
 .blob:hover > span {

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import IconGen from "../data/IconGen";
 import ProjectCard from "../components/ProjectCard";
 

@@ -1,6 +1,5 @@
 import ExCard from "../components/ExCard";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 import exp from "../data/exp.json";
 

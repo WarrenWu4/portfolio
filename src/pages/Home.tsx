@@ -1,8 +1,15 @@
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Home() {
+
+    const [secret, setSecret] = useState("none")
+
+    const showSecret = () => {
+        setSecret((secret === "none") ? "flex":"none")
+    }
 
     return (
         <motion.div exit={{opacity: 0, transform: "translateX(-60vw)"}} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative bg-[white] dark:bg-dark-bg">
@@ -13,6 +20,7 @@ export default function Home() {
                     <span />
                     <span />
                     <span />
+                    <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center p-[2rem] text-[black] font-default font-bold dark:text-dark-100">There's a secret somewhere on this page, but not here</div>
                 </div>
 
                 <div className="desktop:w-[50.7rem] flex flex-col desktop:items-start desktop:text-left desktop:mr-[3.2rem] mt-[3.2rem] text-center items-center">
@@ -42,8 +50,11 @@ export default function Home() {
 
             </div>
 
-            <div className="absolute left-[1.6rem] bottom-[1.6rem] text-[1.2rem] font-default text-neutral-380 dark:text-dark-380 font-bold">
-                Made with 💚 by Warren Wu
+            <div className="absolute max-w-[153.6rem] w-full bottom-[1.6rem] text-[1.2rem] font-default text-neutral-380 dark:text-dark-380 font-bold px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] flex">
+                Made with 
+                <div style={{display: secret}} className="absolute top-[-3.2rem] left-[1.6rem] bg-neutral-380 rounded-[0.4rem] text-[white] px-[0.8rem] py-[0.4rem] tablet:left-[6.4rem] desktop:left-[12.8rem] dark:bg-dark-380 dark:text-[black]">Access Code: G5zv1Z8W7Nx24bf&f@bZ</div>
+                <div className="cursor-pointer " onClick={showSecret}>💚</div>
+                by Warren Wu
             </div>
 
         </motion.div>
