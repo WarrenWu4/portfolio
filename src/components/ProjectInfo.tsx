@@ -35,7 +35,9 @@ export default function ProjectInfo() {
             
 
             <div className="max-w-[1536px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] [&>h2]:text-[black] [&>h2]:dark:text-dark-100 [&>h2]:font-bold [&>h2]:text-[2.4rem] [&>h2]:my-[2.4rem] [&>h3]:text-neutral-380 [&>h3]:dark:text-dark-360 [&>h3]:text-[1.6rem] [&>h3]:font-semibold font-default">
-                <ReactMarkdown children={mdInfo}/>
+                <ReactMarkdown>
+                    {mdInfo}
+                </ReactMarkdown>
             </div>
 
             <div className="max-w-[1536px] w-screen flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] my-[4.8rem] [&>*]:mr-[2rem]">

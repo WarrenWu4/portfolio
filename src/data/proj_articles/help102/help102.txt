@@ -1,3 +1,3 @@
-### A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M
+### Help102 is a web app built for the ENGR 102 course (intro to Python) taken by all incoming engineering freshmen at Texas A&M. The web app provides 3 main resources in the form of a learning page, a review page, and a labs page.
 ## Why build this?
 ### Since my high school years, I've been very passionate about teaching others, whether it be math or chess or computer science. I love seeing the joy others feel when the finally understand a concept or when they are able to build something cool. As such, the underlining driver for creating this website was mainly fueled by my passion as an educator. Another aspect that I'm
