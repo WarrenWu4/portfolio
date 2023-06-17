@@ -29,7 +29,7 @@ export default function Home() {
                     </div>
 
                     <div className="max-w-[47.2rem] mb-[2rem] text-neutral-380 dark:text-dark-380 font-bold font-default text-[1.6rem] tablet:text-[1.8rem] desktop:text-[2rem] leading-[2.4rem]">
-                        I'm a computer science student and I make software that help people.
+                        I'm a software engineer and I create apps that help people.
                     </div>
 
                     <div className="flex [&>*]:font-default [&>*]:font-bold [&>*]:text-[2.5rem] text-black [&>*]:mx-[0.8rem] tablet:[&>*]:text-[3rem] [&>*]:dark:text-dark-100">

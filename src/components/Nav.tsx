@@ -97,7 +97,7 @@ export default function Nav(props: {currLoc:string}) {
                 alt="menu" 
                 className="w-[5rem] aspect-square cursor-pointer z-50 tablet:hidden"
                 onClick={showSide}
-                style={{position: (showTop === "translateY(-110%)") ? "relative":"fixed", top: (showTop === "translateY(-110%)") ? "0":"3.9rem", right: (showTop === "translateY(-110%)") ? "0": "1.6rem"}}
+                style={{position: (showTop === "translateY(-110%)") ? "relative":"fixed", top: (showTop === "translateY(-110%)") ? "0":"3.9rem", left: (showTop === "translateY(-110%)") ? "0": "calc(100vw - 6.6rem)"}}
             />
 
             <div className="justify-center items-center relative tablet:flex hidden">
