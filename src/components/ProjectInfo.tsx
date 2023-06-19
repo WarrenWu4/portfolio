@@ -30,15 +30,13 @@ export default function ProjectInfo() {
     :
     ""
 
-    const test = `### testing test test testing test random test\n ## Purpose`
-
     return (
         <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
             <div className="mt-[12.8rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem]">{title}</div>
             
 
             <div className="max-w-[1536px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] [&>h2]:text-[black] [&>h2]:dark:text-dark-100 [&>h2]:font-bold [&>h2]:text-[2.4rem] [&>h2]:my-[2.4rem] [&>h3]:text-neutral-380 [&>h3]:dark:text-dark-360 [&>h3]:text-[1.6rem] [&>h3]:font-semibold font-default">
-                <ReactMarkdown children={test} />
+                <ReactMarkdown children={mdInfo} />
             </div>
 
             <div className="max-w-[1536px] w-screen flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] py-[4.8rem] [&>*]:mr-[2rem]">
