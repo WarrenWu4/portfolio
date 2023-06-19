@@ -26,7 +26,7 @@
       "techstack": ["figma", "javascript", "react", "css"],
       "imgPath": "/proj_102.png",
       "links": [
-        "/help102/help102.txt",
+        "/help102/help102.md",
         "https://github.com/WarrenWu4/help102",
         "https://help102.vercel.app/"
       ]
