@@ -10,9 +10,9 @@ export default function ProjectInfo() {
     const id = useParams() as any;
     const title:string = data.projects[id.id-1].name;
 
-    const [mdInfo, setMdInfo] = useState("")
+    const [mdInfo, setMdInfo] = useState(``)
     useEffect(() => {
-        fetch('/src/data/proj_articles'+data.projects[id.id-1].links[0]).then(res=>res.text()).then(text=>setMdInfo(text));
+        fetch('/test.md').then(res=>res.text()).then(text=>setMdInfo(text));
         console.log(mdInfo)
     })
 
@@ -30,7 +30,7 @@ export default function ProjectInfo() {
     :
     ""
 
-    const test = `### testing test test testing test random test`
+    const test = `### testing test test testing test random test\n ## Purpose`
 
     return (
         <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
