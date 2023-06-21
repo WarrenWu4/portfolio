@@ -6,7 +6,7 @@
       "role": "IT Intern",
       "desc": "Wdsafasdfasdf",
       "imgPath": "/ex_gm.png",
-      "links": ["/gm/gm.txt"]
+      "links": ["/gm.md"]
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "role": "Workshops Officer",
       "desc": "sdafsdf",
       "imgPath": "/ex_1.png",
-      "links": ["/acc/acc.txt"]
+      "links": ["/acc.md"]
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "role": "Developer",
       "desc": "asdfsadfsddf",
       "imgPath": "/ex_td.webp",
-      "links": ["/datathon/datathon.txt"]
+      "links": ["/datathon.md"]
     }
   ]
 }

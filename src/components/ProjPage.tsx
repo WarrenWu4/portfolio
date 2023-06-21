@@ -51,8 +51,7 @@ export function ProjInfo() {
 
     const [mdInfo, setMdInfo] = useState(``)
     useEffect(() => {
-        fetch('/test.md').then(res=>res.text()).then(text=>setMdInfo(text));
-        console.log(mdInfo)
+        fetch('/proj_articles'+data.projects[id.id-1].links[0]).then(res=>res.text()).then(text=>setMdInfo(text));
     })
 
     const githubComp = (data.projects[id.id-1].links.length >= 2) ? 
@@ -74,7 +73,7 @@ export function ProjInfo() {
             <div className="mt-[12.8rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem]">{title}</div>
             
 
-            <div className="max-w-[1536px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] [&>h2]:text-[black] [&>h2]:dark:text-dark-100 [&>h2]:font-bold [&>h2]:text-[2.4rem] [&>h2]:my-[2.4rem] [&>h3]:text-neutral-380 [&>h3]:dark:text-dark-360 [&>h3]:text-[1.6rem] [&>h3]:font-semibold font-default">
+            <div className="max-w-[1536px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
                 <ReactMarkdown children={mdInfo} />
             </div>
 

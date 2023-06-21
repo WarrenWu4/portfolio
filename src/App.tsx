@@ -67,7 +67,7 @@ export default function App() {
 function Nav(props: {currLoc:string}) {
 
     const [mode, setMode] = useState((localStorage.getItem("theme") === null) ? "light":localStorage.getItem("theme"));
-    const [menuIcon, setMenuIcon] = useState("/menu.svg");
+    const [menuIcon, setMenuIcon] = useState("/img/menu.svg");
     const [showTop, setShowTop] = useState("translateY(-110%)");
     const [displayBool, setDisplayBool] = useState("flex");
 
@@ -76,22 +76,22 @@ function Nav(props: {currLoc:string}) {
         if (mode === "light") {
             document.documentElement.className = "dark";
             localStorage.setItem("theme", "dark");
-            setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu_dark.svg":"/close_dark.svg") 
+            setMenuIcon((menuIcon === "/img/menu.svg" || menuIcon === "/img/menu_dark.svg") ? "/img/menu_dark.svg":"/img/close_dark.svg") 
         }
         else {
             document.documentElement.className = "light"
             localStorage.setItem("theme", "light");
-            setMenuIcon((menuIcon === "/menu.svg" || menuIcon === "/menu_dark.svg") ? "/menu.svg":"/close.svg") 
+            setMenuIcon((menuIcon === "/img/menu.svg" || menuIcon === "/img/menu_dark.svg") ? "/img/menu.svg":"/img/close.svg") 
 
         }
     }
 
     const showSide = () => {
         if (mode === "light") {
-            setMenuIcon((menuIcon === "/menu.svg") ? "/close.svg":"/menu.svg");
+            setMenuIcon((menuIcon === "/img/menu.svg") ? "/img/close.svg":"/img/menu.svg");
         }
         else {
-            setMenuIcon((menuIcon === "/menu_dark.svg") ? "/close_dark.svg":"/menu_dark.svg");
+            setMenuIcon((menuIcon === "/img/menu_dark.svg") ? "/img/close_dark.svg":"/img/menu_dark.svg");
         }
         setShowTop((showTop === "translateY(-110%)") ? "translateY(0)":"translateY(-110%)");
     }
@@ -99,7 +99,7 @@ function Nav(props: {currLoc:string}) {
     useEffect(() => {
         const changeNav = () => {
             if (window.innerWidth >= 768) {
-                setMenuIcon((mode==="light")? "/menu.svg":"/menu_dark.svg");
+                setMenuIcon((mode==="light")? "/img/menu.svg":"/img/menu_dark.svg");
                 setShowTop("translateY(-110%)");
                 setDisplayBool("none");
             }
@@ -117,7 +117,7 @@ function Nav(props: {currLoc:string}) {
 
     useEffect(() => {
         setShowTop("translateY(-110%)");
-        setMenuIcon((mode === "light") ? "/menu.svg":"/menu_dark.svg")
+        setMenuIcon((mode === "light") ? "/img/menu.svg":"/img/menu_dark.svg")
     }, [props.currLoc])
     
 
@@ -126,7 +126,7 @@ function Nav(props: {currLoc:string}) {
         <div className="max-w-[1536px] w-screen h-[12.8rem] flex items-center justify-between box-border px-[1.6rem] absolute top-0 z-50 tablet:px-[6.4rem] desktop:px-[12.8rem]">
 
             <NavLink to="/">
-                <img src={(mode === "light") ? "/logo.svg":"/logo_dark.svg"} alt="logo" className="w-[5rem] aspect-square cursor-pointer"/>
+                <img src={(mode === "light") ? "/img/logo.svg":"/img/logo_dark.svg"} alt="logo" className="w-[5rem] aspect-square cursor-pointer"/>
             </NavLink>
 
             <div className="flex justify-center items-end w-full rounded-b-[2rem] shadow-card fixed top-0 left-0 transition-all ease-in-out duration-[0.5s] pt-[12.8rem] bg-[#fff] dark:bg-dark-bg dark:shadow-card-dark" style={{display:displayBool, transform: showTop}}>
@@ -149,7 +149,7 @@ function Nav(props: {currLoc:string}) {
                     </NavLink>
                 </div>
 
-                <img src={(mode==="light") ? "/dark_mode.svg" : "/light_mode.svg"} alt="bruh" className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem] fixed top-[3.9rem] left-[1.6rem]" onClick={changeMode}/>
+                <img src={(mode==="light") ? "/img/dark_mode.svg" : "/img/light_mode.svg"} alt="bruh" className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem] fixed top-[3.9rem] left-[1.6rem]" onClick={changeMode}/>
 
             </div>
 
@@ -170,7 +170,7 @@ function Nav(props: {currLoc:string}) {
                 </div>
 
                 <img 
-                    src={(mode === "light") ? "/dark_mode.svg" : "/light_mode.svg"} 
+                    src={(mode === "light") ? "/img/dark_mode.svg" : "/img/light_mode.svg"} 
                     alt="bruh" 
                     className="w-[3rem] aspect-square cursor-pointer ml-[3.2rem]"
                     onClick={changeMode}

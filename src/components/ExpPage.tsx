@@ -66,15 +66,15 @@ export default function ExpCard(props: {id:number, org:string, role:string, desc
 
     const imgContent = (props.imgPath === undefined) ? <div className="w-[5rem] aspect-square rounded-[0.4rem] box-border bg-center bg-no-repeat bg-contain mr-[0.6rem]" style={{background: "var(--neutral-360)"}}></div>
     :
-    <img src={"/ex_img"+props.imgPath} alt="ex-img" className="w-[5rem] aspect-square rounded-[0.4rem] box-border bg-center bg-no-repeat bg-contain mr-[0.6rem]"/>
+    <img src={"/ex_img"+props.imgPath} alt="ex-img" className="w-[5rem] h-[5rem] aspect-square rounded-[0.4rem] box-border bg-center bg-no-repeat bg-contain mr-[0.6rem]"/>
 
     return (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 1, ease:"easeInOut" }} variants={{visible: { opacity: 1 },hidden: { opacity: 0 }}}  className="min-w-[30rem] min-h-[20rem] rounded-[0.4rem] shadow-card dark:shadow-card-dark flex flex-col items-center relative">
             <div className="mt-[1.6rem] mb-[0.8rem] w-[27.6rem] height-[5rem] flex">
                 {imgContent}
                 <div className="h-full flex flex-col justify-between items-start">
-                    <div className="text-[black] text-[2.4rem] font-bold font-default dark:text-dark-100">{props.org}</div>
-                    <div className="text-neutral-380 text-[1.6rem] font-bold font-default dark:text-dark-380 text-ellipsis overflow-hidden line-clamp-4">{props.role}</div>
+                    <div className="text-[black] text-[2.4rem] h-[2.9rem] font-bold font-default dark:text-dark-100">{props.org}</div>
+                    <div className="text-neutral-380 text-[1.6rem] h-[1.9rem] font-bold font-default dark:text-dark-380 text-ellipsis overflow-hidden line-clamp-4">{props.role}</div>
                 </div>
             </div>
             <div className="text-neutral-360 dark:text-dark-360 font-bold font-default text-[1.2rem] w-[27.2rem]">{props.desc}</div>
