@@ -8,8 +8,6 @@ For many students at A&M, freshmen year is one of the most stressful periods of 
 
 ## Problems
 
-- hello there my name is shithead
-
 ## Solutions
 
 # Reflection
