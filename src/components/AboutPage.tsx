@@ -1,8 +1,8 @@
 import { BsArrowDown } from "react-icons/bs";
 import { motion } from "framer-motion";
-import IconGen from "../data/IconGen";
+import {IconGen} from "../App";
 
-export default function About() {
+export default function AboutPage() {
 
     const icons:any[] = IconGen({icons:["all"]})
     let icon_cards:any[] = []

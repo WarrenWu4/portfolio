@@ -3,7 +3,7 @@ import { SiGmail } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function Home() {
+export default function HomePage() {
 
     const [secret, setSecret] = useState("none")
 
