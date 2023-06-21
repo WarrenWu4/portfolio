@@ -77,7 +77,7 @@ export default function ExpCard(props: {id:number, org:string, role:string, desc
                     <div className="text-neutral-380 text-[1.6rem] h-[1.9rem] font-bold font-default dark:text-dark-380 text-ellipsis overflow-hidden line-clamp-4">{props.role}</div>
                 </div>
             </div>
-            <div className="text-neutral-360 dark:text-dark-360 font-bold font-default text-[1.2rem] w-[27.2rem]">{props.desc}</div>
+            <div className="text-neutral-360 dark:text-dark-360 font-bold font-default text-[1.2rem] w-[27.2rem] text-ellipsis overflow-hidden line-clamp-5">{props.desc}</div>
             <Link to={"./"+props.id}>
             <div className="text-neutral-380 dark:text-dark-380 absolute flex bottom-[1.2rem] right-[1.6rem] font-default font-bold text-[1.6rem] cursor-pointer [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] hover:text-[black] dark:hover:text-dark-100 hover:translate-x-[0.4rem] transition-all duration-[0.4s]">
                     Learn More <FiArrowRightCircle className="translate-y-[0.16rem]" />

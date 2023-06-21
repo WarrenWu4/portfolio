@@ -99,3 +99,17 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: black;
 }
+
+/* markdown styling */
+h1 {
+ @apply font-default text-[dark] dark:text-dark-100 text-[2.4rem] font-bold my-[2rem]
+}
+h2 {
+  @apply font-default text-[dark] dark:text-dark-100 text-[2rem] font-bold my-[1.6rem] pl-[2.4rem]
+}
+p {
+  @apply font-default text-neutral-380 dark:text-dark-100 text-[1.6rem] font-bold
+}
+li {
+  @apply font-default text-neutral-380 dark:text-dark-100 text-[1.6rem] font-bold pl-[3.6rem]
+}
