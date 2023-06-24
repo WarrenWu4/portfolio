@@ -15,7 +15,7 @@ export default function AboutPage() {
 
             <div className="mt-[12.8rem] mb-[3.2rem] text-black font-bold font-default text-[3.6rem] dark:text-dark-100">About</div>
 
-            <div className="max-w-[153.6rem] w-full text-neutral-380 dark:text-dark-380 font-bold font-default text-[1.6rem] box-border px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
+            <div className="max-w-[153.6rem] w-full text-[black] leading-[1.5] dark:text-dark-380 font-medium font-default text-[1.6rem] box-border px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
             Hello! I'm Warren (if you didn't read the home page, LOL). I'm a sophomore pursuing computer science at Texas A&M with a passion for mission-driven software development. I believe that the true power of software lies in its ability to positively impact people's lives, whether it's creating captivating games for endless entertainment or developing educational apps. I simply find immense satisfaction in knowing that my programs bring joy and value to others. While the title of "software engineer" may not carry the same heroic aura as "firefighter" or "police officer," I strongly believe that I can make a meaningful contribution to my community through my coding skills. On a lighter note, I also have a fascination with clouds, blobs, and enjoy spending time watching YouTube. Feel free to connect/contact me if you think I'm pretty chill dude 😊.
             </div>
 

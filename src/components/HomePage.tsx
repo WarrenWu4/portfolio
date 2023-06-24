@@ -28,7 +28,7 @@ export default function HomePage() {
                         Hi, I'm Warren
                     </div>
 
-                    <div className="max-w-[47.2rem] mb-[2rem] text-neutral-380 dark:text-dark-380 font-bold font-default text-[1.6rem] tablet:text-[1.8rem] desktop:text-[2rem] leading-[2.4rem]">
+                    <div className="max-w-[47.2rem] mb-[2rem] text-neutral-380 dark:text-dark-380 font-semibold font-default text-[1.6rem] tablet:text-[1.8rem] desktop:text-[2rem] leading-[2.4rem]">
                         I'm a software engineer and I create apps that help people.
                     </div>
 

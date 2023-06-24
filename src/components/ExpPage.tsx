@@ -45,12 +45,12 @@ export function ExpInfo() {
 
     const [mdInfo, setMdInfo] = useState("")
     useEffect(() => {
-        fetch('/src/data/exp_articles'+data.experiences[id.id-1].links[0]).then(res=>res.text()).then(text=>setMdInfo(text))
+        fetch('/exp_articles/'+data.experiences[id.id-1].links[0]).then(res=>res.text()).then(text=>setMdInfo(text))
     })
 
     return (
         <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
-            <div className="mt-[12.8rem] mb-[2rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem]">{title}</div>
+            <div className="mt-[12.8rem] mb-[1.6rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem]">{title}</div>
             
             <div></div>
 
