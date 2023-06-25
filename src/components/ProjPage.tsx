@@ -73,11 +73,11 @@ export function ProjInfo() {
             <div className="mt-[12.8rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem] mb-[1.6rem]">{title}</div>
             
 
-            <div className="max-w-[1536px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]">
+            <div className="max-w-[1024px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]" id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 
-            <div className="max-w-[1536px] w-screen flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] py-[4.8rem] [&>*]:mr-[2rem]">
+            <div className="max-w-[1024px] w-screen flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] py-[4.8rem] [&>*]:mr-[2rem]">
                 {githubComp}
                 {weblinkComp}
             </div>

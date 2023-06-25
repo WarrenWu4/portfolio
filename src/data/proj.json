@@ -5,7 +5,7 @@
       "name": "help102",
       "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
       "techstack": ["figma", "javascript", "react", "css"],
-      "imgPath": "/proj_102.png",
+      "imgPath": "/help102/help102_4_design4.png",
       "links": [
         "/help102.md",
         "https://github.com/WarrenWu4/help102",
