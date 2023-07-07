@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom";
 import { BsHouseDoorFill, BsFillPersonFill, BsFolderFill } from "react-icons/bs";
 import { IoMdBriefcase } from "react-icons/io"
+import { useLocation } from "react-router-dom";
 
 import logo from "/img/logo.svg"
 import theme from "/img/dark_mode.svg"
@@ -10,19 +11,27 @@ export default function Nav() {
 
     const changeTheme = (e:any) => {
         e.preventDefault()
+        // todo
         console.log("WORK IN PROGRESS")
     }
 
+    const path:string = useLocation().pathname
+
     return (
-        <nav className="max-w-[768px] mt-[3.2rem] h-[5rem] flex items-center w-full px-[6.4rem] [&>*]:mr-[1.6rem] font-bold text-[2rem] text-black/70">
+        <nav className="max-w-[768px] mt-[3.2rem] h-[5rem] flex items-center w-full px-[6.4rem] [&>*]:mr-[1.6rem] font-bold text-[2rem] text-black/70 ">
 
             <NavLink to={"/"}>
                 <img src={logo} alt="logo" className="w-[5rem] aspect-square"/>
             </NavLink>
 
-            <NavLink to={"/projects"}>PROJ</NavLink>
-            <NavLink to={"/blog"}>BLOG</NavLink>
-            <NavLink to={"/miscellaneous"}>MISC</NavLink>
+            <NavLink 
+            className={(path === "/proj") ? 'is-active':'not-active'} 
+            to="/proj">
+                    PROJ
+            </NavLink>
+
+            <NavLink className={(path === "/blog") ? 'is-active':'not-active'}  to="/blog" >BLOG</NavLink>
+            <NavLink className={(path === "/misc") ? 'is-active':'not-active'}  to="/misc" >MISC</NavLink>
 
             <button type="button" onClick={changeTheme}>
                 <img src={theme} alt="theme" className="w-[2.4rem] aspect-square" />

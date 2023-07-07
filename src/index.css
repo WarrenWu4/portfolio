@@ -25,6 +25,18 @@ html {
   }
 }
 
+.not-active, .is-active {
+  @apply h-[4rem] border-b-4 border-solid flex justify-center items-center transition-all duration-[0.4] ease-in-out hover:text-black
+}
+
+.is-active {
+  @apply text-black border-black
+}
+
+.not-active {
+  @apply text-black/70 border-transparent
+}
+
 #spotlight::before {
   content: "";
   position: absolute;
