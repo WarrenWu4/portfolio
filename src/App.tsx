@@ -13,6 +13,8 @@ import AboutPage from "./components/AboutPage";
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
 
+import MiscPage, { AdminLogin, MyMusic, MiniGame } from './components/MiscPage';
+
 export default function App() {
 
   return (
@@ -25,6 +27,10 @@ export default function App() {
 
         <Route path="/" element={<HomePage/>}/>
 
+        <Route path='/proj' element={<ProjPage/>}>
+          <Route path='/proj/:id' element={<ProjInfo/>}></Route>
+        </Route>
+
         <Route path="/projects" element={<ProjPage/>}/>
 
         <Route path="/projects/:id" element={<ProjInfo/>}/>
@@ -34,6 +40,13 @@ export default function App() {
         <Route path="/experiences/:id" element={<ExpInfo/>}/>
         
         <Route path="/about" element={<AboutPage/>}/>
+
+        <Route path='/misc'>
+          <Route path='/misc' element={<MiscPage/>}></Route>
+          <Route path='/misc/music' element={<MyMusic/>}></Route>
+          <Route path='/misc/minigame' element={<MiniGame/>}></Route>
+          <Route path='/misc/admin' element={<AdminLogin/>}></Route>
+        </Route>
 
         <Route path='*' element={<Error/>}/>
 
