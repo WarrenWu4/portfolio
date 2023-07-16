@@ -37,17 +37,6 @@ html {
   @apply text-black/70 border-transparent
 }
 
-#spotlight::before {
-  content: "";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40rem;
-  height: 40rem;
-  border-radius: 50%;
-  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.00) 100%);
-}
-
 /* scroll bar */
 ::-webkit-scrollbar {
   width: 0.8rem;

@@ -18,7 +18,7 @@ export default function Nav() {
     const path:string = useLocation().pathname
 
     return (
-        <nav className="max-w-[768px] mt-[3.2rem] h-[5rem] flex items-center w-full px-[6.4rem] [&>*]:mr-[1.6rem] font-bold text-[2rem] text-black/70 ">
+        <nav className="max-w-[768px] mt-[3.2rem] h-[5rem] flex items-center w-full px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem] [&>*]:mr-[0.8rem] small:[&>*]:mr-[1.6rem] font-bold text-[2rem] text-black/70 ">
 
             <NavLink to={"/"}>
                 <img src={logo} alt="logo" className="w-[5rem] aspect-square"/>

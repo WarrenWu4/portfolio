@@ -9,6 +9,10 @@ export default {
       gridTemplateColumns: {
         "tech-stack": "repeat(auto-fit, 5rem)",
       },
+      gridTemplateRows: {
+        "zed": "0fr",
+        "exp": "1fr",
+      },
       boxShadow: {
         'tech': "0 0.2rem 0.4rem 0.2rem rgba(0,0,0,0.25)",
         "card": "0 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.25)",
@@ -27,9 +31,8 @@ export default {
       },
     },
     screens: {
-      "sm": "540px",
-      "tablet": "768px",
-      "desktop": "1024px",
+      "small": "475px",
+      "med": "640px",
     },
     fontFamily: {
       default: "Rubik",
