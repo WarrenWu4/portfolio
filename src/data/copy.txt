@@ -1,0 +1,14 @@
+for projects:
+
+    {
+      "title": "",
+      "desc": "",
+      "techstack": [""],
+      "thumbnail": "",
+      "article": "",
+      "github": "",
+      "link": ""
+    }
+
+for blogs:
+

@@ -15,7 +15,7 @@ import { ProjPage, ProjInfo } from "./components/ProjPage";
 
 import BlogPage, { BlogArticle } from './components/BlogPage';
 
-import MiscPage, { AdminLogin, MyMusic, MiniGame } from './components/MiscPage';
+import MiscPage, { MyMusic, MiniGame } from './components/MiscPage';
 
 export default function App() {
 
@@ -48,7 +48,6 @@ export default function App() {
           <Route path='/misc' element={<MiscPage/>}></Route>
           <Route path='/misc/music' element={<MyMusic/>}></Route>
           <Route path='/misc/minigame' element={<MiniGame/>}></Route>
-          <Route path='/misc/admin' element={<AdminLogin/>}></Route>
         </Route>
 
         <Route path='*' element={<Error/>}/>

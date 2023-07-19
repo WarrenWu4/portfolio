@@ -1,16 +1,13 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "help102",
+      "title": "help102",
       "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
       "techstack": ["figma", "javascript", "react", "css"],
-      "imgPath": "/help102/help102_4_design4.png",
-      "links": [
-        "/help102.md",
-        "https://github.com/WarrenWu4/help102",
-        "https://help102.vercel.app/"
-      ]
+      "thumbnail": "/help102/help102_4_design4.png",
+      "article": "/help102.md",
+      "github": "https://github.com/WarrenWu4/help102",
+      "link": "https://help102.vercel.app"
     }
   ]
 }
