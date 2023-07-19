@@ -31,16 +31,22 @@ export function ProjPage() {
         )
     })
 
+    const variants = {
+        visible: {opacity: 1, transform: `translateY(0)`},
+        hidden: {opacity:0, transform: `translateY(2rem)`}
+    }
+    const timer = 1
+
     return (
-        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative dark:bg-dark-bg">
+        <div className="max-w-[768px] w-screen min-h-screen flex flex-col items-center relative px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <div className="mt-[12.8rem] mb-[3.2rem] text-[black] font-default font-bold text-[3.6rem] dark:text-dark-100">Projects</div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] text-center font-bold text-[4rem]">Projects</motion.div>
 
-            <div className="grid place-items-center grid-cols-1 gap-[3.2rem] pb-[6.4rem] tablet:grid-cols-2 desktop:grid-cols-3">
+            <div className="w-full flex flex-wrap gap-[3.2rem] mt-[4.8rem]">
                 {projCards}
             </div>
 
-        </motion.div>
+        </div>
     )
 }
 
@@ -69,15 +75,15 @@ export function ProjInfo() {
     ""
 
     return (
-        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen h-screen flex flex-col items-center relative">
-            <div className="mt-[12.8rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem] mb-[1.6rem]">{title}</div>
+        <motion.div exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration:0.4, ease:"easeInOut"}} className="w-screen flex flex-col items-center relative max-w-[768px] px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
+            <div className="mt-[4.8rem] text-[black] dark:text-dark-100 font-default font-bold text-[3.6rem] mb-[1.6rem]">{title}</div>
             
 
-            <div className="max-w-[1024px] w-screen flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]" id="article">
+            <div className="w-full flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]" id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 
-            <div className="max-w-[1024px] w-screen flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] py-[4.8rem] [&>*]:mr-[2rem]">
+            <div className="w-full flex px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem] py-[4.8rem] [&>*]:mr-[2rem]">
                 {githubComp}
                 {weblinkComp}
             </div>
@@ -101,10 +107,16 @@ function ProjCard(props: {id:number, name: string, desc: string, imgPath?:string
     :
     ""
 
-    return (
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 1, ease:"easeInOut" }} variants={{visible: { opacity: 1 },hidden: { opacity: 0 }}} className="w-[30rem] aspect-square shadow-card dark:shadow-card-dark rounded-[0.4rem] flex flex-col relative">
+    const variants = {
+        visible: {opacity: 1, transform: `translateY(0)`},
+        hidden: {opacity:0, transform: `translateY(2rem)`}
+    }
+    const timer = 1
 
-            <div className="border-b-[0.2rem] border-solid border-[black] box-border w-full h-[55%] bg-neutral-360 bg-no-repeat bg-top bg-cover rounded-t-[0.4rem] relative group" style={{backgroundImage: `url("/proj_img${props.imgPath}")`}}>
+    return (
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: timer, ease:"easeInOut" }} variants={variants} className="w-[30rem] aspect-square shadow-elevate rounded-[1.2rem] flex flex-col relative overflow-hidden">
+
+            <div className="border-b-[0.2rem] border-solid border-[black] box-border w-full h-[55%] bg-neutral-360 bg-no-repeat bg-top bg-cover relative group" style={{backgroundImage: `url("/proj_img${props.imgPath}")`}}>
                 <div className="absolute top-0 left-0 w-full h-full bg-[black]/[0.8] font-bold font-default text-[white] text-[2.4rem] rounded-[0.2rem] flex justify-center items-center flex-wrap opacity-0 transition-[opacity] duration-[0.2s] ease-in-out group-hover:opacity-100 [&>*]:m-[0.8rem]">
                     {props.techStack}
                 </div>

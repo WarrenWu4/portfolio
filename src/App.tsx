@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaDocker } from "react-icons/fa";
 import { SiJavascript, SiCplusplus, SiFirebase, SiTailwindcss, SiPandas, SiTensorflow, SiNumpy, SiNextdotjs, SiDotnet, SiElectron, SiFlask, SiExpo, SiMysql, SiTypescript, SiMongodb} from "react-icons/si";
@@ -7,15 +8,21 @@ import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
 
 import HomePage from "./components/HomePage";
-import { ProjPage, ProjInfo } from "./components/ProjPage";
-import { ExpPage, ExpInfo } from "./components/ExpPage";
-import AboutPage from "./components/AboutPage";
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
+
+import { ProjPage, ProjInfo } from "./components/ProjPage";
+
+import BlogPage, { BlogArticle } from './components/BlogPage';
 
 import MiscPage, { AdminLogin, MyMusic, MiniGame } from './components/MiscPage';
 
 export default function App() {
+
+  const pathname:string = useLocation().pathname
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
 
@@ -27,19 +34,15 @@ export default function App() {
 
         <Route path="/" element={<HomePage/>}/>
 
-        <Route path='/proj' element={<ProjPage/>}>
+        <Route path='/proj'>
+          <Route path='/proj' element={<ProjPage/>}></Route>
           <Route path='/proj/:id' element={<ProjInfo/>}></Route>
         </Route>
 
-        <Route path="/projects" element={<ProjPage/>}/>
-
-        <Route path="/projects/:id" element={<ProjInfo/>}/>
-
-        <Route path="/experiences" element={<ExpPage/>}/>
-
-        <Route path="/experiences/:id" element={<ExpInfo/>}/>
-        
-        <Route path="/about" element={<AboutPage/>}/>
+        <Route path='/blog'>
+          <Route path='/blog' element={<BlogPage/>}></Route>
+          <Route path='/blog/:blog_id' element={<BlogArticle/>}></Route>
+        </Route>
 
         <Route path='/misc'>
           <Route path='/misc' element={<MiscPage/>}></Route>

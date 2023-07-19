@@ -5,15 +5,14 @@ import { IoMdBriefcase } from "react-icons/io"
 import { useLocation } from "react-router-dom";
 
 import logo from "/img/logo.svg"
-import theme from "/img/dark_mode.svg"
+// import theme from "/img/dark_mode.svg"
 
 export default function Nav() {
 
-    const changeTheme = (e:any) => {
-        e.preventDefault()
-        // todo
-        console.log("WORK IN PROGRESS")
-    }
+    // const changeTheme = (e:any) => {
+    //     e.preventDefault()
+    //     console.log("WORK IN PROGRESS")
+    // }
 
     const path:string = useLocation().pathname
 
@@ -33,9 +32,9 @@ export default function Nav() {
             <NavLink className={(path === "/blog") ? 'is-active':'not-active'}  to="/blog" >BLOG</NavLink>
             <NavLink className={(path === "/misc") ? 'is-active':'not-active'}  to="/misc" >MISC</NavLink>
 
-            <button type="button" onClick={changeTheme}>
+            {/* <button type="button" onClick={changeTheme}>
                 <img src={theme} alt="theme" className="w-[2.4rem] aspect-square" />
-            </button>
+            </button> */}
 
         </nav>
     )

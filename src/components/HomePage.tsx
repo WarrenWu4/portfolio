@@ -9,12 +9,12 @@ const exp = [
     {
         "org": "Aggie Coding Club",
         "pos": "Workshops Officer",
-        "desc": "Migrated internal tools and create data analytics and metrics for an internal project. Used HTML, CSS, Power BI, Excel, and other tools within the Microsoft Sharepoint environment.",
+        "desc": "Created entertaining (in my opinion) and engaging workshops for weekly ACC meetings. Workshop content includes: Python, debugging, APIs, and cybersecurity.",
     },
     {
         "org": "TAMU Datathon",
         "pos": "Developer",
-        "desc": "Migrated internal tools and create data analytics and metrics for an internal project. Used HTML, CSS, Power BI, Excel, and other tools within the Microsoft Sharepoint environment.",
+        "desc": "Worked on parts of the landing page (eg. FAQ section) and also additional tools like help queue used during the Datathon event.",
     },
     {
         "org": "General Motors",
@@ -69,8 +69,9 @@ export default function HomePage() {
 
                 <div className="h-full w-full flex flex-col items-center gap-[1.6rem] pt-[2.4rem] pb-[0.4rem]">
                     {
-                        exp.map((info) =>
+                        exp.map((info, index) =>
                             <ExpInfo
+                                key={index}
                                 org={info["org"]}
                                 pos={info["pos"]}
                                 desc={info["desc"]}
