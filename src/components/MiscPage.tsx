@@ -14,7 +14,7 @@ export default function MiscPage() {
     return (
         <div className="max-w-[768px] w-full min-h-screen px-[6.4rem] flex flex-col items-center">
             
-            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] text-center font-bold text-[4rem]">Miscellaneous</motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] w-full text-left font-bold text-[4rem]">Miscellaneous</motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="w-full flex flex-wrap justify-center med:justify-start [&>*]:rounded-[1.2rem] gap-[4rem] mt-[4.8rem]">
 

@@ -24,13 +24,13 @@ export default function Nav() {
             </NavLink>
 
             <NavLink 
-            className={(path === "/proj") ? 'is-active':'not-active'} 
+            className={(path.split("/")[1] === "proj") ? 'is-active':'not-active'} 
             to="/proj">
                     PROJ
             </NavLink>
 
-            <NavLink className={(path === "/blog") ? 'is-active':'not-active'}  to="/blog" >BLOG</NavLink>
-            <NavLink className={(path === "/misc") ? 'is-active':'not-active'}  to="/misc" >MISC</NavLink>
+            <NavLink className={(path.split("/")[1] === "blog") ? 'is-active':'not-active'}  to="/blog" >BLOG</NavLink>
+            <NavLink className={(path.split("/")[1] === "misc") ? 'is-active':'not-active'}  to="/misc" >MISC</NavLink>
 
             {/* <button type="button" onClick={changeTheme}>
                 <img src={theme} alt="theme" className="w-[2.4rem] aspect-square" />

@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "article": "/dead",
+      "date-created": "7/21/2023",
+      "desc": ""
+    },
+    {
+      "article": "/learning-how-to-program",
+      "date-created": "7/21/2023",
+      "desc": ""
+    }
+  ]
+}

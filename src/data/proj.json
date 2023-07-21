@@ -1,11 +1,26 @@
 {
   "projects": [
     {
+      "title": "jumbo",
+      "desc": "Jumbo is a multi-face flashcard app that uses proven science-based flashcarding strategies to increase studying efficiency.",
+      "techstack": [
+        "nextjs",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "firebase",
+        "figma"
+      ],
+      "thumbnail": "/proj_articles/jumbo/jumbo_1_design1.png",
+      "article": "/jumbo",
+      "github": "https://github.com/WarrenWu4/jumbo"
+    },
+    {
       "title": "help102",
       "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
-      "techstack": ["figma", "javascript", "react", "css"],
-      "thumbnail": "/help102/help102_4_design4.png",
-      "article": "/help102.md",
+      "techstack": ["figma", "javascript", "react"],
+      "thumbnail": "/proj_articles/help102/help102_4_design4.png",
+      "article": "/help102",
       "github": "https://github.com/WarrenWu4/help102",
       "link": "https://help102.vercel.app"
     }

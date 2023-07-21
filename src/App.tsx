@@ -36,7 +36,7 @@ export default function App() {
 
         <Route path='/proj'>
           <Route path='/proj' element={<ProjPage/>}></Route>
-          <Route path='/proj/:id' element={<ProjInfo/>}></Route>
+          <Route path='/proj/:proj_id' element={<ProjInfo/>}></Route>
         </Route>
 
         <Route path='/blog'>

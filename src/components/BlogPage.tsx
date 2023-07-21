@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+// import data from "../data/blog.json";
 
 export default function BlogPage() {
 
@@ -9,15 +10,26 @@ export default function BlogPage() {
     }
     const timer = 1
 
+    
+
     return (
         <div className="max-w-[768px] w-screen min-h-screen flex flex-col items-center relative px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] text-center font-bold text-[4rem]">Blog Posts</motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] w-full text-left font-bold text-[4rem]">Blog Posts</motion.div>
 
+            {/* {
+                data["blogs"].map((metadata, index) => {
+                    return <div key={index}></div>
+                })
+            } */}
 
         </div>
     )
 }
+
+// const BlogItem = () => {
+
+// }
 
 export const BlogArticle = () => {
     return (
