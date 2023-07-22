@@ -112,7 +112,7 @@ function ProjCard(data: ProjectData) {
             </div>
 
             <div className="mt-[1.6rem] mr-[0.8rem] ml-[1.6rem] font-default font-bold text-[black] dark:text-dark-100 text-[2.4rem]">{data.title}</div>
-            <div className="max-w-[27.2rem] ml-[1.6rem] h-[4rem] text-neutral-360 font-bold font-default text-[1.2rem] dark:text-dark-360 text-ellipsis overflow-hidden line-clamp-2">{data.desc}</div>
+            <div className="max-w-[27.2rem] ml-[1.6rem] h-[4rem] text-black/60 font-bold text-[1.2rem] text-ellipsis overflow-hidden line-clamp-2">{data.desc}</div>
 
             <div className="flex [&>*]:mr-[0.8rem] text-[2rem] absolute bottom-[1.2rem] left-[1.6rem]">
                 {githubComp}
