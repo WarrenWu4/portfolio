@@ -11,4 +11,10 @@ for projects:
     }
 
 for blogs:
+    {
+      "title": "",
+      "article": "",
+      "date-created": "",
+      "desc": ""
+    }
 

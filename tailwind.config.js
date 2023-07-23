@@ -33,6 +33,7 @@ export default {
     screens: {
       "small": "475px",
       "med": "640px",
+      "huh": "759px"
     },
     fontFamily: {
       default: "Rubik",

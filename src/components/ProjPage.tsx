@@ -33,9 +33,9 @@ export function ProjPage() {
     return (
         <div className="max-w-[768px] w-screen min-h-screen flex flex-col items-center relative px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={transition} variants={variants} className="mt-[4.8rem] w-full text-left font-bold text-[4rem]">Projects</motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={transition} variants={variants} className="mt-[4.8rem] w-full text-center huh:text-left font-bold text-[4rem]">Projects</motion.div>
 
-            <div className="w-full flex flex-wrap gap-[3.2rem] mt-[4.8rem]">
+            <div className="w-full flex flex-wrap gap-[3.2rem] mt-[4.8rem] justify-center huh:justify-start">
                 {
                     proj.projects.map((project, index) => {
                         return <ProjCard key={index} title={project.title} desc={project.desc} techstack={project.techstack} thumbnail={project.thumbnail} article={project.article} github={project.github} link={project.link}></ProjCard>

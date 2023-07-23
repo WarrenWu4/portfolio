@@ -25,7 +25,7 @@ export default function BlogPage() {
     return (
         <div className="max-w-[768px] w-screen min-h-screen flex flex-col items-center relative px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] w-full text-left font-bold text-[4rem]">Blog Posts</motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="mt-[4.8rem] w-full text-center huh:text-left font-bold text-[4rem]">Blog Posts</motion.div>
 
             <div className="w-full flex flex-wrap gap-[3.2rem] mt-[4.8rem]">
             {
@@ -75,7 +75,7 @@ export const BlogArticle = () => {
     const [mdInfo, setMdInfo] = useState<string>(``)
 
     useEffect(() => {
-        fetch(`/blog_articles/${blog_id}/${blog_id}.md`).then(res=>res.text()).then(text=>setMdInfo(text))
+        fetch(`/blog_articles/${blog_id}/index.md`).then(res=>res.text()).then(text=>setMdInfo(text))
     }, [])
 
     const variants = {

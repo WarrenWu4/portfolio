@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "title": "dead",
-      "article": "/dead",
-      "date-created": "7/21/2023",
-      "desc": "there once was a stupid ass person and then what happened was that it overflows and what if it didn't i'm going kinda crazy dicking around with the css"
-    },
-    {
       "title": "learning how to program",
       "article": "/learning-how-to-program",
       "date-created": "7/21/2023",
