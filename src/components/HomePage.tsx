@@ -3,23 +3,21 @@ import {IconGen} from "../App";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const text = `I'm currently a sophomore pursuing computer science at Texas A&M with a passion for mission-driven software development. I believe that the true power of software lies in its ability to positively impact people's lives, whether it's creating captivating games for endless entertainment or developing educational apps. I simply find immense satisfaction in knowing that my programs bring joy and value to others. While the title of "software engineer" may not carry the same heroic aura as "firefighter" or "police officer," I strongly believe that I can make a meaningful contribution to my community through my coding skills. On a lighter note, I also have a fascination with clouds, blobs, and enjoy spending time watching YouTube. Feel free to connect/contact me if you think I'm pretty chill dude 😊.`
-
 const exp = [
     {
         "org": "Aggie Coding Club",
         "pos": "Workshops Officer",
-        "desc": "Created entertaining (in my opinion) and engaging workshops for weekly ACC meetings. Workshop content includes: Python, debugging, APIs, and cybersecurity.",
+        "desc": "Created engaging and interactive workshops in the form of code-alongs, presentations, and mini-competitions. Workshop content includes: game development with Pygame, debugging 101, intro to APIs, etc.",
     },
     {
         "org": "TAMU Datathon",
         "pos": "Developer",
-        "desc": "Worked on parts of the landing page (eg. FAQ section) and also additional tools like help queue used during the Datathon event.",
+        "desc": "Used EJS, SCSS, & Javascript to build parts of the landing page. Also worked on fullstack tools that were used by participants during the Datathon event.",
     },
     {
         "org": "General Motors",
         "pos": "IT Intern",
-        "desc": "Migrated internal tools and create data analytics and metrics for an internal project. Used HTML, CSS, Power BI, Excel, and other tools within the Microsoft Sharepoint environment.",
+        "desc": "Migrated internal tools and web pages from Sharepoint On-Premise to Sharepoint Online through the SPFX framework. Leveraged embeded web parts to build custom components for more advanced features. Also used Python and PowerBI to create data analytics and visuals for an internal knowledge management project to better track and update knowledge articles.",
     }
 ]
 
@@ -52,7 +50,7 @@ export default function HomePage() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: timer, ease:"easeInOut" }} variants={variants} className="w-full p-[2.4rem] relative mt-[4.8rem] rounded-[1.2rem] border-4 border-black/60 border-solid">
                 <span className="font-bold text-[2rem] text-black/60 px-[0.8rem] bg-white absolute left-[2.4rem] top-[-1.8rem]">ABOUT</span>
                 <span className="text-[1.6rem] leading-[1.5]">
-                    {text}
+                    I'm currently a computer science sophomore at Texas A&M, dedicated to creating mission-driven software that leaves a positive impact on the world. With a love for minimalistic designs and an insatiable curiosity for incorporating cutting-edge technologies into my workflow, I'm always on the lookout for innovative ways to enhance productivity and user experiences. When I'm not immersed in code or exploring new tech, you'll find me unwinding by watching YouTube or jamming out to my Spotify playlist. Side note: I'm also <s>obsessed</s> fascinated with clouds and blobs. I love meeting and getting to know new people, so feel free to connect/contact me if you think I'm pretty chill dude 😊.
                 </span>
             </motion.div>
 
