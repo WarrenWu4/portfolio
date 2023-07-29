@@ -2,22 +2,26 @@ import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import {IconGen} from "../App";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { BsCaretDown } from "react-icons/bs";
 
 const exp = [
     {
         "org": "Aggie Coding Club",
         "pos": "Workshops Officer",
         "desc": "Created engaging and interactive workshops in the form of code-alongs, presentations, and mini-competitions. Workshop content includes: game development with Pygame, debugging 101, intro to APIs, etc.",
+        "date": "Aug 2022 - Present"
     },
     {
         "org": "TAMU Datathon",
         "pos": "Developer",
         "desc": "Used EJS, SCSS, & Javascript to build parts of the landing page. Also worked on fullstack tools that were used by participants during the Datathon event.",
+        "date": "Jan 2023 - Present"
     },
     {
         "org": "General Motors",
         "pos": "IT Intern",
         "desc": "Migrated internal tools and web pages from Sharepoint On-Premise to Sharepoint Online through the SPFX framework. Leveraged embeded web parts to build custom components for more advanced features. Also used Python and PowerBI to create data analytics and visuals for an internal knowledge management project to better track and update knowledge articles.",
+        "date": "May 2023 - Aug 2023"
     }
 ]
 
@@ -63,7 +67,7 @@ export default function HomePage() {
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: timer, ease:"easeInOut" }} variants={variants} className="w-full p-[2.4rem] flex flex-col mt-[4.8rem] rounded-[1.2rem] bg-black/80 text-white">
 
-                <span className="font-bold text-[2rem] ml-[0.8rem]">INVOLVEMENT</span>
+                <span className="font-bold text-[2rem] ml-[0.8rem]">EXPERIENCES</span>
 
                 <div className="h-full w-full flex flex-col items-center gap-[1.6rem] pt-[2.4rem] pb-[0.4rem]">
                     {
@@ -73,6 +77,7 @@ export default function HomePage() {
                                 org={info["org"]}
                                 pos={info["pos"]}
                                 desc={info["desc"]}
+                                date={info["date"]}
                             />
                         )
                     }
@@ -86,20 +91,25 @@ export default function HomePage() {
 interface ExpInfoProps {
     org: string;
     pos: string;
-    desc: string;
+    desc: string;  
+    date: string; 
 }
 
-const ExpInfo:React.FC<ExpInfoProps> = ({org, pos, desc}) => {
+const ExpInfo:React.FC<ExpInfoProps> = ({org, pos, desc, date}) => {
 
     const [show, setShow] = useState(false);
 
     return (
     <button type="button" onClick={() => setShow((show)?false:true)} className="w-full flex flex-col border-4 border-white/80 border-solid rounded-[1.2rem] p-[1.2rem] text-white/80">
-        <span className="text-[2rem] font-semibold">{org}</span>
+        <div className="w-full flex justify-between items-center">
+            <span className="text-[2rem] font-semibold">{org}</span>
+            <BsCaretDown size={24} strokeWidth={0.6} className={(show)?"rotate-180 transition-all duration-500":"transition-all duration-500"} />
+        </div>
         <div className={`${(show) ? "grid-rows-exp":"grid-rows-zed"}` + " grid overflow-hidden transition-all duration-[0.4s]"}>
             <div className="min-h-[0] flex flex-col text-start">
-                <span className="text-[1.6rem] font-bold">{pos}</span>
+                <span className="text-[1.6rem] font-medium">{pos}</span>
                 <span className="text-white text-[1.6rem] mt-[0.8rem]">{desc}</span>
+                <span className="text-[1.6rem] font-medium mt-[1.2rem]">{date}</span>
             </div>
         </div>
     </button>
