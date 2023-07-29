@@ -1,5 +1,3 @@
 # jumbo
 
-Jumbo is a multi-face flashcard app that uses proven science-based flashcarding strategies to increase studying efficiency.
-
-## Purpose
+Work in progress. You can read the devlog below to see how it's going though 💚.

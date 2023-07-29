@@ -90,7 +90,7 @@ export const BlogArticle = () => {
     return (
         <motion.div initial="hidden" whileInView={"visible"} viewport={{once: true}} transition={transition} variants={variants} className="max-w-[768px] w-screen min-h-screen flex flex-col items-center relative px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <div className="mt-[4.8rem] w-full flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]" id="blog">
+            <div className="mt-[4.8rem] w-full flex flex-col" id="blog">
                 <ReactMarkdown children={mdInfo} />
             </div>
 

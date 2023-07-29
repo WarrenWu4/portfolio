@@ -68,7 +68,7 @@ export function ProjInfo() {
     return (
         <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={transition} variants={variants} className="w-screen flex flex-col items-center relative max-w-[768px] px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem]">
 
-            <div className="mt-[4.8rem] w-full flex flex-col px-[1.6rem] tablet:px-[6.4rem] desktop:px-[12.8rem]" id="article">
+            <div className="mt-[4.8rem] w-full flex flex-col" id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 
