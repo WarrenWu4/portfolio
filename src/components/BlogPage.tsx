@@ -53,7 +53,7 @@ const BlogItem = (data: BlogData) => {
     return (
         <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} transition={transition} variants={variants} className="w-full rounded-[1.2rem] shadow-elevate dark:shadow-elevate-dark p-[1.6rem] group cursor-pointer">
             <Link to={`.${data.article}`}>
-                <div className="font-bold text-[2rem]">{data.title}</div>
+                <div className="font-bold text-[2rem] mb-[0.4rem]">{data.title}</div>
                 <div className="w-full overflow-hidden text-[1.6rem] break-word line-clamp-4">{data.desc}</div>
 
                 <div className="w-full flex justify-between mt-[0.8rem]">

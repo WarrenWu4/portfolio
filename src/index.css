@@ -68,6 +68,9 @@ html {
 #article img {
   @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
 }
+#article hr {
+  @apply my-[0.4rem]
+}
 
 /* blog styling */
 #blog h1 {
@@ -84,4 +87,7 @@ html {
 }
 #blog img {
   @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
+}
+#blog hr {
+  @apply my-[0.4rem]
 }
