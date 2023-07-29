@@ -75,7 +75,21 @@ export const BlogArticle = () => {
     const [mdInfo, setMdInfo] = useState<string>(``)
 
     useEffect(() => {
-        fetch(`/blog_articles/${blog_id}/index.md`).then(res=>res.text()).then(text=>setMdInfo(text))
+
+        const getArticle = async() => {
+            const response = await fetch(`/blog_articles/${blog_id}/index.md`)
+            if (response?.ok) {
+                const text = await response.text()
+                setMdInfo(text)
+            }
+            else {
+                console.log(`${response?.status} error: article not found`)
+                window.location.href = "/error"
+            }
+        }
+
+        getArticle()
+
     }, [])
 
     const variants = {
