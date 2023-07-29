@@ -1,7 +1,5 @@
 import { useState, useEffect, useMemo } from "react"
 import { NavLink } from "react-router-dom";
-import { BsHouseDoorFill, BsFillPersonFill, BsFolderFill } from "react-icons/bs";
-import { IoMdBriefcase } from "react-icons/io"
 import { useLocation } from "react-router-dom";
 
 import logoLight from "/img/logo.svg"
