@@ -19,12 +19,12 @@ export default function MiscPage() {
             <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="w-full flex flex-wrap justify-center huh:justify-start [&>*]:rounded-[1.2rem] gap-[4rem] mt-[4.8rem]">
 
                 <NavLink className="w-[12rem] aspect-square shadow-elevate bg-[#C4D7B2] flex justify-center items-center text-[4rem] relative mb-[2.4rem]" to="./music">
-                    <RiSpotifyLine/>
+                    <RiSpotifyLine className="text-black"/>
                     <span className="font-medium w-full text-center text-[1.6rem] absolute left-1/2 translate-x-[-50%] bottom-0 translate-y-[150%]">Music I 💚</span>
                 </NavLink>
 
                 <NavLink className="w-[12rem] aspect-square shadow-elevate bg-[#C4DFDF] flex justify-center items-center text-[4rem] relative mb-[2.4rem]" to="./minigame">
-                    <GrGamepad/>
+                    <GrGamepad className="text-black"/>
                     <span className="font-medium w-full text-center text-[1.6rem] absolute left-1/2 translate-x-[-50%] bottom-0 translate-y-[150%]">Mini Game</span>
                 </NavLink>
 

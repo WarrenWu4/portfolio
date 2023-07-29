@@ -15,7 +15,7 @@ export default {
       },
       boxShadow: {
         'tech': "0 0.2rem 0.4rem 0.2rem rgba(0,0,0,0.25)",
-        "tech-dark": "0 0.2rem 0.4rem 0.2rem rgba(255,255,255,0.25)",
+        "tech-dark": "0 0 0.4rem rgba(255,255,255,0.25)",
         "card": "0 0.4rem 0.4rem 0.4rem rgba(0,0,0,0.25)",
         "card-dark": "0 0.4rem 0.4rem 0.4rem rgba(255,255,255,0.25)",
         "elevate": "4px 6px 32px 6px rgba(0, 0, 0, 0.25)",

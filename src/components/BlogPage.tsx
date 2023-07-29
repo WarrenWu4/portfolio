@@ -51,16 +51,16 @@ const BlogItem = (data: BlogData) => {
     }
     
     return (
-        <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} transition={transition} variants={variants} className="w-full rounded-[1.2rem] shadow-elevate p-[1.6rem] group cursor-pointer">
+        <motion.div initial="hidden" whileInView="visible" viewport={{once:true}} transition={transition} variants={variants} className="w-full rounded-[1.2rem] shadow-elevate dark:shadow-elevate-dark p-[1.6rem] group cursor-pointer">
             <Link to={`.${data.article}`}>
                 <div className="font-bold text-[2rem]">{data.title}</div>
                 <div className="w-full overflow-hidden text-[1.6rem] break-word line-clamp-4">{data.desc}</div>
 
                 <div className="w-full flex justify-between mt-[0.8rem]">
-                    <div className="text-neutral-380 text-[1.6rem] font-bold">
+                    <div className="text-black/70 dark:text-white/70 text-[1.6rem] font-bold">
                         {data.dateCreated}
                     </div>
-                    <div className="text-neutral-380 flex font-bold text-[1.6rem] [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] group-hover:text-black group-hover:translate-x-[0.4rem] transition-all duration-[0.4s]">
+                    <div className="text-black/70 dark:text-white/70 flex font-bold text-[1.6rem] [&>svg]:ml-[0.4rem] [&>svg]:text-[2rem] group-hover:text-black dark:group-hover:text-white group-hover:translate-x-[0.4rem] transition-all duration-[0.4s]">
                         Read More <FiArrowRightCircle className="translate-y-[0.16rem]" />
                     </div>
                 </div>

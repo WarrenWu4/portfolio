@@ -30,7 +30,7 @@ export default function HomePage() {
     const icons:any[] = IconGen({icons:["all"]})
     let icon_cards:any[] = []
     icons.map((icon) => {
-        icon_cards.push(<div className="w-[5rem] aspect-square rounded-[0.4rem] flex justify-center items-center text-[3.5rem] shadow-tech dark:shadow-tech-dark dark:text-dark-100">{icon}</div>)
+        icon_cards.push(<div className="w-[5rem] aspect-square rounded-[0.4rem] flex justify-center items-center text-[3.5rem] shadow-tech dark:shadow-tech-dark dark:text-white">{icon}</div>)
     })
 
     const variants = {
@@ -65,7 +65,7 @@ export default function HomePage() {
                 </span>
             </motion.div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: timer, ease:"easeInOut" }} variants={variants} className="w-full p-[2.4rem] flex flex-col mt-[4.8rem] rounded-[1.2rem] bg-black/80 dark:bg-white/60 dark:text-black/80 text-white">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: timer, ease:"easeInOut" }} variants={variants} className="w-full p-[2.4rem] flex flex-col mt-[4.8rem] rounded-[1.2rem] bg-black/80 dark:bg-white dark:text-black/80 text-white">
 
                 <span className="font-bold text-[2rem] ml-[0.8rem]">EXPERIENCES</span>
 
