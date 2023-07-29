@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { BsGlobe, BsGithub } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useEffect, useState } from "react";
 
@@ -53,7 +52,20 @@ export function ProjInfo() {
     const [mdInfo, setMdInfo] = useState<string>(``)
 
     useEffect(() => {
-        fetch(`/proj_articles/${proj_id}/${proj_id}.md`).then(res=>res.text()).then(text=>setMdInfo(text))
+
+        const getProj = async() => {
+            const response = await fetch(`/proj_articles/${proj_id}/${proj_id}.md`)
+            if (response?.ok) {
+                const text = await response.text()
+                setMdInfo(text)
+            }
+            else {
+                console.log(`${response?.status} error: article not found`)
+                window.location.href = "/error"
+            }
+        }
+        getProj()
+
     }, [])
 
     const variants = {
