@@ -2,31 +2,38 @@
 
 ---
 
-The other day I was browsing around Reddit and laughing my ass off at the shithousery going on with the whole NextJS app router fiasco when I came across a post titled "Why is everyone godlike in comparison to me?"
+The other day I was browsing around Reddit, laughing my ass off at the shithousery going on with the whole NextJS app router fiasco, when I came across a post titled "Why is everyone godlike in comparison to me?"
 
-... Instantly I felt a connection with the author of this post. In fact, I would bet good money that many other programmers also had a similar thought, especially early on in their careers.
+Instantly I felt a connection with the author. In fact, I would bet good money that many other programmers also had a similar thought.
 
 ---
 
-For some context, at the time of writing this article I'm an 18 year old computer science student. I'm nearing the end of my summer internship and about to head into my sophmore year at college.
-. I'm also someone who likes comparisons, because whether you think it's "toxic" or not, it's a good way for me to calculate my chances and try to stay ahead of the curve for career opportunities and I don't use it to maliciously judge others are think I'm superior. As such, when I compare myself to the average computer science student at my age, I would rank myself above average in terms of experience and practical knowledge. However, for me, being average isn't enough. I have my own dreams and goals that I want to accomplish and I don't think living an average life, or even an above average life would make me satisifed. As such, I've started to push myself to do more, to learn more, to network more. At some point I stopped comparing myself to the mean and started looking at those further ahead of me. Is it a bad thing? No, I think that if you have big goals you want to accomplish (more than just getting a cushy job) then you should aim to be a lot better than average. Essentially how much you expect out of yourself should reflect your goals. If all you want is to get a decent job, then sure expecting
+---
 
-Now I'm still an 18 year old so the people reading this might not give a shit because of my age, hell when I grow older maybe I'll have a different sentiment, but this is what I think so far and I'm going to keep feeling behind.
+For some context, at the time of writing this article, I'm an 18 year old computer science student. I'm nearing the end of my summer internship and about to head into my sophmore year at college. Even though I would say that I'm above average in terms of skill and experience (for my age), I can't help but compare myself to other amazing devs I've seen/met. Whenever I'm browsing trending GitHub repos, I see the crazy cool stuff that people are building and I feel like a massive idiot.
 
-- reddit posts about people feeling dumb
-- never feeling that you're good enough
-- always comparing yourself to other people and seeing how great they are
-- my own programming journey
-- job market & rise of AI & being "younger"
+**[Massive Rant Incoming]**
 
-- 10 year game dev showing how long it takes to truly be decent at something
-- everyone has their own areas of expertise and it's impossible to know everything
-- am I doing too much? working on multiple projects on my own time and learning about new things?
+The frustrating reality of computer science is that in order to become a better software developer, you simply need more experience. You don't become a good software developer in 6 months by taking some bullshit bootcamp or watching 4 hour YouTube videos. Becoming a better software developer means encountering more problems, fixing those problems, and improving your general understanding of what the actual fuck you're building. I feel like the process of becoming a better software developer has become increasingly more difficult with the apperance of more modern tools that add layers upon layers of abstractions which dampens the need to learn the stuff under the hood. As such, when shit hits the fan and something in production breaks, you're left clueless on how to actually fix anything more complicated than centering a div. On the other hand, if you choose to learn from the ground up, oftentimes you focus on a specific niche and when you're building a full-stack app that requires knowledge of something else... well fuck you're going to have to wing it or spend another good chunk of your life learning about it.
 
-- feeling behind can be stressful as you constantly feel the need to work harder, faster, more efficiently in order to accomplish the goals you want
-- programming is something that requires continuous learning & so feeling content is dangerous
-- not here to point out any solutions as I'm still dealing with the feeling, just here for people that feel the same way and to tell them they're not alone
-- maybe in 10 years I'll feel comfortable and content
-- power of looking back
+---
 
-**Peace out ✌️.**
+---
+
+In my not so humble opinion, if you're a regular college student, you can afford to spend a couple of years building a good foundation before moving on to the real world. Ideally you would learn a little, build a mini project, learn while building the project, and repeat. However I'm not exactly a regular college student. I have greater ambitions beyond just getting a comfy job, so the sooner I can become a 10x developer the better. The pressure to produce more as a developer has also increased with jobs being more scarce and the economy shitting the bed, although that's an article for another day.
+
+---
+
+---
+
+To answer the original question: "am I bad at programming?" No, but it sure feels like it sometimes 😩.
+
+---
+
+---
+
+---
+
+---
+
+**Thanks for reading. Cya 👋.**
