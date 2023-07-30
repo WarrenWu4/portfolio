@@ -1,16 +1,21 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "help102",
-      "desc": "A website built for the ENGR 102 course taken by all incoming engineering freshmen at Texas A&M.",
-      "techstack": ["figma", "javascript", "react", "css"],
-      "imgPath": "/help102/help102_4_design4.png",
-      "links": [
-        "/help102.md",
-        "https://github.com/WarrenWu4/help102",
-        "https://help102.vercel.app/"
-      ]
+      "title": "jumbo",
+      "desc": "Work in progress. You can read the devlog to see how it's going though 💚.",
+      "techstack": ["figma", "typescript", "react", "tailwindcss", "firebase"],
+      "thumbnail": "/proj_articles/jumbo/jumbo_1_design1.png",
+      "article": "/jumbo",
+      "github": "https://github.com/WarrenWu4/jumbo"
+    },
+    {
+      "title": "help102",
+      "desc": "A website built for the ENGR102 course taken by all incoming engineering freshmen at Texas A&M.",
+      "techstack": ["figma", "javascript", "react", "tailwindcss", "firebase"],
+      "thumbnail": "/proj_articles/help102/help102_4_design4.png",
+      "article": "/help102",
+      "github": "https://github.com/WarrenWu4/help102",
+      "link": "https://help102.vercel.app"
     }
   ]
 }
