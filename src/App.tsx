@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaDocker } from "react-icons/fa";
-import { SiJavascript, SiCplusplus, SiFirebase, SiTailwindcss, SiPandas, SiTensorflow, SiNumpy, SiNextdotjs, SiDotnet, SiElectron, SiFlask, SiExpo, SiMysql, SiTypescript, SiMongodb} from "react-icons/si";
+import { SiJavascript, SiCplusplus, SiFirebase, SiTailwindcss, SiPandas, SiTensorflow, SiNumpy, SiNextdotjs, SiDotnet, SiElectron, SiFlask, SiExpo, SiMysql, SiTypescript, SiMongodb, SiSvelte} from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
@@ -87,6 +87,7 @@ export function IconGen(props:{icons:string[]|undefined}) {
         "tailwindcss": <SiTailwindcss />,
         "threejs": <TbBrandThreejs />,
         "flask": <SiFlask />,
+        "svelte": <SiSvelte />,
         "java": <FaJava />,
         "c++": <SiCplusplus />,
         "python": <FaPython/>,
@@ -101,7 +102,7 @@ export function IconGen(props:{icons:string[]|undefined}) {
         "expo": <SiExpo />,
         ".net": <SiDotnet />,
         "electronjs": <SiElectron />,
-        "docker": <FaDocker />
+        "docker": <FaDocker />,
     }
     
     const iconStack:any[] = []
