@@ -82,7 +82,6 @@ export const MyMusic = () => {
     }, [])
 
     const SpotifyCard = (track:any) => {
-        console.log(track)
         return (
         <a href={track.track.uri} target={"_blank"} className="w-full rounded-[1.2rem] shadow-elevate dark:shadow-elevate-dark p-[1.6rem] cursor-pointer flex items-center hover:scale-105 transition">
             <div className="mr-[2rem] text-[2.8rem]" >{track.number+1}</div>
