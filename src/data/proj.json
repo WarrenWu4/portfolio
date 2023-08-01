@@ -16,6 +16,15 @@
       "article": "/help102",
       "github": "https://github.com/WarrenWu4/help102",
       "link": "https://help102.vercel.app"
+    },
+    {
+      "title": "whisper",
+      "desc": "A web app that allows strangers to anonymously share secrets. Inspired by Thoraya's YouTube video.",
+      "techstack": ["figma", "svelte", "javascript", "tailwindcss", "mongodb"],
+      "thumbnail": "/proj_articles/whisper/whisper_design_1.png",
+      "article": "/whisper",
+      "github": "",
+      "link": ""
     }
   ]
 }
