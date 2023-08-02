@@ -1,6 +1,6 @@
 # Portfolio
 
-[![](https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=&logoColor=white&labelColor=black&color=black)](https://warrenwu.vercel.app/)
+[![](https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=&logoColor=white&labelColor=black&color=black)](https://www.warrenwu.dev/)
 
 Yo wassup, this is my portfolio website repo. I say "portfolio," but it's more of a blog site where I document my projects and go on random rants rather than begging companies for a job (don't worry I do that irl).
 
