@@ -9,13 +9,6 @@
       "github": "https://github.com/WarrenWu4/jumbo"
     },
     {
-      "title": "whale m",
-      "desc": "AI chatbot",
-      "techstack": ["python", "tensorflow"],
-      "thumbnail": "/proj_articles/whale_m/default.jpg",
-      "article": "/whale_m.md"
-    },
-    {
       "title": "help102",
       "desc": "A website built for the ENGR102 course taken by all incoming engineering freshmen at Texas A&M.",
       "techstack": ["figma", "javascript", "react", "tailwindcss", "firebase"],
@@ -32,6 +25,13 @@
       "article": "/whisper",
       "github": "https://github.com/WarrenWu4/whisper",
       "link": "https://whisper-secret.vercel.app/"
+    },
+    {
+      "title": "whale m",
+      "desc": "AI chatbot",
+      "techstack": ["python", "tensorflow"],
+      "thumbnail": "/proj_articles/whale_m/default.jpg",
+      "article": "/whale_m"
     }
   ]
 }
