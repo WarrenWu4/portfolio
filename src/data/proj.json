@@ -23,8 +23,8 @@
       "techstack": ["figma", "svelte", "javascript", "tailwindcss", "mongodb"],
       "thumbnail": "/proj_articles/whisper/whisper_design_1.png",
       "article": "/whisper",
-      "github": "",
-      "link": ""
+      "github": "https://github.com/WarrenWu4/whisper",
+      "link": "https://whisper-secret.vercel.app/"
     }
   ]
 }
