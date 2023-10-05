@@ -7,15 +7,17 @@ import { CgFigma } from "react-icons/cg";
 import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
 
-import HomePage from "./components/HomePage";
-import Nav from './components/NavBar';
-import Footer from './components/Footer';
+import HomePage from "./pages/HomePage";
+import Footer from './components/Footer/Footer';
 
-import { ProjPage, ProjInfo } from "./components/ProjPage";
+import { ProjPage, ProjInfo } from "./pages/ProjPage";
 
-import BlogPage, { BlogArticle } from './components/BlogPage';
+import BlogPage, { BlogArticle } from './pages/BlogPage';
 
-import MiscPage, { MyMusic, MiniGame } from './components/MiscPage';
+import MiscPage from './pages/MiscPage';
+import GithubStats from './components/GithubStats/GithubStats';
+import SpotifyStats from './components/SpotifyStats/SpotifyStats';
+import Navbar from './components/Navbar/Navbar';
 
 export default function App() {
 
@@ -28,7 +30,7 @@ export default function App() {
 
     <div className='w-screen min-h-screen flex flex-col items-center'>
 
-      <Nav/>
+      <Navbar/>
 
       <Routes>
 
@@ -46,8 +48,8 @@ export default function App() {
 
         <Route path='/misc'>
           <Route path='/misc' element={<MiscPage/>}></Route>
-          <Route path='/misc/music' element={<MyMusic/>}></Route>
-          <Route path='/misc/minigame' element={<MiniGame/>}></Route>
+          <Route path='/misc/music' element={<SpotifyStats/>}></Route>
+          <Route path='/misc/github-stats' element={<GithubStats/>}></Route>
         </Route>
 
         <Route path='*' element={<Error/>}/>
