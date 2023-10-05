@@ -1,3 +1,11 @@
+/**
+ * todo
+ * - [ ] add github stats
+ * - [ ] add better loading states for spotify
+ * - [ ] add resume link
+ * - [ ] add mini game
+ */
+
 import { NavLink } from "react-router-dom";
 import { RiSpotifyLine } from "react-icons/ri";
 import { GrGamepad } from "react-icons/gr";

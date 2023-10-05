@@ -1,3 +1,3 @@
 # jumbo
 
-Work in progress. You can read the devlog below to see how it's going though 💚.
+Multi-face flashcard webapp that utilizes more efficienty studying methods like the Leitner system for improved study sessions.

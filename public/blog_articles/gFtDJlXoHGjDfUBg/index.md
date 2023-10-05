@@ -1,0 +1,35 @@
+# I Went To Seattle
+
+---
+
+I recently went on a trip to Seattle and I want to talk about it. For some context I went on this trip with my sister near the end of the 2023 summer season. Both my sister and I were busy with our respective internships, but we really wanted to travel some place together and get some quality sibling time. As such the only available time between our internships and school starting again was this small chunk of time in August. Now out of all the places we could've went to, why did I choose Seattle? Well it's because I thought it was the perfect city for me. The weather was cold (especially compared to Texas), I heard that people drive really slowly (especially compared to Texas), and there's a lot of _high paying_ tech jobs.
+
+---
+
+---
+
+So... How did my experience in Seattle fair relative to my expectations? Well the first day was definitely a rough start. Most of the day was spent traveling from the Dallas airport to a layover to the Seattle airport. From there it took awhile to figure out how the public transport system worked. This might be a bit of my privilege coming out, but the only public transport I've really used throughout my life were buses. Everything else from trains to subways are completely out of my expertise. Luckily my sister went to Seattle with her boyfriend before, so she was kinda (?) able to help me get up to speed on how stuff worked. After taking a bus, we landed near the perimeter of Chinatown where I immediately felt unsafe. It felt like every 3 steps I took there was something crazy going on whether it was some drunk dude barfing on the side of the street or another dude who looked like he wanted to offer me drugs. Luckily both my sister and I were able to reach the dimsum place safely and started chowing down on the food (we were starving). Perhaps it was just my perception, but the staff didn't feel super friendly which I don't care that much about. It was just something that felt odd since most of the restaurants I went to back in Texas were super inviting and hospitable. After the dimsum place we were literally too tired to do anything, so we went to our hotel room and basically chilled there for the rest of the day. The hotel room itself was pretty mediocre. The beds were comfy and there was a nice shower, but that was pretty much it. The highlight of the hotel though was definitely the staff. They were super nice and accommodating which definitely made the overall atmosphere a lot friendlier.
+
+---
+
+---
+
+The second day of Seattle was a definitely a lot better. We got breakfast and headed out to visit the Space Needle which is basically a super skinny observation tower that's 605 feet tall. Now one thing you should know about me is that I'm deathly scared of heights which is why I immediately started protesting to my sister once I found out I was going up 605 feet in the air. However being the cheapskate I am, I couldn't let those tickets go to waste, so I begrudgingly went up the tower. To be entirely honest, when I got to the top, it wasn't so bad. There were crazy people that were standing on the glass wall outside the deck to take "photos for the gram," but I, as a normal human being, followed my natural instincts and stayed the fuck away from the edge of the deck. The scariest part of the Space Needle though (besides the glass floor thing) was the elevator ride up. The elevator is partially glass which means that when you're going up you can literally see how far up you're traveling and there was this constant image in my head of the elevator collapsing and me seeing through the glass how I'm slowly falling to my demise...
+
+Besides the Space Needle we also went to Garden and Glass which is like a garden that also has a glass exihibit. It looked cool I guess? I've never been super interested (or knowledgable) about art, so I didn't think too much of it. The garden part was also cool? Again I'm not super into nature and plants if you couldn't already guess. There were a couple of trees that looked like they belonged in a Dr. Seuss story which I thought was a bit interesting.
+
+---
+
+---
+
+And that was basically all for my trip to Seattle. We also went to a couple of restaurants, but none of them were super noteworthy. Looking back on it, the trip was a definite 7/10 experience which is quite surprising to me considering how much I dislike traveling. I think if I went alone it would've definitely been a 3/10 experience, but since I went with my sister it bumped it up a lot since it was great hanging out with her. Additionally I now have an actual story I can tell people instead of saying how my summer was basically just work and projects. I know I shit on downtown Seattle a lot during this article, but I understand that I can't just judge a city based on it's downtown (I mean just look at Austin...) and I realize that my disappointment was skewed considering how I romanticized the city before, so I'm very much down to explore more of the city if I ever get a chance in the future.
+
+---
+
+---
+
+---
+
+---
+
+**Thanks for reading. Cya 👋.**

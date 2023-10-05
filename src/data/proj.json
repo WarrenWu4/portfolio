@@ -2,11 +2,12 @@
   "projects": [
     {
       "title": "jumbo",
-      "desc": "Work in progress. You can read the devlog to see how it's going though 💚.",
+      "desc": "Multi-face flashcard webapp that utilizes more efficienty studying methods like the Leitner system for improved study sessions.",
       "techstack": ["figma", "typescript", "react", "tailwindcss", "firebase"],
       "thumbnail": "/proj_articles/jumbo/jumbo_1_design1.png",
       "article": "/jumbo",
-      "github": "https://github.com/WarrenWu4/jumbo"
+      "github": "https://github.com/WarrenWu4/jumbo",
+      "link": "https://jumbocard.vercel.app/"
     },
     {
       "title": "help102",
