@@ -8,8 +8,6 @@ import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
 
 import HomePage from "./pages/HomePage";
-import Footer from "./components/global/Footer"
-import Navbar from './components/global/Navbar';
 
 import { ProjPage, ProjInfo } from "./pages/ProjPage";
 
@@ -30,8 +28,6 @@ export default function App() {
   return (
 
     <div className='w-screen min-h-screen flex flex-col items-center'>
-
-      <Navbar/>
 
       <Routes>
 
@@ -56,8 +52,6 @@ export default function App() {
         <Route path='*' element={<Error/>}/>
 
       </Routes>
-
-      <Footer/>
 
     </div>
   )

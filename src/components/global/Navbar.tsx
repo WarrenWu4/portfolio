@@ -32,11 +32,11 @@ export default function Navbar() {
 
 
     return (
-        <nav className="max-w-[768px] mt-[3.2rem] h-[5rem] flex justify-between items-center w-full px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem] font-bold text-[1.8rem]">
+        <nav className="mt-8 h-[50px] flex justify-between items-center w-full font-bold text-[18px]">
 
-            <div className="flex items-center [&>*]:mr-[0.8rem] small:[&>*]:mr-[1.6rem]">
+            <div className="flex items-center gap-x-2 small:gap-x-4">
                 <NavLink to={"/"}>
-                    <img src={logo} alt="logo" className="w-[4.8rem] aspect-square"/>
+                    <img src={logo} alt="logo" className="w-12 aspect-square"/>
                 </NavLink>
 
                 <NavLink 
@@ -50,7 +50,7 @@ export default function Navbar() {
             </div>
 
             <button type="button" onClick={changeTheme}>
-                <img src={themeIcon} alt="theme" className="w-[2.8rem] aspect-square" />
+                <img src={themeIcon} alt="theme" className="w-7 aspect-square" />
             </button>
 
         </nav>
