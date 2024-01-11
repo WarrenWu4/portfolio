@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-dark-bg dark:text-white;
+  }
+}
+
+.not-active, .is-active {
+  @apply h-[4rem] border-b-4 border-solid flex justify-center items-center transition-all duration-[0.4] ease-in-out hover:text-black hover:dark:text-white
+}
+
+.is-active {
+  @apply text-black border-black dark:text-white dark:border-white
+}
+
+.not-active {
+  @apply text-black/70 border-transparent dark:text-white/70
+}
+
+/* scroll bar */
+::-webkit-scrollbar{
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4E4F51;
+}
+
+/* markdown styling */
+#article h1 {
+  @apply text-[4rem] font-bold leading-[1.2]
+}
+#article h2 {
+  @apply text-[2.8rem] font-bold mt-[2.8rem]
+}
+#article h3 {
+  @apply text-[2.4rem] font-medium mt-[1.6rem]
+}
+#article p {
+  @apply text-[1.6rem] leading-[1.7] mt-[0.8rem]
+}
+#article img {
+  @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
+}
+#article hr {
+  @apply my-[0.4rem]
+}
+#article a {
+  @apply text-blue-600 underline dark:text-blue-400
+}
+
+/* blog styling */
+#blog h1 {
+  @apply text-[4rem] font-bold leading-[1.2]
+}
+#blog h2 {
+  @apply text-[2.8rem] font-bold mt-[2.8rem]
+}
+#blog h3 {
+  @apply text-[2.4rem] font-medium mt-[1.6rem]
+}
+#blog p {
+  @apply text-[1.6rem] leading-[1.7] mt-[0.8rem]
+}
+#blog img {
+  @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
+}
+#blog hr {
+  @apply my-[0.4rem]
+}

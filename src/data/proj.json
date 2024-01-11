@@ -1,0 +1,56 @@
+{
+    "projects": [
+        {
+            "title": "jumbo",
+            "desc": "Multi-face flashcard webapp that utilizes more efficienty studying methods like the Leitner system for improved study sessions.",
+            "techstack": [
+                "figma",
+                "typescript",
+                "react",
+                "tailwindcss",
+                "firebase"
+            ],
+            "thumbnail": "/proj_articles/jumbo/jumbo_1_design1.png",
+            "article": "/jumbo",
+            "github": "https://github.com/WarrenWu4/jumbo",
+            "link": "https://jumbocard.vercel.app/"
+        },
+        {
+            "title": "help102",
+            "desc": "A website built for the ENGR102 course taken by all incoming engineering freshmen at Texas A&M.",
+            "techstack": [
+                "figma",
+                "javascript",
+                "react",
+                "tailwindcss",
+                "firebase"
+            ],
+            "thumbnail": "/proj_articles/help102/help102_4_design4.png",
+            "article": "/help102",
+            "github": "https://github.com/WarrenWu4/help102",
+            "link": "https://help102.vercel.app"
+        },
+        {
+            "title": "whisper",
+            "desc": "A web app that allows strangers to anonymously share secrets. Inspired by Thoraya's YouTube video.",
+            "techstack": [
+                "figma",
+                "svelte",
+                "javascript",
+                "tailwindcss",
+                "mongodb"
+            ],
+            "thumbnail": "/proj_articles/whisper/whisper_design_1.png",
+            "article": "/whisper",
+            "github": "https://github.com/WarrenWu4/whisper",
+            "link": "https://whisper-secret.vercel.app/"
+        },
+        {
+            "title": "whale m",
+            "desc": "AI chatbot",
+            "techstack": ["python", "tensorflow"],
+            "thumbnail": "/proj_articles/whale_m/default.jpg",
+            "article": "/whale_m"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /misc/admin/
+
+# life is miserable, but there are amazing people that love and cherish you.
+# don't give up hope <3.
+# - Warren Wu (12/31/9999)
