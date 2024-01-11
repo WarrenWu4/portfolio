@@ -3,30 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* reset */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: none;
   box-sizing: border-box;
   font-family: "Rubik";
 }
 
-html {
-  font-size: 10px;
-  overflow-x: hidden;
-}
-
-@layer base {
-  body {
-    @apply bg-white dark:bg-dark-bg dark:text-white;
-  }
+body, #root {
+    @apply w-screen min-h-screen overflow-x-hidden bg-white text-black dark:bg-dark-bg dark:text-white
 }
 
 .not-active, .is-active {
-  @apply h-[4rem] border-b-4 border-solid flex justify-center items-center transition-all duration-[0.4] ease-in-out hover:text-black hover:dark:text-white
+  @apply h-[40px] border-b-4 border-solid flex justify-center items-center transition-all duration-[0.4] ease-in-out hover:text-black hover:dark:text-white
 }
 
 .is-active {
@@ -39,14 +32,14 @@ html {
 
 /* scroll bar */
 ::-webkit-scrollbar{
-  width: 0.8rem;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: black;
-  border-radius: 0.8rem;
+  border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #4E4F51;
