@@ -17,6 +17,8 @@ import MiscPage from './pages/MiscPage';
 import Github from './components/github/Github';
 import Spotify from './components/spotify/Spotify';
 
+import MainLayout from "./layouts/MainLayout";
+
 
 export default function App() {
 
@@ -27,7 +29,7 @@ export default function App() {
 
   return (
 
-    <div className='w-screen min-h-screen flex flex-col items-center'>
+    <MainLayout>
 
       <Routes>
 
@@ -53,7 +55,7 @@ export default function App() {
 
       </Routes>
 
-    </div>
+    </MainLayout>
   )
 }
 

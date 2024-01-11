@@ -10,7 +10,7 @@
                 "tailwindcss",
                 "firebase"
             ],
-            "thumbnail": "/proj_articles/jumbo/jumbo_1_design1.png",
+            "thumbnail": "/test_img.svg",
             "article": "/jumbo",
             "github": "https://github.com/WarrenWu4/jumbo",
             "link": "https://jumbocard.vercel.app/"
@@ -25,7 +25,7 @@
                 "tailwindcss",
                 "firebase"
             ],
-            "thumbnail": "/proj_articles/help102/help102_4_design4.png",
+            "thumbnail": "/test_img.svg",
             "article": "/help102",
             "github": "https://github.com/WarrenWu4/help102",
             "link": "https://help102.vercel.app"
@@ -40,17 +40,10 @@
                 "tailwindcss",
                 "mongodb"
             ],
-            "thumbnail": "/proj_articles/whisper/whisper_design_1.png",
+            "thumbnail": "/test_img.svg",
             "article": "/whisper",
             "github": "https://github.com/WarrenWu4/whisper",
             "link": "https://whisper-secret.vercel.app/"
-        },
-        {
-            "title": "whale m",
-            "desc": "AI chatbot",
-            "techstack": ["python", "tensorflow"],
-            "thumbnail": "/proj_articles/whale_m/default.jpg",
-            "article": "/whale_m"
         }
     ]
 }

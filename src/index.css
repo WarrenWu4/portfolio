@@ -15,7 +15,7 @@
 }
 
 body, #root {
-    @apply w-screen min-h-screen overflow-x-hidden bg-white text-black dark:bg-dark-bg dark:text-white
+    @apply w-screen min-h-screen overflow-x-hidden bg-white text-black dark:bg-dark-bg dark:text-white flex justify-center
 }
 
 .not-active, .is-active {

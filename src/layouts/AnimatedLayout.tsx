@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 interface AnimatedLayoutProps {
-    children: JSX.Element | JSX.Element[];
+    children: string | JSX.Element | JSX.Element[];
     className?: string;
 }
 

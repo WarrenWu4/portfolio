@@ -5,7 +5,7 @@ import { FiExternalLink } from "react-icons/fi";
 export default function Footer() {
     return (
         <>
-        <div className="w-32 h-1 bg-black/60 dark:bg-white/60 rounded-2xl"></div>
+        <div className="mt-16 mb-8 w-32 h-1 bg-black/60 dark:bg-white/60 rounded-2xl"></div>
 
         <div className="w-full flex flex-col text-[16px] mb-32 gap-y-12">
             <div className="flex flex-col">

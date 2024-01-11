@@ -3,7 +3,6 @@ import {IconGen} from "../App";
 import { useState } from "react";
 import { BsCaretDown } from "react-icons/bs";
 
-import MainLayout from "../layouts/MainLayout";
 import AnimatedLayout from "../layouts/AnimatedLayout";
 
 const exp = [
@@ -36,7 +35,7 @@ export default function HomePage() {
     })
 
     return (
-        <MainLayout>
+        <>
 
             <AnimatedLayout className="flex items-center justify-center flex-col leading-tight">
                 <span className="font-bold text-[40px] mb-3">Hi, I'm Warren</span>
@@ -82,7 +81,7 @@ export default function HomePage() {
 
             </AnimatedLayout>
 
-        </MainLayout>
+        </>
     )
 }
 
