@@ -3,15 +3,37 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
+import LoadingPage from "./LoadingPage";
 
 interface BlogData {
     title: string;
     article: string;
-    dateCreated: string;
+    "date-created": string;
     desc: string;
+    thumbnail?: string;
 }
 
 export default function BlogPage() {
+
+    const [blogData, setBlogData] = useState<BlogData[] | null>(null)
+
+    useEffect(() => {
+
+        async function getData() {
+            const response = await fetch("/_blogs/blog_data.json")
+            const data = await response.json()
+
+            setBlogData(data)
+        }
+
+        getData()
+
+    }, [])
+
+    if (blogData === null) {
+        return <LoadingPage/>
+    }
+
 
     return (
         <>
@@ -22,8 +44,12 @@ export default function BlogPage() {
 
             <div className="w-full flex flex-wrap gap-8">
             {
-                data["blogs"].map((metadata, index) => {
-                    return <BlogItem key={index} title={metadata["title"]} article={metadata["article"]} dateCreated={metadata["date-created"]} desc={metadata["desc"]} ></BlogItem>
+                blogData.map((blogs:BlogData, index:number) => {
+                    return (
+                    <BlogItem 
+                        key={index} 
+                        {...blogs}
+                    />)
                 })
             }
             </div>
@@ -43,7 +69,7 @@ const BlogItem = (data: BlogData) => {
 
                 <div className="w-full flex justify-between mt-2">
                     <div className="text-black/70 dark:text-white/70 text-[16px] font-bold">
-                        {data.dateCreated}
+                        {data["date-created"]}
                     </div>
                     <div className="text-black/70 dark:text-white/70 flex font-bold text-[16px] [&>svg]:ml-1 [&>svg]:text-[20px] group-hover:text-black dark:group-hover:text-white group-hover:translate-x-1 transition-all duration-[0.4s]">
                         Read More 

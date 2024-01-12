@@ -53,13 +53,7 @@ export function ProjPage() {
                         return (
                         <ProjCard 
                             key={index} 
-                            title={project.title} 
-                            desc={project.desc} 
-                            techstack={project.techstack} 
-                            thumbnail={project.thumbnail} 
-                            article={project.article} 
-                            github={project.github} 
-                            demo={project.demo}
+                            {...project}
                         />)
                     })
                 }
