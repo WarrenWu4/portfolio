@@ -1,5 +1,5 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
@@ -86,26 +86,35 @@ const BlogItem = (data: BlogData) => {
 
 export const BlogArticle = () => {
 
+    const nav = useNavigate()
     const {blog_id} = useParams<string>()
-    const [mdInfo, setMdInfo] = useState<string>(``)
+    const [mdInfo, setMdInfo] = useState<string | undefined>(undefined)
+
+    if (blog_id === undefined) {
+        nav("/error")
+        return
+    }
 
     useEffect(() => {
 
         const getArticle = async() => {
-            const response = await fetch(`/blog_articles/${blog_id}/index.md`)
-            if (response?.ok) {
+
+            const response = await fetch(`/_blogs/${blog_id}.md`)
+            if (response.ok) {
                 const text = await response.text()
                 setMdInfo(text)
-            }
-            else {
-                console.log(`${response?.status} error: article not found`)
-                window.location.href = "/error"
+            } else {
+                nav("/error")
             }
         }
 
         getArticle()
 
     }, [])
+
+    if (mdInfo === undefined) {
+        return <LoadingPage/>
+    }
 
 
     return (

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
@@ -65,22 +65,36 @@ export function ProjPage() {
 
 export function ProjInfo() {
 
+    const nav = useNavigate()
     const {proj_id} = useParams<string>()
     const [mdInfo, setMdInfo] = useState<string>(``)
+
+    if (proj_id === undefined) {
+        nav("/error")
+        return
+    }
 
     useEffect(() => {
 
         const getProj = async() => {
-            const response = await fetch(`/proj_articles/${proj_id}/${proj_id}.md`)
-            if (response?.ok) {
-                const text = await response.text()
-                setMdInfo(text)
+
+            try {
+                const [owner, repo, branch] = proj_id.split("_")
+                console.log(owner, repo, branch)
+                const response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/README.md`)
+                if (response.ok) {
+                    const text = await response.text()
+                    setMdInfo(text)
+                } else {
+                    nav("/error")
+                }
+            } catch (err) {
+                console.error(err)
+                nav("/error")
             }
-            else {
-                console.log(`${response?.status} error: article not found`)
-                window.location.href = "/error"
-            }
+
         }
+
         getProj()
 
     }, [])
