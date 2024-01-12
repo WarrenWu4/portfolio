@@ -1,0 +1,68 @@
+{
+    "socials": [
+        {
+            "icon": "github",
+            "link": "https://github.com/WarrenWu4"
+        },
+        {
+            "icon": "youtube",
+            "link": "https://www.youtube.com/channel/UCiJosbDdPhrP3Rn3hfSBInw"
+        },
+        {
+            "icon": "linkedin",
+            "link": "https://www.linkedin.com/in/warren-wu4/"
+        }
+    ],
+    "about": "I'm currently a computer science sophomore at Texas A&M, dedicated to creating mission-driven software that leaves a positive impact on the world. With a love for minimalistic designs and an insatiable curiosity for incorporating cutting-edge technologies into my workflow, I'm always on the lookout for innovative ways to enhance productivity and user experiences. When I'm not immersed in code or exploring new tech, you'll find me unwinding by watching YouTube or jamming out to my Spotify playlist. Side note: I'm also obsessed with clouds and blobs. I love meeting and getting to know new people, so feel free to connect/contact me if you think I'm pretty chill dude.",
+    "techstack": [
+        "cplusplus",
+        "kotlin",
+        "python",
+        "javascript",
+        "typescript",
+        "html5",
+        "css3",
+        "flask",
+        "tensorflow",
+        "numpy",
+        "pandas",
+        "react",
+        "nodedotjs",
+        "express",
+        "svelte",
+        "astro",
+        "nextdotjs",
+        "threedotjs",
+        "electron",
+        "expo",
+        "firebase",
+        "mongodb",
+        "postgresql",
+        "sqlite",
+        "tailwindcss",
+        "docker",
+        "figma",
+        "notion",
+        "stripe"
+    ],
+    "exps": [
+        {
+            "org": "Aggie Coding Club",
+            "pos": "Workshops Officer",
+            "desc": "Created engaging and interactive workshops in the form of code-alongs, presentations, and mini-competitions. Workshop content includes: game dev with Pygame, debugging 101, intro to APIs, intro to cybersecurity etc.",
+            "date": "Aug 2022 - Present"
+        },
+        {
+            "org": "TAMU Datathon",
+            "pos": "Developer",
+            "desc": "Used EJS, SCSS, & Javascript to build parts of the landing page. Also worked on fullstack tools that were used by participants during the Datathon event.",
+            "date": "Jan 2023 - Present"
+        },
+        {
+            "org": "General Motors",
+            "pos": "IT Intern",
+            "desc": "Migrated internal tools and web pages from Sharepoint On-Premise to Sharepoint Online through the SPFX framework. Leveraged embeded web parts to build custom components for more advanced features. Also used Python and PowerBI to create data analytics and visuals for an internal knowledge management project to better track and update knowledge articles.",
+            "date": "May 2023 - Aug 2023"
+        }
+    ]
+}

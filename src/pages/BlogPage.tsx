@@ -1,5 +1,4 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import data from "../data/blog.json";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";

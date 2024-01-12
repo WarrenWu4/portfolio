@@ -1,0 +1,47 @@
+[
+    {
+        "title": "whisper",
+        "desc": "A web app that allows strangers to anonymously share secrets. Inspired by Thoraya's YouTube video.",
+        "techstack": [
+            "figma",
+            "svelte",
+            "javascript",
+            "tailwindcss",
+            "mongodb"
+        ],
+        "thumbnail": "whisper_thumbnail.png",
+        "article": "WarrenWu4_whisper_master",
+        "github": "https://github.com/WarrenWu4/whisper",
+        "demo": "https://whisper-secret.vercel.app/"
+    },
+    {
+        "title": "help102",
+        "desc": "A website built for the ENGR102 course taken by all incoming engineering freshmen at Texas A&M.",
+        "techstack": [
+            "figma",
+            "javascript",
+            "react",
+            "tailwindcss",
+            "firebase"
+        ],
+        "thumbnail": "help102_thumbnail.png",
+        "article": "WarrenWu4_help102_master",
+        "github": "https://github.com/WarrenWu4/help102",
+        "demo": "https://help102.vercel.app"
+    },
+    {
+        "title": "jumbocards",
+        "desc": "Multi-face flashcard webapp that utilizes more efficienty studying methods like the Leitner system for improved study sessions.",
+        "techstack": [
+            "figma",
+            "typescript",
+            "react",
+            "tailwindcss",
+            "firebase"
+        ],
+        "thumbnail": "jumbocards_thumbnail.png",
+        "article": "WarrenWu4_jumbocards_master",
+        "github": "https://github.com/WarrenWu4/jumbocards",
+        "demo": "https://jumbocard.vercel.app/"
+    }
+]
