@@ -8,15 +8,12 @@ import { TbBrandThreejs } from "react-icons/tb";
 import { DiSqllite } from "react-icons/di";
 
 import HomePage from "./pages/HomePage";
-
 import { ProjPage, ProjInfo } from "./pages/ProjPage";
-
 import BlogPage, { BlogArticle } from './pages/BlogPage';
-
 import MiscPage from './pages/MiscPage';
 import Github from './components/github/Github';
 import Spotify from './components/spotify/Spotify';
-
+import ErrorPage from './pages/ErrorPage';
 import MainLayout from "./layouts/MainLayout";
 
 
@@ -51,20 +48,11 @@ export default function App() {
           <Route path='/misc/github-stats' element={<Github/>}></Route>
         </Route>
 
-        <Route path='*' element={<Error/>}/>
+        <Route path='*' element={<ErrorPage/>}/>
 
       </Routes>
 
     </MainLayout>
-  )
-}
-
-function Error() {
-  return (
-    <>
-        <div className="mt-32 font-bold text-4xl dark:text-dark-100">Error 404: Page Not Found</div>
-        <div className= "text-neutral-380 font-bold text-2xl dark:text-dark-380">make sure the url is correct</div>
-    </>
   )
 }
 
