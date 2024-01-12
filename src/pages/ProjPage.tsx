@@ -77,14 +77,14 @@ function ProjCard(data: ProjectData) {
 
     const githubComp = (data.github !== undefined) ? 
     <a target="_blank" href={data.github}>
-        <Icon icon={"mdi:github"} className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-[0.2s] hover:scale-[120%]"/>
+        <Icon icon={"mdi:github"} width={"1.5rem"} className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-[0.2s] hover:scale-[120%]"/>
     </a> 
     :
     ""
 
     const weblinkComp = (data.link !== undefined) ? 
     <a target="_blank" href={data.link}>
-        <Icon icon={"mdi:web"} className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-[0.2s] hover:scale-[120%]" />
+        <Icon icon={"mdi:web"} width={"1.5rem"} className="text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-[0.2s] hover:scale-[120%]" />
     </a>
     :
     ""
@@ -102,19 +102,30 @@ function ProjCard(data: ProjectData) {
                 </div>
             </div>
 
-            <div className="mt-4 mr-2 ml-4 font-bold dark:text-white text-[24px]">{data.title}</div>
-            <div className="max-w-[272px] ml-4 h-[40px] text-black/60 dark:text-white/60 font-bold text-[12px] text-ellipsis overflow-hidden line-clamp-2">{data.desc}</div>
+            <div className="w-full h-[45%] p-4 pb-3 flex flex-col justify-between">
+                    
+                <div className="flex flex-col">
+                    <div className="font-bold text-[24px]">{data.title}</div>
+                    <div className="text-black/60 dark:text-white/60 font-bold text-[12px] text-ellipsis overflow-hidden line-clamp-2">{data.desc}</div>
+                </div>
 
-            <div className="flex gap-x-2 text-[20px] absolute bottom-3 left-4">
-                {githubComp}
-                {weblinkComp}
-            </div>
+                <div className="w-full flex justify-between items-center">
+                    <div className="flex gap-x-1 items-center">
+                        {githubComp}
+                        {weblinkComp}
+                    </div>
 
-            <Link to={"."+data.article}>
-            <div className="text-black/70 dark:text-white/70 absolute flex items-center bottom-3 right-4 font-default font-bold text-[16px] cursor-pointer [&>svg]:ml-1 [&>svg]:text-[20px] hover:text-black dark:hover:text-white hover:translate-x-1 transition-all duration-[0.4s]">
-                    Learn More <Icon icon={"mdi:arrow-right-thin-circle-outline"} />
+                    <Link to={"."+data.article} className="flex gap-x-1 items-center text-black/70 dark:text-white/70 font-bold hover:text-black dark:hover:text-white hover:translate-x-1 transition-all duration-[0.4s]">
+                        Learn More 
+                        <Icon 
+                            icon={"mdi:arrow-right-thin-circle-outline"}
+                            width={"1.5rem"}
+                        />
+                    </Link>
+
+                </div>
+
             </div>
-            </Link>
 
         </AnimatedLayout>
     )
