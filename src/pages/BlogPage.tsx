@@ -1,8 +1,8 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import data from "../data/blog.json";
-import { FiArrowRightCircle } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
 
 interface BlogData {
@@ -47,7 +47,11 @@ const BlogItem = (data: BlogData) => {
                         {data.dateCreated}
                     </div>
                     <div className="text-black/70 dark:text-white/70 flex font-bold text-[16px] [&>svg]:ml-1 [&>svg]:text-[20px] group-hover:text-black dark:group-hover:text-white group-hover:translate-x-1 transition-all duration-[0.4s]">
-                        Read More <FiArrowRightCircle className="translate-y-[0.16rem]" />
+                        Read More 
+                        <Icon 
+                            icon={"mdi:arrow-right-thin-circle-outline"}
+                            width={"1.5rem"}
+                        />
                     </div>
                 </div>
             </Link>
