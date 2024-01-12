@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import AnimatedLayout from "../../layouts/AnimatedLayout";
 
 export interface GithubCardProps {
     commits: number;
@@ -9,18 +9,12 @@ export interface GithubCardProps {
 
 const GithubCard = ({commits, pullRequests, issues, followers}: GithubCardProps) => {
 
-    const variants = {
-        visible: {opacity: 1, transform: `translateY(0)`},
-        hidden: {opacity:0, transform: `translateY(2rem)`}
-    }
-    const timer = 1
-
     return (
-        <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} transition={{duration:timer, ease:"easeInOut"}} variants={variants} className="p-12 rounded-[1.2rem] shadow-elevate dark:shadow-elevate-dark h-fit">
+        <AnimatedLayout className="p-8 rounded-xl shadow-elevate dark:shadow-elevate-dark h-fit">
 
-            <div className="text-[2rem] font-bold mb-8">Overview</div>
+            <div className="text-[20px] font-bold mb-5">Overview</div>
 
-            <div className="text-[1.6rem] flex justify-between gap-x-16">
+            <div className="flex justify-between gap-x-12">
 
                 <div className="flex flex-col gap-y-4 font-medium">
                     <div>Commits:</div>
@@ -38,7 +32,7 @@ const GithubCard = ({commits, pullRequests, issues, followers}: GithubCardProps)
 
             </div>
 
-        </motion.div>
+        </AnimatedLayout>
     )
 }
 
