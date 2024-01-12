@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import GithubTable from "./GithubTable"
 import GithubCard, { GithubCardProps } from "./GithubCard"
+import AnimatedLayout from "../../layouts/AnimatedLayout"
 
 const Github = () => {
 
@@ -48,7 +49,6 @@ const Github = () => {
                 body: JSON.stringify(body)
                 })
             const textData = await res.json()
-            console.log(textData)
             setCardData({
                 commits: textData.data.user.contributionsCollection.contributionCalendar.totalContributions,
                 pullRequests: textData.data.user.pullRequests.totalCount,
@@ -67,17 +67,23 @@ const Github = () => {
     }, [])
 
     return (
-        <div className="max-w-[768px] w-full min-h-screen px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem] flex flex-col items-center">
-            <span className="font-bold text-[4rem] mt-[4.8rem]">Monthly Contributions</span>
+        <>
+
+            <AnimatedLayout className="w-full text-center huh:text-left font-bold text-[40px]">
+                
+                Monthly Contributions
+                
+            </AnimatedLayout>
+
             {loaded ?
-                <div className="w-full flex med:flex-row flex-col justify-center mt-[4.8rem] med:gap-x-20 gap-y-20">
+                <div className="w-full flex med:flex-row flex-col justify-center med:gap-x-20 gap-y-20">
                     <GithubTable data={data} />
                     <GithubCard commits={cardData.commits} pullRequests={cardData.pullRequests} issues={cardData.issues} followers={cardData.followers}/>
                 </div>
                 :
                 <></>
             }
-        </div>
+        </>
     )
 }
 
