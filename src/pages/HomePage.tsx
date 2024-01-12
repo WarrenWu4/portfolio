@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Octokit } from "octokit";
 import { Icon } from "@iconify/react"
 
 import AnimatedLayout from "../layouts/AnimatedLayout";
@@ -30,22 +29,11 @@ export default function HomePage() {
     const [homeData, setHomeData] = useState<HomePageData | null>(null)
 
     useEffect(() => {
-
+    
         async function getData() {
-
-            const octokit = new Octokit({auth: import.meta.env.VITE_GITHUB_TOKEN})
-
-            const data = await octokit.request(`GET /repos/WarrenWu4/blackbox/contents/_data/home.json`, {
-                owner: "WarrenWu4",
-                repo: "blackbox",
-                path: "_data/home.json",
-                headers: {
-                    "X-GitHub-Api-Version": "2022-11-28"
-                }
-            })
-
-            setHomeData(JSON.parse(atob(data.data.content)))
-
+            const response = await fetch("_data/home.json")
+            const data = await response.json()
+            setHomeData(data)
         }
 
         getData()
@@ -92,7 +80,7 @@ export default function HomePage() {
             <AnimatedLayout className="w-full p-6 rounded-xl shadow-elevate dark:shadow-elevate-dark">
 
                 <span className="font-bold text-[20px] text-black/60 dark:text-white/60 ml-2">
-                    TECH STACK
+                    TECHSTACK
                 </span>
 
                 <span className="flex flex-wrap gap-8 w-full pt-6 pb-1">

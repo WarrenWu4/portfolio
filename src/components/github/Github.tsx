@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import GithubTable from "./GithubTable"
 import GithubCard, { GithubCardProps } from "./GithubCard"
 import AnimatedLayout from "../../layouts/AnimatedLayout"
+import LoadingPage from "../../pages/LoadingPage"
 
 const Github = () => {
 
@@ -66,6 +67,10 @@ const Github = () => {
 
     }, [])
 
+    if (!loaded) {
+        return <LoadingPage/>
+    }
+
     return (
         <>
 
@@ -75,13 +80,11 @@ const Github = () => {
                 
             </AnimatedLayout>
 
-            {loaded ?
+            {
                 <div className="w-full flex med:flex-row flex-col justify-center med:gap-x-20 gap-y-20">
                     <GithubTable data={data} />
                     <GithubCard commits={cardData.commits} pullRequests={cardData.pullRequests} issues={cardData.issues} followers={cardData.followers}/>
                 </div>
-                :
-                <></>
             }
         </>
     )

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import SpotifyCard from "./SpotifyCard"
 import { Buffer } from "buffer"
 import AnimatedLayout from "../../layouts/AnimatedLayout"
+import LoadingPage from "../../pages/LoadingPage"
 
 const Spotify = () => {
 
@@ -48,6 +49,10 @@ const Spotify = () => {
 
     }, [])
 
+    if (isLoading) {
+        return <LoadingPage/>
+    }
+
     return (
         <>
             <AnimatedLayout className="w-full text-center huh:text-left font-bold text-[40px]">
@@ -57,7 +62,7 @@ const Spotify = () => {
             </AnimatedLayout>
 
             <div className="w-full flex flex-col gap-y-8">
-            {!isLoading &&
+            {
                 trackData!.map((track:any, index:number) => {
                     return <SpotifyCard key={index} number={index} track={track}/>
                 })

@@ -2,10 +2,10 @@ import { useState, useEffect, useMemo } from "react"
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-import logoLight from "/img/logo.svg"
-import logoDark from "/img/logo_dark.svg"
-import themeDark from "/img/dark_mode.svg"
-import themeLight from "/img/light_mode.svg"
+import logoLight from "/_logos/logo.svg"
+import logoDark from "/_logos/logo_dark.svg"
+import themeDark from "/_logos/dark_mode.svg"
+import themeLight from "/_logos/light_mode.svg"
 
 export default function Navbar() {
 

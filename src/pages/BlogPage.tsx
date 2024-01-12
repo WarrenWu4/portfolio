@@ -1,18 +1,39 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import data from "../data/blog.json";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
+import LoadingPage from "./LoadingPage";
 
 interface BlogData {
     title: string;
     article: string;
-    dateCreated: string;
+    "date-created": string;
     desc: string;
+    thumbnail?: string;
 }
 
 export default function BlogPage() {
+
+    const [blogData, setBlogData] = useState<BlogData[] | null>(null)
+
+    useEffect(() => {
+
+        async function getData() {
+            const response = await fetch("/_blogs/blog_data.json")
+            const data = await response.json()
+
+            setBlogData(data)
+        }
+
+        getData()
+
+    }, [])
+
+    if (blogData === null) {
+        return <LoadingPage/>
+    }
+
 
     return (
         <>
@@ -23,8 +44,12 @@ export default function BlogPage() {
 
             <div className="w-full flex flex-wrap gap-8">
             {
-                data["blogs"].map((metadata, index) => {
-                    return <BlogItem key={index} title={metadata["title"]} article={metadata["article"]} dateCreated={metadata["date-created"]} desc={metadata["desc"]} ></BlogItem>
+                blogData.map((blogs:BlogData, index:number) => {
+                    return (
+                    <BlogItem 
+                        key={index} 
+                        {...blogs}
+                    />)
                 })
             }
             </div>
@@ -44,7 +69,7 @@ const BlogItem = (data: BlogData) => {
 
                 <div className="w-full flex justify-between mt-2">
                     <div className="text-black/70 dark:text-white/70 text-[16px] font-bold">
-                        {data.dateCreated}
+                        {data["date-created"]}
                     </div>
                     <div className="text-black/70 dark:text-white/70 flex font-bold text-[16px] [&>svg]:ml-1 [&>svg]:text-[20px] group-hover:text-black dark:group-hover:text-white group-hover:translate-x-1 transition-all duration-[0.4s]">
                         Read More 
@@ -61,20 +86,25 @@ const BlogItem = (data: BlogData) => {
 
 export const BlogArticle = () => {
 
+    const nav = useNavigate()
     const {blog_id} = useParams<string>()
-    const [mdInfo, setMdInfo] = useState<string>(``)
+    const [mdInfo, setMdInfo] = useState<string | undefined>(undefined)
+
+    if (blog_id === undefined) {
+        nav("/error")
+        return
+    }
 
     useEffect(() => {
 
         const getArticle = async() => {
-            const response = await fetch(`/blog_articles/${blog_id}/index.md`)
-            if (response?.ok) {
+
+            const response = await fetch(`/_blogs/${blog_id}.md`)
+            if (response.ok) {
                 const text = await response.text()
                 setMdInfo(text)
-            }
-            else {
-                console.log(`${response?.status} error: article not found`)
-                window.location.href = "/error"
+            } else {
+                nav("/error")
             }
         }
 
@@ -82,11 +112,15 @@ export const BlogArticle = () => {
 
     }, [])
 
+    if (mdInfo === undefined) {
+        return <LoadingPage/>
+    }
+
 
     return (
         <AnimatedLayout>
 
-            <div id="blog">
+            <div id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 
