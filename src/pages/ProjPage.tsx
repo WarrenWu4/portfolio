@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 
 import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 interface ProjData {
     title: string,
@@ -70,8 +71,7 @@ export function ProjInfo() {
     const [mdInfo, setMdInfo] = useState<string>(``)
 
     if (proj_id === undefined) {
-        nav("/error")
-        return
+        return <ErrorPage/>
     }
 
     useEffect(() => {

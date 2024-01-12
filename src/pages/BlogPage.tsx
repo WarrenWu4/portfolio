@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
 
 interface BlogData {
     title: string;
@@ -91,8 +92,7 @@ export const BlogArticle = () => {
     const [mdInfo, setMdInfo] = useState<string | undefined>(undefined)
 
     if (blog_id === undefined) {
-        nav("/error")
-        return
+        return <ErrorPage/>
     }
 
     useEffect(() => {
