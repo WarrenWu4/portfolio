@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import SpotifyCard from "./SpotifyCard"
 import { Buffer } from "buffer"
+import AnimatedLayout from "../../layouts/AnimatedLayout"
 
 const Spotify = () => {
 
@@ -48,16 +49,22 @@ const Spotify = () => {
     }, [])
 
     return (
-        <div className="max-w-[768px] w-full min-h-screen px-[1.6rem] small:px-[3.2rem] med:px-[6.4rem] flex flex-col items-center">
-            <span className="font-bold text-[4rem] mt-[4.8rem]">Monthly Top Tracks</span>
-            <div className="w-full flex flex-wrap gap-[3.2rem] mt-[4.8rem]">
+        <>
+            <AnimatedLayout className="w-full text-center huh:text-left font-bold text-[40px]">
+                
+                Monthly Top Tracks
+                
+            </AnimatedLayout>
+
+            <div className="w-full flex flex-col gap-y-8">
             {!isLoading &&
                 trackData!.map((track:any, index:number) => {
                     return <SpotifyCard key={index} number={index} track={track}/>
                 })
             }
             </div>
-        </div>
+            
+        </>
     )
 }
 
