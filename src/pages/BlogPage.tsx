@@ -120,7 +120,7 @@ export const BlogArticle = () => {
     return (
         <AnimatedLayout>
 
-            <div id="blog">
+            <div id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 

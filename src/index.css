@@ -45,45 +45,46 @@ body, #root {
   background: #4E4F51;
 }
 
-/* markdown styling */
+/* styling for project and blog articles */
 #article h1 {
-  @apply text-[4rem] font-bold leading-[1.2]
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 #article h2 {
-  @apply text-[2.8rem] font-bold mt-[2.8rem]
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 2rem;
 }
 #article h3 {
-  @apply text-[2.4rem] font-medium mt-[1.6rem]
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 1.5rem;
 }
 #article p {
-  @apply text-[1.6rem] leading-[1.7] mt-[0.8rem]
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 1rem;
 }
 #article img {
-  @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
-}
-#article hr {
-  @apply my-[0.4rem]
-}
-#article a {
-  @apply text-blue-600 underline dark:text-blue-400
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
 }
 
-/* blog styling */
-#blog h1 {
-  @apply text-[4rem] font-bold leading-[1.2]
+#article hr {
+    border: 0;
+    margin: 1rem 0;
 }
-#blog h2 {
-  @apply text-[2.8rem] font-bold mt-[2.8rem]
+
+#article a {
+    color: rgb(37 99 235);
+    text-decoration: underline;
 }
-#blog h3 {
-  @apply text-[2.4rem] font-medium mt-[1.6rem]
-}
-#blog p {
-  @apply text-[1.6rem] leading-[1.7] mt-[0.8rem]
-}
-#blog img {
-  @apply w-full aspect-video mt-[0.8rem] rounded-[1.2rem]
-}
-#blog hr {
-  @apply my-[0.4rem]
+
+#article pre {
+    background-color: rgb(229 229 229);
+    border-radius: 0.125rem;
+    padding: 1rem;
+    margin-top: 1rem;
 }
