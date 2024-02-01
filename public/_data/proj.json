@@ -43,5 +43,21 @@
         "article": "WarrenWu4_jumbocards_master",
         "github": "https://github.com/WarrenWu4/jumbocards",
         "demo": "https://jumbocard.vercel.app/"
+    },
+    {
+        "title": "scout",
+        "desc": "An all-in-one accessibility app aimed at making life easier for those who are less fortunate.",
+        "techstack": [
+            "figma",
+            "expo",
+            "javascript",
+            "firebase",
+            "python",
+            "flask",
+            "opencv"
+        ],
+        "thumbnail": "scout_thumbnail.png",
+        "article": "WarrenWu4_scout_master",
+        "github": "https://github.com/WarrenWu4/scout"
     }
 ]
