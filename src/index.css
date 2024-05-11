@@ -22,7 +22,11 @@ body, #root {
 }
 
 .brutalist {
-    @apply border-4 shadow-brutalist dark:shadow-brutalist-dark
+    @apply border-4 rounded-md shadow-brutalist dark:shadow-brutalist-dark
+}
+
+.brutalist-sm {
+  @apply border-4 rounded-md shadow-brutalist-sm dark:shadow-brutalist-sm-dark
 }
 
 .not-active, .is-active {

@@ -58,7 +58,9 @@ export default {
           "elevate": "4px 6px 32px 6px rgba(0, 0, 0, 0.25)",
           "elevate-dark": "4px 6px 32px 6px rgba(255, 255, 255, 0.25)",
           "brutalist": "4px 6px rgba(0, 0, 0, 1)",
-          "brutalist-dark": "4px 6px rgba(255, 255, 255, 1)"
+          "brutalist-dark": "4px 6px rgba(255, 255, 255, 1)",
+          "brutalist-sm": "2px 3px rgba(0, 0, 0, 1)",
+          "brutalist-sm-dark": "2px 3px rgba(255, 255, 255, 1)",
         },
         colors: {
           "neutral-380": "#4E4F51",
