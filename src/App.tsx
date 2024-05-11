@@ -20,7 +20,6 @@ export default function App() {
   }, [pathname])
 
   return (
-
     <MainLayout>
 
       <Routes>

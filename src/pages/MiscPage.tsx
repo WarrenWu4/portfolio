@@ -3,6 +3,8 @@
  * - [ ] add resume link
  * - [ ] add recent events
  * - [ ] add game corner
+ * - [ ] tech stack
+ * - [ ] museum of memories
  */
 
 import { NavLink } from "react-router-dom";

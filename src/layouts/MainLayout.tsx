@@ -7,7 +7,7 @@ interface MainLayoutProps {
 
 export default function MainLayout({children}: MainLayoutProps) {
     return (
-        <div className="max-w-3xl w-full flex flex-col gap-y-12 items-center px-4 small:px-8 med:px-16">
+        <div className="max-w-3xl w-full flex flex-col items-center gap-y-12 px-4 sm:px-8 pt-8 pb-32">
 
             <Navbar/>
 

@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
 import { Icon } from "@iconify/react"
-
 import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
 
 interface Social {
     icon: string;
     link: string;
+}
+
+interface Event{
+    title: string,
+    description: string,
+    date: string,
 }
 
 interface ExpInfoProps {
@@ -46,105 +50,79 @@ export default function HomePage() {
 
     return (
         <>
-
-            <AnimatedLayout className="flex items-center justify-center flex-col leading-tight">
-
-                <span className="font-bold text-[40px] mb-3">
-                    Hi, I'm Warren
-                </span>
-
-                <span className="font-medium text-[20px] text-black/80 dark:text-white/80 mb-4 text-center">
-                    I like building software that helps people 👍
-                </span>
-
-                <span className="flex items-center gap-x-4 text-[24px]">
-                    {homeData.socials.map((social: Social, index: number) => {
-                        return (<a key={index} href={social.link} target="_blank">
-                            <Icon icon={`mdi:${social.icon}`} width="2rem"/>
-                        </a>)
-                    })}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 relative rounded-xl border-4 border-black/60 dark:border-white/60 border-solid">
-
-                <span className="font-bold text-[20px] text-black/60 dark:text-white/60 px-2 bg-white dark:bg-dark-bg absolute left-6 top-[-18px]">ABOUT</span>
-
-                <span className="text-[16px] leading-[1.5]">
-                    {homeData.about}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 rounded-xl shadow-elevate dark:shadow-elevate-dark">
-
-                <span className="font-bold text-[20px] text-black/60 dark:text-white/60 ml-2">
-                    TECHSTACK
-                </span>
-
-                <span className="flex flex-wrap gap-8 w-full pt-6 pb-1">
-                    {homeData.techstack.map((icon:string, index:number) => {
-                        return (<div key={index} className="w-[50px] aspect-square rounded-md flex justify-center items-center text-[35px] shadow-tech dark:shadow-tech-dark dark:text-white">
-                            <Icon icon={`simple-icons:${icon}`}/>
-                        </div>)
-                    })}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 flex flex-col rounded-xl bg-black/80 dark:bg-white dark:text-black/80 text-white">
-
-                <span className="font-bold text-[20px] ml-2">EXPERIENCES</span>
-
-                <div className="h-full w-full flex flex-col items-center gap-4 pt-6 pb-1">
-                    {
-                        homeData.exps.map((info:ExpInfoProps, index:number) =>
-                            <ExpInfo
-                                key={index}
-                                org={info.org}
-                                pos={info.pos}
-                                desc={info.desc}
-                                date={info.date}
-                            />
-                        )
-                    }
-                </div>
-
-            </AnimatedLayout>
-
+            <HeroSection socials={homeData.socials}/>
+            <AboutSection about={homeData.about} />
+            <EventsSection events={[""]}/>
+            <ProjectSection/>
+            <BlogSection/>
         </>
     )
 }
 
-const ExpInfo:React.FC<ExpInfoProps> = ({org, pos, desc, date}) => {
-
-    const [show, setShow] = useState(false);
-
+function HeroSection({socials}: {socials: Social[]}) {
     return (
-    <button type="button" onClick={() => setShow(!show)} className="w-full flex flex-col border-4 border-white/80 border-solid rounded-xl p-3 text-white/80 dark:text-black/80 dark:border-black/80">
+        <div className="flex items-center justify-center flex-col">
 
-        <div className="w-full flex justify-between items-center">
+            <h1 className="font-bold text-4xl mb-3 animate-fadeRight">
+                Hi, I'm Warren
+            </h1>
 
-            <span className="text-[20px] font-semibold">{org}</span>
+            <h3 className="font-medium text-xl text-black/80 dark:text-white/80 mb-4 text-center animate-fadeLeft">
+                I like building software that helps people 👍
+            </h3>
 
-            <Icon 
-                icon="bi:caret-down"
-                stroke="currentColor"
-                strokeWidth={0.6} 
-                className={twMerge("w-6 h-6 transition-all duration-500", (show ? "rotate-180" : "rotate-0"))}
-            />
-
-        </div>
-        <div className={`${(show) ? "grid-rows-exp":"grid-rows-zed"}` + " grid overflow-hidden transition-all duration-[0.4s]"}>
-
-            <div className="min-h-0 flex flex-col text-start">
-                <span className="text-[16px] font-medium">{pos}</span>
-                <span className="text-white dark:text-black text-[16px] mt-2">{desc}</span>
-                <span className="text-[16px] font-medium mt-3">{date}</span>
-            </div>
+            <span className="flex items-center gap-x-4 text-[24px]">
+                {socials.map((social: Social, index: number) => {
+                    return (
+                    <a key={index} href={social.link} target="_blank" className="animate-fadeTop opacity-0 brutalist p-2" style={{animationDelay: `${index*200}ms`}}>
+                        <Icon icon={`mdi:${social.icon}`} width="2.2rem"/>
+                    </a>
+                )})}
+            </span>
 
         </div>
-    </button>
+    )
+}
+
+function AboutSection({about}: {about: string}) {
+    return (
+        <div className="w-full p-6 brutalist bg-blue-200 dark:bg-blue-600">
+            <h2 className="font-bold text-xl mb-2">
+                ABOUT ME
+            </h2>
+            <p className="text-lg leading-7">
+                {about}
+            </p>
+        </div>
+    )
+}
+
+function EventsSection({events}: {events: string[]}) {
+    return (
+        <AnimatedLayout className="w-full p-6 brutalist bg-green-200 dark:bg-green-600">
+            <h2 className="font-bold text-xl mb-2">
+                RECENT EVENTS
+            </h2>
+        </AnimatedLayout>
+    )
+}
+
+function ProjectSection() {
+    return (
+        <AnimatedLayout className="w-full p-6 brutalist bg-amber-200 dark:bg-amber-600">
+            <h2 className="font-bold text-xl mb-2">
+                CURRENT PROJECT
+            </h2>
+        </AnimatedLayout>
+    )
+}
+
+function BlogSection() {
+    return (
+        <AnimatedLayout className="w-full p-6 brutalist bg-pink-200 dark:bg-pink-600">
+            <h2 className="font-bold text-xl mb-2">
+                LATEST BLOG POST
+            </h2>
+        </AnimatedLayout>
     )
 }

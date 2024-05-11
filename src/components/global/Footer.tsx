@@ -5,9 +5,11 @@ export default function Footer() {
     return (
         <>
 
-        <div className="mt-16 mb-8 w-32 min-h-[0.2rem] bg-black/60 dark:bg-white/60 rounded-2xl"></div>
+        <div className="mt-auto">
+            <div className="mt-16 mb-8 w-32 min-h-[0.2rem] bg-black/60 dark:bg-white/60 rounded-2xl"></div>
+        </div>
 
-        <div className="w-full flex flex-col text-[16px] mb-32 gap-y-12">
+        <div className="w-full flex flex-col text-[16px] gap-y-12">
 
             <div className="flex flex-col">
 

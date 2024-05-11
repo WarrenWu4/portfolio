@@ -10,11 +10,11 @@ export default function AnimatedLayout({children, className}: AnimatedLayoutProp
 
     const variants = {
         visible: {opacity: 1, transform: `translateY(0)`},
-        hidden: {opacity: 0, transform: `translateY(2rem)`}
+        hidden: {opacity: 0, transform: `translateY(1rem)`}
     }
     const transition = { 
         duration: 1, 
-        ease:"easeInOut"
+        ease:"easeInOut",
     }
 
     return (
