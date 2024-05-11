@@ -1,8 +1,8 @@
 /**
  * todo
  * - [ ] add resume link
- * - [ ] add mini game
- * - [ ] add graveyard
+ * - [ ] add recent events
+ * - [ ] add game corner
  */
 
 import { NavLink } from "react-router-dom";
@@ -24,6 +24,12 @@ export default function MiscPage() {
             icon: "github",
             background: "#333"
         },
+        {
+            link: "./timeline",
+            text: "Recent Events",
+            icon: "calendar",
+            background: "#a16edb"
+        }
     ]
 
     return (

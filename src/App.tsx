@@ -9,6 +9,7 @@ import Github from './components/github/Github';
 import Spotify from './components/spotify/Spotify';
 import ErrorPage from './pages/ErrorPage';
 import MainLayout from "./layouts/MainLayout";
+import Events from "./components/events/Events";
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
           <Route path='/misc' element={<MiscPage/>}></Route>
           <Route path='/misc/music' element={<Spotify/>}></Route>
           <Route path='/misc/github-stats' element={<Github/>}></Route>
+          <Route path="/misc/timeline" element={<Events/>}></Route>
         </Route>
 
         <Route path='*' element={<ErrorPage/>}/>
