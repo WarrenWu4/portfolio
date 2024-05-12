@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react"
-import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
 import { NavLink } from "react-router-dom";
+import BlogCard from "../components/blog/BlogCard";
 
 interface Social {
     icon: string;
@@ -95,7 +95,7 @@ function HeroSection({socials}: {socials: Social[]}) {
             <div className="flex items-center justify-center flex-col border-4">
 
                 <div className="w-fit px-12 py-6 border-r-4 border-l-4 flex flex-col items-center">
-                    <h1 className="font-bold text-4xl mb-3">
+                    <h1 className="font-bold text-40 mb-3">
                         Hi, I'm Warren
                     </h1>
 
@@ -189,16 +189,10 @@ function BlogSection({post}: {post: Blog}) {
             <h2 className="font-bold text-xl mb-2">
                 LATEST BLOG POST
             </h2>
-            <div className="brutalist bg-[#FFD39F] px-5 pt-4 pb-6 flex flex-col gap-y-3">
-                <div className="w-full flex items-center justify-between text-base font-bold">
-                    <h4>{post.title}</h4>
-                    <h4>{post["date-created"]}</h4>
-                </div>
-                <p className="w-full overflow-hidden text-base break-word line-clamp-4">{post.desc}</p>
-                <NavLink to={post.article} className={"bg-[#FFD39F] font-bold text-base border-4 rounded-md px-6 py-4 flex w-fit"}>
-                    READ MORE
-                </NavLink>
-            </div>
+            <BlogCard
+                blog={post}
+                className="brutalist bg-[#F2DE95]"
+            />
             <NavLink to={"/blog"} className={"w-fit brutalist bg-[#FFD39F] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>

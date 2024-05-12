@@ -34,7 +34,7 @@ export default function Navbar() {
     return (
         <nav className="w-full p-4 border-4 flex items-center justify-between bg-[#EFE0B9]">
 
-            <div className="flex items-center gap-x-2 small:gap-x-4 text-2xl font-bold">
+            <div className="flex items-center gap-x-2 small:gap-x-4 text-xl font-bold">
                 <NavLink to={"/"}>
                     <img src={logo} alt="logo" className="w-12 aspect-square"/>
                 </NavLink>

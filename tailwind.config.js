@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
       extend: {
+        fontSize: {
+          "40": "2.5rem",
+        },
         animation: {
           'fadeRight': 'fadeRight 1s ease-out forwards',
           'fadeLeft': 'fadeLeft 1s ease-out forwards',
