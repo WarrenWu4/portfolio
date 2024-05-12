@@ -15,6 +15,14 @@ interface Event{
     date: string,
 }
 
+interface Blog {
+    title: string;
+    article: string;
+    "date-created": string;
+    thumbnail: string;
+    desc: string;
+}
+
 interface ExpInfoProps {
     org: string;
     pos: string;
@@ -32,20 +40,41 @@ interface HomePageData {
 export default function HomePage() {
 
     const [homeData, setHomeData] = useState<HomePageData | null>(null)
+    const [eventsData, setEventsData] = useState<Event[] | null>(null)
+    const [latestBlogPost, setLatestBlogPost] = useState<Blog | null>(null)
 
     useEffect(() => {
     
-        async function getData() {
+        async function getHomeData() {
             const response = await fetch("_data/home.json")
             const data = await response.json()
             setHomeData(data)
         }
+        async function getEventsData() {
+            const response = await fetch("_data/events.json")
+            const data = await response.json()
+            data.sort((a: Event, b: Event) => {
+                return new Date(b.date).getTime() - new Date(a.date).getTime()
+            })
+            setEventsData(data.slice(0, 2))
+        }
+        async function getLatestBlogPost() {
+            const response = await fetch("_blogs/blog_data.json")
+            const data = await response.json()
+            console.log(data)
+            data.sort((a: Blog, b: Blog) => {
+                return new Date(b["date-created"]).getTime() - new Date(a["date-created"]).getTime()
+            })
+            setLatestBlogPost(data[0])
+        }
 
-        getData()
+        getHomeData()
+        getEventsData()
+        getLatestBlogPost()
 
     }, [])
 
-    if (homeData === null) {
+    if (homeData === null || eventsData === null || latestBlogPost === null) {
         return <LoadingPage/>
     }
 
@@ -53,9 +82,9 @@ export default function HomePage() {
         <div className="flex flex-col gap-y-6">
             <HeroSection socials={homeData.socials}/>
             <AboutSection about={homeData.about} />
-            <EventsSection events={[""]}/>
+            <EventsSection events={eventsData}/>
             <ProjectSection/>
-            <BlogSection/>
+            <BlogSection post={latestBlogPost}/>
         </div>
     )
 }
@@ -105,12 +134,24 @@ function AboutSection({about}: {about: string}) {
     )
 }
 
-function EventsSection({events}: {events: string[]}) {
+function EventsSection({events}: {events: Event[]}) {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#C6CFF0]">
             <h2 className="font-bold text-xl mb-2">
                 RECENT EVENTS
             </h2>
+            <div className="brutalist bg-[#91BCFD]">
+                {events.map((event: Event, index: number) => {
+                    return (
+                        <NavLink to={"/misc/timeline"} key={index} className={`flex flex-col gap-y-2 px-5 pt-4 pb-6 ${(index === 0) ? "" : "border-t-4"}`}>
+                            <div className="w-full items-center justify-between text-base font-bold">
+                                <h4>{event.title}</h4>
+                                <h4>{event.date}</h4>
+                            </div>
+                            <p>{event.description}</p>
+                        </NavLink>
+                )})}
+            </div>
             <NavLink to={"/misc/timeline"} className={"w-fit brutalist bg-[#9FA9FF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
@@ -127,8 +168,8 @@ function ProjectSection() {
             </h2>
             <div className="flex brutalist bg-[#A4E583]">
                 <div className="py-4 px-5 flex flex-col gap-y-1">
-                    <h4 className="font-bold text-base">MD to HTML Translator</h4>
-                    <p>Translates Markdown to HTML using Python</p>
+                    <h4 className="font-bold text-base">Takeoff</h4>
+                    <p>A tool that bootstraps packages and streamlines project setup</p>
                 </div>
                 <div className="py-4 px-5 border-l-4">
                     <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
@@ -142,12 +183,22 @@ function ProjectSection() {
     )
 }
 
-function BlogSection() {
+function BlogSection({post}: {post: Blog}) {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#F0E7C6]">
             <h2 className="font-bold text-xl mb-2">
                 LATEST BLOG POST
             </h2>
+            <div className="brutalist bg-[#FFD39F] px-5 pt-4 pb-6 flex flex-col gap-y-3">
+                <div className="w-full flex items-center justify-between text-base font-bold">
+                    <h4>{post.title}</h4>
+                    <h4>{post["date-created"]}</h4>
+                </div>
+                <p className="w-full overflow-hidden text-base break-word line-clamp-4">{post.desc}</p>
+                <NavLink to={post.article} className={"bg-[#FFD39F] font-bold text-base border-4 rounded-md px-6 py-4 flex w-fit"}>
+                    READ MORE
+                </NavLink>
+            </div>
             <NavLink to={"/blog"} className={"w-fit brutalist bg-[#FFD39F] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
