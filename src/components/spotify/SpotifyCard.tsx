@@ -1,25 +1,27 @@
-import AnimatedLayout from "../../layouts/AnimatedLayout"
+import { twMerge } from "tailwind-merge";
+import { Icon } from "@iconify/react";
 
-const SpotifyCard = (track:any) => {
+interface SpotifyCardProps {
+    track: any
+    number: number
+    className?: string
+}
 
+const SpotifyCard = ({track, className, number}: SpotifyCardProps) => {
     return (
-    <AnimatedLayout>
-
-        <a href={track.track.uri} target={"_blank"}>
-
-            <div className="w-full rounded-xl shadow-elevate dark:shadow-elevate-dark p-4 cursor-pointer flex items-center hover:scale-105 transition">
-            <div className="mr-5 text-[28px]" >{track.number+1}</div>
-            <img src={track.track.album.images[2].url} alt="album image" width={40} height={40} className="rounded-lg mr-3"/>
-            <div className="flex flex-col justify-center mr-5">
-                <div className="mb-1">{track.track.name}</div>
-                <div className="text-[12px] text-black/70 dark:text-white/70">{track.track.artists[0].name}</div>
+        <div className={twMerge("w-full px-2 py-4 flex items-center justify-between gap-x-4", className)}>
+            <div className="w-full flex items-center gap-x-4">
+                <div className="w-12 font-bold text-40 text-center" >{number}</div>
+                <img src={track.album.images[2].url} alt="album image" width={48} height={48} className="border-4 rounded-md"/>
+                <div className="flex flex-col justify-center">
+                    <div className="font-bold text-lg">{track.name}</div>
+                    <div className="font-medium text-sm text-black/70 dark:text-white/70">{track.artists[0].name}</div>
+                </div>
             </div>
-            </div>
-
-        </a>
-        
-    </AnimatedLayout>
-
+            <a href={track.uri} target={"_blank"} className="w-12 flex items-center justify-center brutalist-sm p-1 mr-4">
+                <Icon icon={"mdi:headphones"} width={"2rem"}/>
+            </a>
+        </div>
 )}
 
 export default SpotifyCard;

@@ -1,0 +1,20 @@
+[
+    {
+        "link": "./music",
+        "text": "Music I 💚",
+        "icon": "spotify",
+        "background": "#80966b"
+    },
+    {
+        "link": "./github-stats",
+        "text": "Github Stats",
+        "icon": "github",
+        "background": "#333"
+    },
+    {
+        "link": "./timeline",
+        "text": "Recent Events",
+        "icon": "calendar",
+        "background": "#a16edb"
+    }
+]

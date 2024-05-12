@@ -1,16 +1,12 @@
-import AnimatedLayout from "../../layouts/AnimatedLayout"
+import { Event } from "../../lib/types";
 import LoadingPage from "../../pages/LoadingPage"
 import { useEffect, useState } from "react" 
-
-interface EventData{
-    title: string,
-    description: string,
-    date: string,
-}
+import EventCard from "./EventCard";
+import ContentLayout from "../../layouts/ContentLayout";
 
 export default function Events() {
     
-    const [events, setEvents] = useState<EventData[] | null>(null);
+    const [events, setEvents] = useState<Event[] | null>(null);
 
     useEffect(() => {
 
@@ -31,36 +27,17 @@ export default function Events() {
     }
 
     return (
-        <>
-            <AnimatedLayout className="w-full text-center huh:text-left font-bold text-[40px]">
-                
-                What I've Been Up To 
-                
-            </AnimatedLayout>
-
-            <div className="w-full flex flex-col gap-y-8">
-                {events.map((event:EventData, index:number) => {
-                    return <EventItem key={index} title={event.title} description={event.description} date={event.date} />
-                })}
+        <ContentLayout title="What I've Been Up To">
+            <div className="w-full flex flex-col brutalist">
+                {events.map((event:Event, index:number) => {
+                    return (
+                        <EventCard 
+                            key={index}
+                            event={event}
+                            className={(index === 0) ? "" : "border-t-4"} 
+                        />
+                )})}
             </div>
-        </>
-    )
-}
-
-interface EventItemProps {
-    title: string;
-    description: string;
-    date: string;
-}
-
-function EventItem({title, description, date}: EventItemProps) {
-    return (
-        <AnimatedLayout className="w-full flex flex-col gap-y-1">
-            <div className="w-full flex gap-x-4 items-center justify-between font-bold text-base hover:border-black hover:dark:border-white border-transparent  border-solid border-b-[3px] cursor-pointer duration-500">
-                <p>{title}</p>
-                <p>{date}</p>
-            </div>
-            <p className="text-base">{description}</p>
-        </AnimatedLayout>
+        </ContentLayout>
     )
 }

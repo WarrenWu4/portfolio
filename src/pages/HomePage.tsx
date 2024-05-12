@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react"
 import LoadingPage from "./LoadingPage";
 import { NavLink } from "react-router-dom";
 import BlogCard from "../components/blog/BlogCard";
+import EventCard from "../components/events/EventCard";
 
 interface Social {
     icon: string;
@@ -143,13 +144,11 @@ function EventsSection({events}: {events: Event[]}) {
             <div className="brutalist bg-[#91BCFD]">
                 {events.map((event: Event, index: number) => {
                     return (
-                        <NavLink to={"/misc/timeline"} key={index} className={`flex flex-col gap-y-2 px-5 pt-4 pb-6 ${(index === 0) ? "" : "border-t-4"}`}>
-                            <div className="w-full items-center justify-between text-base font-bold">
-                                <h4>{event.title}</h4>
-                                <h4>{event.date}</h4>
-                            </div>
-                            <p>{event.description}</p>
-                        </NavLink>
+                        <EventCard
+                            key={index}
+                            event={event}
+                            className={(index === 0) ? "" : "border-t-4"}
+                        />
                 )})}
             </div>
             <NavLink to={"/misc/timeline"} className={"w-fit brutalist bg-[#9FA9FF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
