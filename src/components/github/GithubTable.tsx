@@ -22,7 +22,7 @@ const GithubTable = (data:any) => {
     return (
         <div className="flex brutalist p-5 pr-8 gap-x-2 justify-center items-center">
 
-            <div className="w-6 h-full py-20 flex flex-col justify-between items-center">
+            <div className="w-6 h-full py-20 flex flex-col justify-between items-center gap-8">
                 <div className="h-fit rotate-[270deg]">{`${oldMonth}`}</div>
 
                 <Icon icon={"ion:arrow-down-outline"} width={"1.5rem"}/>

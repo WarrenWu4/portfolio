@@ -75,7 +75,7 @@ const Github = () => {
         <ContentLayout title="Monthly Contributions">
 
             {
-                <div className="w-full flex med:flex-row flex-col justify-center med:gap-x-20 gap-y-20">
+                <div className="w-full flex md:flex-row flex-col justify-center gap-12">
                     <GithubTable data={data} />
                     <GithubCard commits={cardData.commits} pullRequests={cardData.pullRequests} issues={cardData.issues} followers={cardData.followers}/>
                 </div>
