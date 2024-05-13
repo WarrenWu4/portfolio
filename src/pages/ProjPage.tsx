@@ -2,7 +2,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { useEffect, useState } from "react";
 
-import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
 import ErrorPage from "./ErrorPage";
 import { Proj } from "../lib/types";
