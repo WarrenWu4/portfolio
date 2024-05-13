@@ -5,9 +5,9 @@ export default function Footer() {
     return (
         <>
 
-        <div className="mt-16 mb-8 w-32 min-h-[0.2rem] bg-black/60 dark:bg-white/60 rounded-2xl"></div>
+        <div className="w-full mt-auto h-1 bg-black dark:bg-white"></div>
 
-        <div className="w-full flex flex-col text-[16px] mb-32 gap-y-12">
+        <div className="border-4 p-6 w-full flex flex-col text-base gap-y-12 bg-[#EFE0B9] dark:bg-[#8a7746]">
 
             <div className="flex flex-col">
 

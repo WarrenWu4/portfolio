@@ -32,9 +32,9 @@ export default function Navbar() {
 
 
     return (
-        <nav className="mt-8 h-[50px] flex justify-between items-center w-full font-bold text-[18px]">
+        <nav className="w-full p-4 border-4 flex items-center justify-between bg-[#EFE0B9] dark:bg-[#8a7746]">
 
-            <div className="flex items-center gap-x-2 small:gap-x-4">
+            <div className="flex items-center gap-x-2 small:gap-x-4 text-xl font-bold">
                 <NavLink to={"/"}>
                     <img src={logo} alt="logo" className="w-12 aspect-square"/>
                 </NavLink>

@@ -1,150 +1,187 @@
 import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
 import { Icon } from "@iconify/react"
-
-import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
+import { NavLink } from "react-router-dom";
+import BlogCard from "../components/blog/BlogCard";
+import EventCard from "../components/events/EventCard";
+import { Social, Event, Blog } from "../lib/types";
 
-interface Social {
-    icon: string;
-    link: string;
-}
-
-interface ExpInfoProps {
-    org: string;
-    pos: string;
-    desc: string;  
-    date: string; 
-}
-
-interface HomePageData {
-    socials: Social[];
-    about: string;
-    techstack: string[];
-    exps: ExpInfoProps[]
+interface HomeProps {
+    socials: Social[]
+    about: string
 }
 
 export default function HomePage() {
 
-    const [homeData, setHomeData] = useState<HomePageData | null>(null)
+    const [homeData, setHomeData] = useState<HomeProps | null>(null)
+    const [eventsData, setEventsData] = useState<Event[] | null>(null)
+    const [latestBlogPost, setLatestBlogPost] = useState<Blog | null>(null)
 
     useEffect(() => {
     
-        async function getData() {
+        async function getHomeData() {
             const response = await fetch("_data/home.json")
             const data = await response.json()
             setHomeData(data)
         }
+        async function getEventsData() {
+            const response = await fetch("_data/events.json")
+            const data = await response.json()
+            data.sort((a: Event, b: Event) => {
+                return new Date(b.date).getTime() - new Date(a.date).getTime()
+            })
+            setEventsData(data.slice(0, 3))
+        }
+        async function getLatestBlogPost() {
+            const response = await fetch("_blogs/blog_data.json")
+            const data = await response.json()
+            data.sort((a: Blog, b: Blog) => {
+                return new Date(b["date-created"]).getTime() - new Date(a["date-created"]).getTime()
+            })
+            setLatestBlogPost(data[0])
+        }
 
-        getData()
+        getHomeData()
+        getEventsData()
+        getLatestBlogPost()
 
     }, [])
 
-    if (homeData === null) {
+    if (homeData === null || eventsData === null || latestBlogPost === null) {
         return <LoadingPage/>
     }
 
     return (
-        <>
-
-            <AnimatedLayout className="flex items-center justify-center flex-col leading-tight">
-
-                <span className="font-bold text-[40px] mb-3">
-                    Hi, I'm Warren
-                </span>
-
-                <span className="font-medium text-[20px] text-black/80 dark:text-white/80 mb-4 text-center">
-                    I like building software that helps people 👍
-                </span>
-
-                <span className="flex items-center gap-x-4 text-[24px]">
-                    {homeData.socials.map((social: Social, index: number) => {
-                        return (<a key={index} href={social.link} target="_blank">
-                            <Icon icon={`mdi:${social.icon}`} width="2rem"/>
-                        </a>)
-                    })}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 relative rounded-xl border-4 border-black/60 dark:border-white/60 border-solid">
-
-                <span className="font-bold text-[20px] text-black/60 dark:text-white/60 px-2 bg-white dark:bg-dark-bg absolute left-6 top-[-18px]">ABOUT</span>
-
-                <span className="text-[16px] leading-[1.5]">
-                    {homeData.about}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 rounded-xl shadow-elevate dark:shadow-elevate-dark">
-
-                <span className="font-bold text-[20px] text-black/60 dark:text-white/60 ml-2">
-                    TECHSTACK
-                </span>
-
-                <span className="flex flex-wrap gap-8 w-full pt-6 pb-1">
-                    {homeData.techstack.map((icon:string, index:number) => {
-                        return (<div key={index} className="w-[50px] aspect-square rounded-md flex justify-center items-center text-[35px] shadow-tech dark:shadow-tech-dark dark:text-white">
-                            <Icon icon={`simple-icons:${icon}`}/>
-                        </div>)
-                    })}
-                </span>
-
-            </AnimatedLayout>
-
-            <AnimatedLayout className="w-full p-6 flex flex-col rounded-xl bg-black/80 dark:bg-white dark:text-black/80 text-white">
-
-                <span className="font-bold text-[20px] ml-2">EXPERIENCES</span>
-
-                <div className="h-full w-full flex flex-col items-center gap-4 pt-6 pb-1">
-                    {
-                        homeData.exps.map((info:ExpInfoProps, index:number) =>
-                            <ExpInfo
-                                key={index}
-                                org={info.org}
-                                pos={info.pos}
-                                desc={info.desc}
-                                date={info.date}
-                            />
-                        )
-                    }
-                </div>
-
-            </AnimatedLayout>
-
-        </>
+        <div className="flex flex-col gap-y-6">
+            <HeroSection socials={homeData.socials}/>
+            <AboutSection about={homeData.about} />
+            <EventsSection events={eventsData}/>
+            <ProjectSection/>
+            <BlogSection post={latestBlogPost}/>
+        </div>
     )
 }
 
-const ExpInfo:React.FC<ExpInfoProps> = ({org, pos, desc, date}) => {
-
-    const [show, setShow] = useState(false);
-
+function HeroSection({socials}: {socials: Social[]}) {
     return (
-    <button type="button" onClick={() => setShow(!show)} className="w-full flex flex-col border-4 border-white/80 border-solid rounded-xl p-3 text-white/80 dark:text-black/80 dark:border-black/80">
+        <div className="w-full flex flex-col gap-y-0 leading-tight">
+            <div className="flex items-center justify-center flex-col border-4">
 
-        <div className="w-full flex justify-between items-center">
+                <div className="w-fit px-12 py-6 sm:border-r-4 sm:border-l-4 flex flex-col items-center text-center">
+                    <h1 className="font-bold text-40 mb-3">
+                        Hi, I'm 
+                        <span className="underline underline-offset-4 decoration-dashed decoration-4 ml-2">Warren</span>
+                    </h1>
 
-            <span className="text-[20px] font-semibold">{org}</span>
+                    <h3 className="font-medium text-xl text-black/80 dark:text-white/80 text-center">
+                        I build software that helps people 👍
+                    </h3>
+                </div>
 
-            <Icon 
-                icon="bi:caret-down"
-                stroke="currentColor"
-                strokeWidth={0.6} 
-                className={twMerge("w-6 h-6 transition-all duration-500", (show ? "rotate-180" : "rotate-0"))}
-            />
-
-        </div>
-        <div className={`${(show) ? "grid-rows-exp":"grid-rows-zed"}` + " grid overflow-hidden transition-all duration-[0.4s]"}>
-
-            <div className="min-h-0 flex flex-col text-start">
-                <span className="text-[16px] font-medium">{pos}</span>
-                <span className="text-white dark:text-black text-[16px] mt-2">{desc}</span>
-                <span className="text-[16px] font-medium mt-3">{date}</span>
             </div>
-
+            <div className="flex items-center p-6 justify-center gap-x-5 border-4 text-2xl border-t-0">
+                {socials.map((social: Social, index: number) => {
+                    return (
+                    <a key={index} href={social.link} target="_blank" className="p-1 flex items-center justify-center btn-1-sm">
+                        <Icon icon={`mdi:${social.icon}`} width="2.2rem"/>
+                    </a>
+                )})}
+            </div>
         </div>
-    </button>
+    )
+}
+
+function AboutSection({about}: {about: string}) {
+    return (
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#E8C6F0] dark:bg-[#5d4463]">
+            <h2 className="font-bold text-xl">
+                ABOUT ME
+            </h2>
+            <p className="text-lg leading-7">
+                {about}
+            </p>
+            <div className="flex flex-wrap gap-4">
+                <NavLink to={"/techstack"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    TECH STACK 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+                <NavLink to={"/involvements"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    INVOLVEMENTS 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+                <NavLink to={"/resume"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    RESUME 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+            </div>
+        </div>
+    )
+}
+
+function EventsSection({events}: {events: Event[]}) {
+    return (
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#C6CFF0] dark:bg-[#3a3f52]">
+            <h2 className="font-bold text-xl">
+                RECENT EVENTS
+            </h2>
+            <div className="brutalist bg-[#91BCFD] dark:bg-[#253040]">
+                {events.map((event: Event, index: number) => {
+                    return (
+                        <EventCard
+                            key={index}
+                            event={event}
+                            className={(index === 0) ? "" : "border-t-4"}
+                        />
+                )})}
+            </div>
+            <NavLink to={"/misc/timeline"} className={"btn-1 w-fit bg-[#9FA9FF] dark:bg-[#1e2246] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                VIEW MORE 
+                <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+            </NavLink>
+        </div>
+    )
+}
+
+function ProjectSection() {
+    return (
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6] dark:bg-[#363e32]">
+            <h2 className="font-bold text-xl">
+                CURRENT PROJECT
+            </h2>
+            <div className="flex brutalist bg-[#A4E583] dark:bg-[#384e2e]">
+                <div className="py-4 px-5 flex flex-col gap-y-1 h-full">
+                    <h4 className="font-bold text-base">Takeoff</h4>
+                    <p>A tool that bootstraps packages and streamlines project setup</p>
+                    <a href="https://github.com/WarrenWu4/md-to-html-compiler" target="_blank" className="mt-auto w-fit">
+                        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-10 h-10 p-1"/>
+                    </a>
+                </div>
+                <div className="py-4 px-5 border-l-4 flex items-center justify-center">
+                    <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
+                </div>
+            </div>
+            <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] dark:bg-[#2d6739] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                VIEW MORE 
+                <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+            </NavLink>
+        </div>
+    )
+}
+
+function BlogSection({post}: {post: Blog}) {
+    return (
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#F0E7C6] dark:bg-[#6f633d]">
+            <h2 className="font-bold text-xl">
+                LATEST BLOG POST
+            </h2>
+            <BlogCard
+                blog={post}
+                className="brutalist bg-[#F2DE95] dark:bg-[#554d2b]"
+            />
+            <NavLink to={"/blog"} className={"w-fit btn-1 bg-[#FFD39F] dark:bg-[#6a5239] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                VIEW MORE 
+                <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+            </NavLink>
+        </div>
     )
 }
