@@ -28,3 +28,8 @@ export interface Event {
     description: string
     date: string
 }
+
+export interface Social {
+    icon: string
+    link: string
+}

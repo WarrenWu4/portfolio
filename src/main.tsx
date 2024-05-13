@@ -31,20 +31,16 @@ export default function App() {
 
                 <Route path="/" element={<HomePage/>}/>
 
-                <Route path='/proj' element={<ProjPage/>}></Route>
-                <Route path='/proj/:proj_id' element={<ProjInfo/>}></Route>
+                <Route path='/proj' element={<ProjPage/>}/>
+                <Route path='/proj/:proj_id' element={<ProjInfo/>}/>
 
-                <Route path='/blog'>
-                <Route path='/blog' element={<BlogPage/>}></Route>
-                <Route path='/blog/:blog_id' element={<BlogArticle/>}></Route>
-                </Route>
+                <Route path='/blog' element={<BlogPage/>}/>
+                <Route path='/blog/:blog_id' element={<BlogArticle/>}/>
 
-                <Route path='/misc'>
-                <Route path='/misc' element={<MiscPage/>}></Route>
-                <Route path='/misc/music' element={<Spotify/>}></Route>
-                <Route path='/misc/github-stats' element={<Github/>}></Route>
-                <Route path="/misc/timeline" element={<Events/>}></Route>
-                </Route>
+                <Route path='/misc' element={<MiscPage/>}/>
+                <Route path='/misc/music' element={<Spotify/>}/>
+                <Route path='/misc/github-stats' element={<Github/>}/>
+                <Route path="/misc/timeline" element={<Events/>}/>
 
                 <Route path='*' element={<ErrorPage/>}/>
 

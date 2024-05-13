@@ -14,10 +14,10 @@ export default function BlogCard({blog, className}: BlogCardProps) {
                 <h4>{blog.title}</h4>
                 <h4>{blog["date-created"]}</h4>
             </div>
-            <p className="break-word line-clamp-4 overflow-hidden">
+            <p className="break-word line-clamp-2 overflow-hidden">
                 {blog.desc}
             </p>
-            <NavLink to={`.${blog.article}`} className={"bg-[#FFD39F] font-bold text-base border-4 rounded-md px-6 py-4 flex w-fit"}>
+            <NavLink to={`.${blog.article}`} className={"bg-[#FFD39F] font-bold text-base flex w-fit btn-2 px-6 py-4"}>
                 READ MORE
             </NavLink>
         </div>

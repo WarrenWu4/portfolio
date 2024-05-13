@@ -1,8 +1,6 @@
 /**
  * todo
- * - [ ] add resume link
  * - [ ] add game corner
- * - [ ] tech stack
  * - [ ] museum of memories
  */
 
@@ -34,9 +32,9 @@ export default function MiscPage() {
     }
 
     return (
-        <ContentLayout title="Miscellaneous">
+        <ContentLayout title="Misc">
 
-            <div className="w-full flex flex-wrap justify-center huh:justify-start [&>*]:rounded-[1.2rem] gap-10">
+            <div className="w-full flex flex-wrap gap-8">
 
                 {miscData.map((data:Misc, index:number) => {
                     return <MiscCard key={index} {...data}/>

@@ -34,7 +34,7 @@ export function ProjPage() {
     return (
         <ContentLayout title="Projects" className="bg-[#D4F0C6]">
 
-            <div className="w-full flex flex-wrap gap-8 justify-center huh:justify-start">
+            <div className="w-full flex flex-wrap gap-8">
                 {
                     projData.map((project: Proj, index:number) => {
                         return (
@@ -66,7 +66,6 @@ export function ProjInfo() {
 
             try {
                 const [owner, repo, branch] = proj_id.split("_")
-                console.log(owner, repo, branch)
                 const response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/README.md`)
                 if (response.ok) {
                     const text = await response.text()

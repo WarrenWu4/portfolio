@@ -4,43 +4,16 @@ import LoadingPage from "./LoadingPage";
 import { NavLink } from "react-router-dom";
 import BlogCard from "../components/blog/BlogCard";
 import EventCard from "../components/events/EventCard";
+import { Social, Event, Blog } from "../lib/types";
 
-interface Social {
-    icon: string;
-    link: string;
-}
-
-interface Event{
-    title: string,
-    description: string,
-    date: string,
-}
-
-interface Blog {
-    title: string;
-    article: string;
-    "date-created": string;
-    thumbnail: string;
-    desc: string;
-}
-
-interface ExpInfoProps {
-    org: string;
-    pos: string;
-    desc: string;  
-    date: string; 
-}
-
-interface HomePageData {
-    socials: Social[];
-    about: string;
-    techstack: string[];
-    exps: ExpInfoProps[]
+interface HomeProps {
+    socials: Social[]
+    about: string
 }
 
 export default function HomePage() {
 
-    const [homeData, setHomeData] = useState<HomePageData | null>(null)
+    const [homeData, setHomeData] = useState<HomeProps | null>(null)
     const [eventsData, setEventsData] = useState<Event[] | null>(null)
     const [latestBlogPost, setLatestBlogPost] = useState<Blog | null>(null)
 
@@ -57,12 +30,11 @@ export default function HomePage() {
             data.sort((a: Event, b: Event) => {
                 return new Date(b.date).getTime() - new Date(a.date).getTime()
             })
-            setEventsData(data.slice(0, 2))
+            setEventsData(data.slice(0, 3))
         }
         async function getLatestBlogPost() {
             const response = await fetch("_blogs/blog_data.json")
             const data = await response.json()
-            console.log(data)
             data.sort((a: Blog, b: Blog) => {
                 return new Date(b["date-created"]).getTime() - new Date(a["date-created"]).getTime()
             })
@@ -92,16 +64,17 @@ export default function HomePage() {
 
 function HeroSection({socials}: {socials: Social[]}) {
     return (
-        <div className="w-full flex flex-col gap-y-0">
+        <div className="w-full flex flex-col gap-y-0 leading-tight">
             <div className="flex items-center justify-center flex-col border-4">
 
-                <div className="w-fit px-12 py-6 border-r-4 border-l-4 flex flex-col items-center">
+                <div className="w-fit px-12 py-6 sm:border-r-4 sm:border-l-4 flex flex-col items-center text-center">
                     <h1 className="font-bold text-40 mb-3">
-                        Hi, I'm Warren
+                        Hi, I'm 
+                        <span className="underline underline-offset-4 decoration-dashed decoration-4 ml-2">Warren</span>
                     </h1>
 
                     <h3 className="font-medium text-xl text-black/80 dark:text-white/80 text-center">
-                        I like building software that helps people 👍
+                        I build software that helps people 👍
                     </h3>
                 </div>
 
@@ -109,7 +82,7 @@ function HeroSection({socials}: {socials: Social[]}) {
             <div className="flex items-center p-6 justify-center gap-x-5 border-4 text-2xl border-t-0">
                 {socials.map((social: Social, index: number) => {
                     return (
-                    <a key={index} href={social.link} target="_blank" className="p-1 flex items-center justify-center brutalist-sm">
+                    <a key={index} href={social.link} target="_blank" className="p-1 flex items-center justify-center btn-1-sm">
                         <Icon icon={`mdi:${social.icon}`} width="2.2rem"/>
                     </a>
                 )})}
@@ -121,16 +94,26 @@ function HeroSection({socials}: {socials: Social[]}) {
 function AboutSection({about}: {about: string}) {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#E8C6F0]">
-            <h2 className="font-bold text-xl mb-2">
+            <h2 className="font-bold text-xl">
                 ABOUT ME
             </h2>
             <p className="text-lg leading-7">
                 {about}
             </p>
-            <NavLink to={"/about"} className={"w-fit brutalist bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
-                READ MORE 
-                <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
-            </NavLink>
+            <div className="flex flex-wrap gap-4">
+                <NavLink to={"/techstack"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    TECH STACK 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+                <NavLink to={"/involvements"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    INVOLVEMENTS 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+                <NavLink to={"/resume"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                    RESUME 
+                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+                </NavLink>
+            </div>
         </div>
     )
 }
@@ -138,7 +121,7 @@ function AboutSection({about}: {about: string}) {
 function EventsSection({events}: {events: Event[]}) {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#C6CFF0]">
-            <h2 className="font-bold text-xl mb-2">
+            <h2 className="font-bold text-xl">
                 RECENT EVENTS
             </h2>
             <div className="brutalist bg-[#91BCFD]">
@@ -151,7 +134,7 @@ function EventsSection({events}: {events: Event[]}) {
                         />
                 )})}
             </div>
-            <NavLink to={"/misc/timeline"} className={"w-fit brutalist bg-[#9FA9FF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/misc/timeline"} className={"btn-1 w-fit bg-[#9FA9FF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>
@@ -162,19 +145,22 @@ function EventsSection({events}: {events: Event[]}) {
 function ProjectSection() {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6]">
-            <h2 className="font-bold text-xl mb-2">
+            <h2 className="font-bold text-xl">
                 CURRENT PROJECT
             </h2>
             <div className="flex brutalist bg-[#A4E583]">
-                <div className="py-4 px-5 flex flex-col gap-y-1">
+                <div className="py-4 px-5 flex flex-col gap-y-1 h-full">
                     <h4 className="font-bold text-base">Takeoff</h4>
                     <p>A tool that bootstraps packages and streamlines project setup</p>
+                    <a href="https://github.com/WarrenWu4/md-to-html-compiler" target="_blank" className="mt-auto w-fit">
+                        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] w-10 h-10 p-1"/>
+                    </a>
                 </div>
-                <div className="py-4 px-5 border-l-4">
+                <div className="py-4 px-5 border-l-4 flex items-center justify-center">
                     <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
                 </div>
             </div>
-            <NavLink to={"/proj"} className={"w-fit brutalist bg-[#9FFFB4] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>
@@ -185,14 +171,14 @@ function ProjectSection() {
 function BlogSection({post}: {post: Blog}) {
     return (
         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#F0E7C6]">
-            <h2 className="font-bold text-xl mb-2">
+            <h2 className="font-bold text-xl">
                 LATEST BLOG POST
             </h2>
             <BlogCard
                 blog={post}
                 className="brutalist bg-[#F2DE95]"
             />
-            <NavLink to={"/blog"} className={"w-fit brutalist bg-[#FFD39F] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/blog"} className={"w-fit btn-1 bg-[#FFD39F] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>
