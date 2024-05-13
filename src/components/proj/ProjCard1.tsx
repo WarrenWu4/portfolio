@@ -2,24 +2,24 @@ import { NavLink } from "react-router-dom";
 import { Proj } from "../../lib/types"
 import { Icon } from "@iconify/react";
 
-export default function ProjCard1({title, desc, techstack, article, thumbnail, github, demo}: Proj) {
+export default function ProjCard1({title, desc, article, thumbnail, github, demo}: Proj) {
 
     const githubComp = (github !== undefined) ? 
     <a target="_blank" href={github}>
-        <Icon icon={"mdi:github"} className="brutalist-sm bg-[#9FFFB4] w-8 h-8"/>
+        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-8 h-8"/>
     </a> 
     :
     ""
 
     const weblinkComp = (demo !== undefined) ? 
     <a target="_blank" href={demo}>
-        <Icon icon={"mdi:web"} width={"1.5rem"} className="brutalist-sm bg-[#9FFFB4] w-8 h-8"/>
+        <Icon icon={"mdi:web"} width={"1.5rem"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-8 h-8"/>
     </a>
     :
     ""
 
     return (
-        <div className="w-[300px] aspect-square brutalist rounded-xl flex flex-col relative overflow-hidden bg-[#A4E583]">
+        <div className="w-[300px] h-[320px] brutalist rounded-xl flex flex-col relative overflow-hidden bg-[#A4E583] dark:bg-[#384e2e]">
 
         <img src={(thumbnail !== undefined) ? `/_imgs/${thumbnail}` : `/_imgs/placeholder.png`} className="border-b-4 w-full h-[55%] bg-no-repeat bg-top bg-cover relative group"/>
 
@@ -36,7 +36,7 @@ export default function ProjCard1({title, desc, techstack, article, thumbnail, g
                     {weblinkComp}
                 </div>
 
-                <NavLink to={"./"+article} className="brutalist-sm bg-[#9FFFB4] font-bold text-xs flex items-center gap-x-2 px-3 py-2 h-[38px] w-[120px]">
+                <NavLink to={"./"+article} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] font-bold text-sm flex items-center gap-x-2 px-3 py-2 h-[38px] w-[130px]">
                     Learn More 
                     <Icon 
                         icon={"fa-solid:arrow-right"}

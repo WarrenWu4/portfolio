@@ -1,7 +1,6 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
 import AnimatedLayout from "../layouts/AnimatedLayout";
 import LoadingPage from "./LoadingPage";
 import ErrorPage from "./ErrorPage";
@@ -32,9 +31,9 @@ export default function BlogPage() {
 
 
     return (
-        <ContentLayout title="Blog" className="bg-[#F0E7C6]">
+        <ContentLayout title="Blog" className="bg-[#F0E7C6] dark:bg-[#6f633d]">
 
-            <div className="w-full flex flex-col brutalist bg-[#F2DE95]">
+            <div className="w-full flex flex-col brutalist bg-[#F2DE95] dark:bg-[#554d2b]">
             {
                 blogData.map((blog:Blog, index:number) => {
                     return (

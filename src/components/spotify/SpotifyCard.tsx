@@ -18,7 +18,7 @@ const SpotifyCard = ({track, className, number}: SpotifyCardProps) => {
                     <div className="font-medium text-sm text-black/70 dark:text-white/70">{track.artists[0].name}</div>
                 </div>
             </div>
-            <a href={track.uri} target={"_blank"} className="w-12 flex items-center justify-center brutalist-sm p-1 mr-4">
+            <a href={track.uri} target={"_blank"} className="w-12 flex items-center justify-center btn-1-sm p-1 mr-4">
                 <Icon icon={"mdi:headphones"} width={"2rem"}/>
             </a>
         </div>

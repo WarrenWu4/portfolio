@@ -32,7 +32,7 @@ export function ProjPage() {
     }
 
     return (
-        <ContentLayout title="Projects" className="bg-[#D4F0C6]">
+        <ContentLayout title="Projects" className="bg-[#D4F0C6] dark:bg-[#363e32]">
 
             <div className="w-full flex flex-wrap gap-8">
                 {

@@ -7,7 +7,7 @@ export default function Footer() {
 
         <div className="w-full mt-auto h-1 bg-black dark:bg-white"></div>
 
-        <div className="border-4 p-6 w-full flex flex-col text-base gap-y-12 bg-[#EFE0B9]">
+        <div className="border-4 p-6 w-full flex flex-col text-base gap-y-12 bg-[#EFE0B9] dark:bg-[#8a7746]">
 
             <div className="flex flex-col">
 

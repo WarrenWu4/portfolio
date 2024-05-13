@@ -93,7 +93,7 @@ function HeroSection({socials}: {socials: Social[]}) {
 
 function AboutSection({about}: {about: string}) {
     return (
-        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#E8C6F0]">
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#E8C6F0] dark:bg-[#5d4463]">
             <h2 className="font-bold text-xl">
                 ABOUT ME
             </h2>
@@ -101,15 +101,15 @@ function AboutSection({about}: {about: string}) {
                 {about}
             </p>
             <div className="flex flex-wrap gap-4">
-                <NavLink to={"/techstack"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                <NavLink to={"/techstack"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                     TECH STACK 
                     <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
                 </NavLink>
-                <NavLink to={"/involvements"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                <NavLink to={"/involvements"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                     INVOLVEMENTS 
                     <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
                 </NavLink>
-                <NavLink to={"/resume"} className={"w-fit btn-1 bg-[#ED9FFF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+                <NavLink to={"/resume"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                     RESUME 
                     <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
                 </NavLink>
@@ -120,11 +120,11 @@ function AboutSection({about}: {about: string}) {
 
 function EventsSection({events}: {events: Event[]}) {
     return (
-        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#C6CFF0]">
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#C6CFF0] dark:bg-[#3a3f52]">
             <h2 className="font-bold text-xl">
                 RECENT EVENTS
             </h2>
-            <div className="brutalist bg-[#91BCFD]">
+            <div className="brutalist bg-[#91BCFD] dark:bg-[#253040]">
                 {events.map((event: Event, index: number) => {
                     return (
                         <EventCard
@@ -134,7 +134,7 @@ function EventsSection({events}: {events: Event[]}) {
                         />
                 )})}
             </div>
-            <NavLink to={"/misc/timeline"} className={"btn-1 w-fit bg-[#9FA9FF] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/misc/timeline"} className={"btn-1 w-fit bg-[#9FA9FF] dark:bg-[#1e2246] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>
@@ -144,23 +144,23 @@ function EventsSection({events}: {events: Event[]}) {
 
 function ProjectSection() {
     return (
-        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6]">
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6] dark:bg-[#363e32]">
             <h2 className="font-bold text-xl">
                 CURRENT PROJECT
             </h2>
-            <div className="flex brutalist bg-[#A4E583]">
+            <div className="flex brutalist bg-[#A4E583] dark:bg-[#384e2e]">
                 <div className="py-4 px-5 flex flex-col gap-y-1 h-full">
                     <h4 className="font-bold text-base">Takeoff</h4>
                     <p>A tool that bootstraps packages and streamlines project setup</p>
                     <a href="https://github.com/WarrenWu4/md-to-html-compiler" target="_blank" className="mt-auto w-fit">
-                        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] w-10 h-10 p-1"/>
+                        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-10 h-10 p-1"/>
                     </a>
                 </div>
                 <div className="py-4 px-5 border-l-4 flex items-center justify-center">
                     <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
                 </div>
             </div>
-            <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] dark:bg-[#2d6739] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>
@@ -170,15 +170,15 @@ function ProjectSection() {
 
 function BlogSection({post}: {post: Blog}) {
     return (
-        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#F0E7C6]">
+        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#F0E7C6] dark:bg-[#6f633d]">
             <h2 className="font-bold text-xl">
                 LATEST BLOG POST
             </h2>
             <BlogCard
                 blog={post}
-                className="brutalist bg-[#F2DE95]"
+                className="brutalist bg-[#F2DE95] dark:bg-[#554d2b]"
             />
-            <NavLink to={"/blog"} className={"w-fit btn-1 bg-[#FFD39F] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+            <NavLink to={"/blog"} className={"w-fit btn-1 bg-[#FFD39F] dark:bg-[#6a5239] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
                 VIEW MORE 
                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
             </NavLink>

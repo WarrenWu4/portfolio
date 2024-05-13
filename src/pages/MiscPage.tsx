@@ -50,7 +50,7 @@ function MiscCard({link, text, icon, background}: Misc) {
     return (
         <div className="w-fit">
             <NavLink className="w-32 flex flex-col items-center font-medium text-center" to={link}>
-                <div className="w-full aspect-square flex justify-center items-center text-40 mb-6 brutalist" style={{background: background}}>
+                <div className="w-full aspect-square flex justify-center items-center text-40 mb-6 btn-1" style={{background: background}}>
                     <Icon icon={`mdi:${icon}`} width={"2.5rem"} className="text-white"/>
                 </div>
                 {text}

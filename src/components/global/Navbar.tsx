@@ -32,7 +32,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="w-full p-4 border-4 flex items-center justify-between bg-[#EFE0B9]">
+        <nav className="w-full p-4 border-4 flex items-center justify-between bg-[#EFE0B9] dark:bg-[#8a7746]">
 
             <div className="flex items-center gap-x-2 small:gap-x-4 text-xl font-bold">
                 <NavLink to={"/"}>
