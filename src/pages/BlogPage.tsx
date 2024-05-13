@@ -83,12 +83,12 @@ export const BlogArticle = () => {
 
 
     return (
-        <AnimatedLayout>
+        <ContentLayout>
 
             <div id="article">
                 <ReactMarkdown children={mdInfo} />
             </div>
 
-        </AnimatedLayout>
+        </ContentLayout>
     )
 }
