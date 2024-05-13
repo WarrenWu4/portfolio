@@ -1,5 +1,3 @@
-import AnimatedLayout from "../../layouts/AnimatedLayout";
-
 export interface GithubCardProps {
     commits: number;
     pullRequests: number;
@@ -10,7 +8,7 @@ export interface GithubCardProps {
 const GithubCard = ({commits, pullRequests, issues, followers}: GithubCardProps) => {
 
     return (
-        <AnimatedLayout className="p-8 rounded-xl shadow-elevate dark:shadow-elevate-dark h-fit">
+        <div className="brutalist p-8 h-fit">
 
             <div className="text-[20px] font-bold mb-5">Overview</div>
 
@@ -32,7 +30,7 @@ const GithubCard = ({commits, pullRequests, issues, followers}: GithubCardProps)
 
             </div>
 
-        </AnimatedLayout>
+        </div>
     )
 }
 

@@ -1,6 +1,5 @@
 import { twMerge } from "tailwind-merge"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import AnimatedLayout from "../../layouts/AnimatedLayout"
 
 interface GithubStatsDataPoint {
     contributionCount: number
@@ -13,7 +12,7 @@ const GithubTable = (data:any) => {
         light: ['bg-[#dbd9d9]', 'bg-[#9be9a8]', 'bg-[#40c463]', 'bg-[#30a14e]', 'bg-[#216e39]'],
         dark: ['dark:bg-[#4d5451]', 'dark:bg-[#9be9a8]', 'dark:bg-[#40c463]', 'dark:bg-[#30a14e]', 'dark:bg-[#216e39]']
     }
-    const defaultRectStyle = "w-6 aspect-square rounded-md"
+    const defaultRectStyle = "w-6 aspect-square rounded-md border-4"
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     // oldest date from data
     const oldMonth = months [new Date(data.data[0].contributionDays[0].date).getMonth() + 1]
@@ -21,7 +20,7 @@ const GithubTable = (data:any) => {
     const newMonth = months [new Date(data.data[data.data.length-1].contributionDays[0].date).getMonth()+1]
 
     return (
-        <AnimatedLayout className="flex rounded-xl shadow-elevate dark:shadow-elevate-dark p-5 pr-8 gap-x-2 justify-center items-center">
+        <div className="flex brutalist p-5 pr-8 gap-x-2 justify-center items-center">
 
             <div className="w-6 h-full py-20 flex flex-col justify-between items-center">
                 <div className="h-fit rotate-[270deg]">{`${oldMonth}`}</div>
@@ -71,7 +70,7 @@ const GithubTable = (data:any) => {
                 })}
                 </tbody>
             </table>
-        </AnimatedLayout>
+        </div>
     )
 }
 

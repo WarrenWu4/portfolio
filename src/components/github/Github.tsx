@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import GithubTable from "./GithubTable"
 import GithubCard, { GithubCardProps } from "./GithubCard"
-import AnimatedLayout from "../../layouts/AnimatedLayout"
 import LoadingPage from "../../pages/LoadingPage"
+import ContentLayout from "../../layouts/ContentLayout"
 
 const Github = () => {
 
@@ -72,13 +72,7 @@ const Github = () => {
     }
 
     return (
-        <>
-
-            <AnimatedLayout className="w-full text-center huh:text-left font-bold text-[40px]">
-                
-                Monthly Contributions
-                
-            </AnimatedLayout>
+        <ContentLayout title="Monthly Contributions">
 
             {
                 <div className="w-full flex med:flex-row flex-col justify-center med:gap-x-20 gap-y-20">
@@ -86,7 +80,7 @@ const Github = () => {
                     <GithubCard commits={cardData.commits} pullRequests={cardData.pullRequests} issues={cardData.issues} followers={cardData.followers}/>
                 </div>
             }
-        </>
+        </ContentLayout>
     )
 }
 
