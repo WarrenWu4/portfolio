@@ -47,16 +47,16 @@
     ],
     "exps": [
         {
+            "org": "TAMU Datathon",
+            "pos": "President",
+            "desc": "Used EJS, SCSS, & Javascript to build parts of the landing page. Also worked on fullstack tools that were used by participants during the Datathon event.",
+            "date": "Jan 2023 - Present"
+        },
+        {
             "org": "Aggie Coding Club",
             "pos": "Workshops Officer",
             "desc": "Created engaging and interactive workshops in the form of code-alongs, presentations, and mini-competitions. Workshop content includes: game dev with Pygame, debugging 101, intro to APIs, intro to cybersecurity etc.",
             "date": "Aug 2022 - Present"
-        },
-        {
-            "org": "TAMU Datathon",
-            "pos": "Developer",
-            "desc": "Used EJS, SCSS, & Javascript to build parts of the landing page. Also worked on fullstack tools that were used by participants during the Datathon event.",
-            "date": "Jan 2023 - Present"
         },
         {
             "org": "General Motors",

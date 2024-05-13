@@ -17,7 +17,7 @@ export default function BlogCard({blog, className}: BlogCardProps) {
             <p className="break-word line-clamp-2 overflow-hidden">
                 {blog.desc}
             </p>
-            <NavLink to={`.${blog.article}`} className={"bg-[#FFD39F] dark:bg-[#6a5239] font-bold text-base flex w-fit btn-2 px-6 py-4"}>
+            <NavLink to={`/blog${blog.article}`} className={"bg-[#FFD39F] dark:bg-[#6a5239] font-bold text-base flex w-fit btn-2 px-6 py-4"}>
                 READ MORE
             </NavLink>
         </div>

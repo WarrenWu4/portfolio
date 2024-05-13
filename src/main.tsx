@@ -15,6 +15,9 @@ import Spotify from './components/spotify/Spotify';
 import ErrorPage from './pages/ErrorPage';
 import MainLayout from "./layouts/MainLayout";
 import Events from "./components/events/Events";
+import TechStack from './components/misc/TechStack'
+import Resume from './components/misc/Resume'
+import Involvement from './components/misc/Involvement'
 
 
 export default function App() {
@@ -30,6 +33,9 @@ export default function App() {
             <Routes>
 
                 <Route path="/" element={<HomePage/>}/>
+                <Route path="/techstack" element={<TechStack/>}/>
+                <Route path="/involvements" element={<Involvement/>}/>
+                <Route path="/resume" element={<Resume/>}/>
 
                 <Route path='/proj' element={<ProjPage/>}/>
                 <Route path='/proj/:proj_id' element={<ProjInfo/>}/>

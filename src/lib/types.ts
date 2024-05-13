@@ -33,3 +33,10 @@ export interface Social {
     icon: string
     link: string
 }
+
+export interface Experience {
+    org: string
+    pos: string
+    desc: string
+    date: string
+}
