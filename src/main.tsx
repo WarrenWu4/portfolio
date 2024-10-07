@@ -18,6 +18,8 @@ import Events from "./components/events/Events";
 import TechStack from './components/misc/TechStack'
 import Resume from './components/misc/Resume'
 import Involvement from './components/misc/Involvement'
+import Photos from './components/photos/Photos'
+import Games from './components/games/Games'
 
 
 export default function App() {
@@ -47,6 +49,8 @@ export default function App() {
                 <Route path='/misc/music' element={<Spotify/>}/>
                 <Route path='/misc/github-stats' element={<Github/>}/>
                 <Route path="/misc/timeline" element={<Events/>}/>
+                <Route path="/misc/photos" element={<Photos/>}/>
+                <Route path="/misc/games" element={<Games/>}/>
 
                 <Route path='*' element={<ErrorPage/>}/>
 

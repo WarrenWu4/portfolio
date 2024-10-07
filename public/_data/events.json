@@ -1,17 +1,22 @@
 [
     {
-        "title": "2024 TAMUHack",
+        "title": "TAMUHack X",
         "description": "Won best cross-platform application.",
         "date": "Jan 27, 2024"
     },
     {
-        "title": "2024 TACS Build4Good",
+        "title": "TACS Build4Good",
         "description": "Won 3rd place for education challenge.",
         "date": "Mar 23, 2024"
     },
     {
-        "title": "2024 TAMU Datathon Lite",
+        "title": "TAMU Datathon Lite I",
         "description": "Organized & held first ever TD Lite event.",
         "date": "Apr 20, 2024"
+    },
+    {
+        "title": "HackSMU VI",
+        "description": "Won best AI/ML & 2nd best overall",
+        "date": "Oct 5, 2024"
     }
 ]

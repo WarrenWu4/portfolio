@@ -40,3 +40,9 @@ export interface Experience {
     desc: string
     date: string
 }
+
+export interface Photo {
+    src: string
+    alt: string
+    desc: string
+}

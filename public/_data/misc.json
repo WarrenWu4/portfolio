@@ -16,5 +16,16 @@
         "text": "Recent Events",
         "icon": "calendar",
         "background": "#a16edb"
+    }, 
+    {
+        "link": "./photos",
+        "text": "Fun Photos",
+        "icon": "camera",
+        "background": "#bf481d"
+    }, {
+        "link": "./games",
+        "text": "Game Corner",
+        "icon": "controller-square",
+        "background": "#48239e"
     }
 ]
