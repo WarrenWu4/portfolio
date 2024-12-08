@@ -14,7 +14,7 @@ A quick disclaimer that I'm probably a bit biased since I'm a former hackathon o
 
 **Exhibit D: fun with the boys**. At the end of the day hackathons are meant to be fun, so I highly recommend bringing your friends and forming a team together since y'all will be together for essentially the entire weekend. It's a great time to just enjoy each other's company and there a couple of fun events sprinkled throughout the event such as movie night and game sessions that you can enjoy as a team!
 
-If none of what I've mentioned above has convinced you to go to a hackathon, I believe that you should still go regardless to try it out. There's no loss in just giving it a shot and seeing if you enjoyed the experience or not. After all, if you don't like it then you can just not go in the future. Otherwise, if this article has convinced you to compete in a hackathon, I hope that you have a great time tell the organizers that I sent you!
+If none of what I've mentioned above has convinced you to go to a hackathon, I believe that you should still go regardless to try it out. There's no loss in just giving it a shot and seeing if you enjoyed the experience or not. After all, if you don't like it then you can just not go in the future. Otherwise, if this article has convinced you to compete in a hackathon, I hope that you have a great time and tell the organizers that I sent you!
 
 ---
 
