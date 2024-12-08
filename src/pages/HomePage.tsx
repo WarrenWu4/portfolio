@@ -100,7 +100,7 @@ function AboutSection({about}: {about: string}) {
                 {about}
                 <br/><br/>
                 Currently organizing hackathons {" "}
-                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://tamudatathon.com/">@TAMU Datathon</a>, creating workshops {" "}
+                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.instagram.com/tamudatathon/">@TAMU Datathon</a>, creating workshops {" "}
                 <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.aggiecodingclub.com/">@Aggie Coding Club</a>, and designing for {" "}
                 <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://switchless.co/">@Switchless</a>. Previously {" "}
                 <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.gm.com/">@General Motors</a>
