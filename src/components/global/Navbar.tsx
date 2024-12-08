@@ -38,20 +38,22 @@ export default function Navbar() {
                 <NavLink to={"/"}>
                     <img src={logo} alt="logo" className="w-12 aspect-square"/>
                 </NavLink>
+            </div>
 
+            <div className="flex items-center gap-x-2 small:gap-x-4 text-lg font-bold">
                 <NavLink 
-                className={(path.split("/")[1] === "proj") ? 'is-active':'not-active'} 
-                to="/proj">
-                        PROJ
+                    className={(path.split("/")[1] === "proj") ? 'is-active':'not-active'} 
+                    to="/proj">
+                    PROJECTS
                 </NavLink>
 
                 <NavLink className={(path.split("/")[1] === "blog") ? 'is-active':'not-active'}  to="/blog" >BLOG</NavLink>
                 <NavLink className={(path.split("/")[1] === "misc") ? 'is-active':'not-active'}  to="/misc" >MISC</NavLink>
-            </div>
 
-            <button type="button" onClick={changeTheme}>
-                <img src={themeIcon} alt="theme" className="w-7 aspect-square" />
-            </button>
+                <button type="button" onClick={changeTheme}>
+                    <img src={themeIcon} alt="theme" className="w-6 aspect-square" />
+                </button>
+            </div>
 
         </nav>
     )

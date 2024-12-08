@@ -17,7 +17,7 @@ const GithubTable = (data:any) => {
     // oldest date from data
     const oldMonth = months [new Date(data.data[0].contributionDays[0].date).getMonth() + 1]
     // newest month from data
-    const newMonth = months [new Date(data.data[data.data.length-1].contributionDays[0].date).getMonth()+1]
+    const newMonth = months [new Date(data.data[data.data.length-1].contributionDays[0].date).getMonth()]
 
     return (
         <div className="flex brutalist p-5 pr-8 gap-x-2 justify-center items-center">

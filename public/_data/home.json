@@ -11,9 +11,13 @@
         {
             "icon": "linkedin",
             "link": "https://www.linkedin.com/in/warren-wu4/"
+        },
+        {
+            "icon": "paper",
+            "link": "/resume"
         }
     ],
-    "about": "I'm a software engineer dedicated to creating mission-driven software that leaves a positive impact on the world. I'm also a big nerd that loves to experiment with different designs and I'm always exploring new technologies. When I'm not immersed in code or exploring new tech, you'll find me unwinding by watching YouTube or jamming out to songs on Spotify. I love meeting and getting to know new people, so feel free to connect/contact me if you think I'm pretty chill dude :D.",
+    "about": "Hi I'm Warren — a software engineer focused on creating mission-driven software that makes a real difference. I'm passionate about building applications that are not only impactful, but also beautiful, scalable, and robust",
     "techstack": [
         "cplusplus",
         "kotlin",

@@ -56,7 +56,6 @@ export default function HomePage() {
             <HeroSection socials={homeData.socials}/>
             <AboutSection about={homeData.about} />
             <EventsSection events={eventsData}/>
-            <ProjectSection/>
             <BlogSection post={latestBlogPost}/>
         </div>
     )
@@ -74,7 +73,7 @@ function HeroSection({socials}: {socials: Social[]}) {
                     </h1>
 
                     <h3 className="font-medium text-xl text-black/80 dark:text-white/80 text-center">
-                        I build software that helps people 👍
+                        I'm building software to help people 👍
                     </h3>
                 </div>
 
@@ -97,23 +96,15 @@ function AboutSection({about}: {about: string}) {
             <h2 className="font-bold text-xl">
                 ABOUT ME
             </h2>
-            <p className="text-lg leading-7">
+            <p className="text-lg leading-7 [&>a]:font-bold">
                 {about}
+                <br/><br/>
+                Currently organizing hackathons {" "}
+                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.instagram.com/tamudatathon/">@TAMU Datathon</a>, creating workshops {" "}
+                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.aggiecodingclub.com/">@Aggie Coding Club</a>, and designing for {" "}
+                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://switchless.co/">@Switchless</a>. Previously {" "}
+                <a className="hover:underline underline-offset-4 decoration-4" target="_blank" href="https://www.gm.com/">@General Motors</a>
             </p>
-            <div className="flex flex-wrap gap-4">
-                <NavLink to={"/techstack"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
-                    TECH STACK 
-                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
-                </NavLink>
-                <NavLink to={"/involvements"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
-                    INVOLVEMENTS 
-                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
-                </NavLink>
-                <NavLink to={"/resume"} className={"w-fit btn-1 bg-[#ED9FFF] dark:bg-[#45214d] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
-                    RESUME 
-                    <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
-                </NavLink>
-            </div>
         </div>
     )
 }
@@ -142,31 +133,31 @@ function EventsSection({events}: {events: Event[]}) {
     )
 }
 
-function ProjectSection() {
-    return (
-        <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6] dark:bg-[#363e32]">
-            <h2 className="font-bold text-xl">
-                CURRENT PROJECT
-            </h2>
-            <div className="flex brutalist bg-[#A4E583] dark:bg-[#384e2e]">
-                <div className="py-4 px-5 flex flex-col gap-y-1 h-full">
-                    <h4 className="font-bold text-base">Takeoff</h4>
-                    <p>A tool that bootstraps packages and streamlines project setup</p>
-                    <a href="https://github.com/WarrenWu4/md-to-html-compiler" target="_blank" className="mt-auto w-fit">
-                        <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-10 h-10 p-1"/>
-                    </a>
-                </div>
-                <div className="py-4 px-5 border-l-4 flex items-center justify-center">
-                    <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
-                </div>
-            </div>
-            <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] dark:bg-[#2d6739] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
-                VIEW MORE 
-                <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
-            </NavLink>
-        </div>
-    )
-}
+// function ProjectSection() {
+//     return (
+//         <div className="w-full p-6 flex flex-col gap-y-4 border-4 bg-[#D4F0C6] dark:bg-[#363e32]">
+//             <h2 className="font-bold text-xl">
+//                 CURRENT PROJECT
+//             </h2>
+//             <div className="flex brutalist bg-[#A4E583] dark:bg-[#384e2e]">
+//                 <div className="py-4 px-5 flex flex-col gap-y-1 h-full">
+//                     <h4 className="font-bold text-base">Takeoff</h4>
+//                     <p>A tool that bootstraps packages and streamlines project setup</p>
+//                     <a href="https://github.com/WarrenWu4/md-to-html-compiler" target="_blank" className="mt-auto w-fit">
+//                         <Icon icon={"mdi:github"} className="btn-1-sm bg-[#9FFFB4] dark:bg-[#2d6739] w-10 h-10 p-1"/>
+//                     </a>
+//                 </div>
+//                 <div className="py-4 px-5 border-l-4 flex items-center justify-center">
+//                     <img src="/_imgs/placeholder.png" width={320} height={180} className="border-4 rounded-md"/>
+//                 </div>
+//             </div>
+//             <NavLink to={"/proj"} className={"w-fit btn-1 bg-[#9FFFB4] dark:bg-[#2d6739] font-bold text-base flex items-center gap-x-2 px-6 py-4"}>
+//                 VIEW MORE 
+//                 <Icon icon={"fa-solid:arrow-right"} width={"1rem"}/>
+//             </NavLink>
+//         </div>
+//     )
+// }
 
 function BlogSection({post}: {post: Blog}) {
     return (
