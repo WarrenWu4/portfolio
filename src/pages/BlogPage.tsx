@@ -1,4 +1,4 @@
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "react-markdown";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import LoadingPage from "./LoadingPage";
@@ -6,6 +6,7 @@ import ErrorPage from "./ErrorPage";
 import { Blog } from "../lib/types";
 import ContentLayout from "../layouts/ContentLayout";
 import BlogCard from "../components/blog/BlogCard";
+import rehypeRaw from "rehype-raw";
 
 export default function BlogPage() {
 
@@ -85,7 +86,8 @@ export const BlogArticle = () => {
         <ContentLayout>
 
             <div id="article">
-                <ReactMarkdown children={mdInfo} />
+                {/* @ts-ignore */}
+                <ReactMarkdown rehypePlugins={[rehypeRaw]} children={mdInfo} />
             </div>
 
         </ContentLayout>
