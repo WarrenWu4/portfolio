@@ -73,7 +73,7 @@ function HeroSection({socials}: {socials: Social[]}) {
                     </h1>
 
                     <h3 className="font-medium text-xl text-black/80 dark:text-white/80 text-center">
-                        I'm building software to help people 👍
+                        I'm building software that helps people 👍
                     </h3>
                 </div>
 
